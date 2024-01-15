@@ -20,6 +20,10 @@
             padding: 5px 0;
         }
 
+        main {
+            display: flex;
+        }
+
         #customerForm {
             max-width: 400px;
             margin: 80px auto;
@@ -98,44 +102,46 @@
     <h1>Customer Management</h1>
 </header>
 
-<section id="customerForm">
-    <form action="http://localhost:8080/pos/customers" method="post">
-        <label for="customerId">Customer ID</label>
-        <input id="customerId" type="text" name="id">
+<main>
+    <section id="customerTable">
+        <table>
+            <thead>
+            <tr>
+                <th>Customer ID</th>
+                <th>Customer Name</th>
+                <th>Customer Address</th>
+                <th>Customer Contact</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>C008</td>
+                <td>Chamil</td>
+                <td>Colombo</td>
+                <td>0768934673</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
 
-        <label for="customerName">Customer Name</label>
-        <input id="customerName" type="text" name="name">
+    <section id="customerForm">
+        <form action="http://localhost:8080/pos/customers" method="post">
+            <label for="customerId">Customer ID</label>
+            <input id="customerId" type="text" name="id">
 
-        <label for="customerAddress">Customer Address</label>
-        <input id="customerAddress" type="text" name="address">
+            <label for="customerName">Customer Name</label>
+            <input id="customerName" type="text" name="name">
 
-        <label for="customerContact">Customer Contact</label>
-        <input id="customerContact" type="text" name="contact">
+            <label for="customerAddress">Customer Address</label>
+            <input id="customerAddress" type="text" name="address">
 
-        <button type="submit">Save</button>
-    </form>
-</section>
+            <label for="customerContact">Customer Contact</label>
+            <input id="customerContact" type="text" name="contact">
 
-<section id="customerTable">
-    <table>
-        <thead>
-        <tr>
-            <th>Customer ID</th>
-            <th>Customer Name</th>
-            <th>Customer Address</th>
-            <th>Customer Contact</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>C008</td>
-            <td>Chamil</td>
-            <td>Colombo</td>
-            <td>0768934673</td>
-        </tr>
-        </tbody>
-    </table>
-</section>
+            <button type="submit">Save</button>
+        </form>
+    </section>
+</main>
 
 </body>
 </html>
