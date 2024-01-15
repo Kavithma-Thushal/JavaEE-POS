@@ -63,16 +63,36 @@
 
         button {
             width: 90px;
-            background-color: #333;
-            color: #fff;
             padding: 10px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        button[type="submit"] {
+            color: #fff;
+        }
+
+        button#save {
+            background: linear-gradient(45deg, #0ff, dodgerblue);
+        }
+
+        button#update {
+            background: linear-gradient(45deg, #f90, #f60);
+        }
+
+        button#delete {
+            background: linear-gradient(45deg, #f00, #c00);
+        }
+
+        button#get-all {
+            background: linear-gradient(45deg, #0f0, #0c0);
         }
 
         button:hover {
-            background-color: #555;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
 
         /* Table styles */
@@ -140,10 +160,10 @@
             <label for="customerContact">Customer Contact</label>
             <input id="customerContact" type="text" name="contact">
 
-            <button type="submit">Save</button>
-            <button type="submit">Update</button>
-            <button type="submit">Delete</button>
-            <button type="submit">Get All</button>
+            <button id="save" type="submit">Save</button>
+            <button id="update" type="submit">Update</button>
+            <button id="delete" type="submit">Delete</button>
+            <button id="get-all" type="submit">Get All</button>
         </form>
     </section>
 </main>
