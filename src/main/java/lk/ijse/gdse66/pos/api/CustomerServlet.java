@@ -21,7 +21,7 @@ import java.sql.SQLException;
 @WebServlet(urlPatterns = "/customers", loadOnStartup = 1, initParams = {
         @WebInitParam(name = "username", value = "root"),
         @WebInitParam(name = "password", value = "1234"),
-        @WebInitParam(name = "url", value = "jdbc:mysql://localhost:3306/servlet_db")})
+        @WebInitParam(name = "url", value = "jdbc:mysql://localhost:3306/javaee_customers")})
 public class CustomerServlet extends HttpServlet {
     private String username;
     private String password;
@@ -43,6 +43,7 @@ public class CustomerServlet extends HttpServlet {
         String id = req.getParameter("id");
         String name = req.getParameter("name");
         String address = req.getParameter("address");
+        String contact = req.getParameter("contact");
 
         /*Using JSON-P Object*/
         /*JsonReader reader = Json.createReader(req.getReader());
@@ -62,11 +63,12 @@ public class CustomerServlet extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(url, username, password);
 
-            String sql = "INSERT INTO customer(id, name, address) VALUES (?,?,?)";
+            String sql = "INSERT INTO customer(id, name, address, contact) VALUES (?,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, id);
             preparedStatement.setString(2, name);
             preparedStatement.setString(3, address);
+            preparedStatement.setString(4, contact);
             int rowsEffected = preparedStatement.executeUpdate();
 
             if (rowsEffected != 0) {
