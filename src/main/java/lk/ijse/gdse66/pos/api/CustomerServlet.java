@@ -1,5 +1,12 @@
 package lk.ijse.gdse66.pos.api;
 
+import jakarta.json.Json;
+import jakarta.json.JsonObject;
+import jakarta.json.JsonReader;
+import jakarta.json.bind.Jsonb;
+import jakarta.json.bind.JsonbBuilder;
+import lk.ijse.gdse66.pos.dto.CustomerDTO;
+
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
@@ -50,14 +57,16 @@ public class CustomerServlet extends HttpServlet {
         JsonObject jsonObject = reader.readObject();
         String id = jsonObject.getString("id");
         String name = jsonObject.getString("name");
-        String address = jsonObject.getString("address");*/
+        String address = jsonObject.getString("address");
+        String contact = jsonObject.getString("contact");*/
 
         /*Using Json-B Object*/
         /*Jsonb jsonb = JsonbBuilder.create();
         CustomerDTO customerDTO = jsonb.fromJson(req.getReader(), CustomerDTO.class);   // JSON Object ---> Java Object
         String id = customerDTO.getId();
         String name = customerDTO.getName();
-        String address = customerDTO.getAddress();*/
+        String address = customerDTO.getAddress();
+        String contact = customerDTO.getContact();*/
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
