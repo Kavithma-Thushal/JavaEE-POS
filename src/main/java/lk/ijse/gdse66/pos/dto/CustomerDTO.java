@@ -1,8 +1,8 @@
 package lk.ijse.gdse66.pos.dto;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.Data;
 
 /**
  * @author : Kavithma Thushal
