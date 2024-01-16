@@ -28,7 +28,7 @@ import java.sql.SQLException;
 @WebServlet(urlPatterns = "/customers", loadOnStartup = 1, initParams = {
         @WebInitParam(name = "username", value = "root"),
         @WebInitParam(name = "password", value = "1234"),
-        @WebInitParam(name = "url", value = "jdbc:mysql://localhost:3306/javaee_customers")})
+        @WebInitParam(name = "url", value = "jdbc:mysql://localhost:3306/javaee_pos")})
 public class CustomerServlet extends HttpServlet {
     private String username;
     private String password;
@@ -50,7 +50,7 @@ public class CustomerServlet extends HttpServlet {
         String id = req.getParameter("id");
         String name = req.getParameter("name");
         String address = req.getParameter("address");
-        String contact = req.getParameter("contact");
+        double salary = Double.parseDouble(req.getParameter("salary"));
 
         /*Using JSON-P Object*/
         /*JsonReader reader = Json.createReader(req.getReader());
@@ -58,7 +58,7 @@ public class CustomerServlet extends HttpServlet {
         String id = jsonObject.getString("id");
         String name = jsonObject.getString("name");
         String address = jsonObject.getString("address");
-        String contact = jsonObject.getString("contact");*/
+        String salary = jsonObject.getString("salary");*/
 
         /*Using Json-B Object*/
         /*Jsonb jsonb = JsonbBuilder.create();
@@ -66,18 +66,18 @@ public class CustomerServlet extends HttpServlet {
         String id = customerDTO.getId();
         String name = customerDTO.getName();
         String address = customerDTO.getAddress();
-        String contact = customerDTO.getContact();*/
+        String salary = customerDTO.getContact();*/
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(url, username, password);
 
-            String sql = "INSERT INTO customer(id, name, address, contact) VALUES (?,?,?,?)";
+            String sql = "INSERT INTO customer(id, name, address, salary) VALUES (?,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, id);
             preparedStatement.setString(2, name);
             preparedStatement.setString(3, address);
-            preparedStatement.setString(4, contact);
+            preparedStatement.setDouble(4,salary);
             int rowsEffected = preparedStatement.executeUpdate();
 
             if (rowsEffected != 0) {

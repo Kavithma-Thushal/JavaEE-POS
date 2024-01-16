@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS Customer
     address VARCHAR(30),
     salary  double,
     CONSTRAINT PRIMARY KEY (id)
-    );
+);
