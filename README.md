@@ -1,5 +1,18 @@
 # JavaEE POS System (Point of Sale)
 
+Technology :-<br/>
+✅Java 11, MYSQL, HTML, CSS, JavaScript, AJAX<br/>
+✅OOP Concepts<br/>
+✅MVC Architecture<br/>
+✅Singleton Design Pattern<br/>
+✅Maven<br/>
+
+Functions :-<br/>
+✅User can manage customers<br/>
+✅User can manage Items<br/>
+✅User can manage Orders<br/>
+✅User can view OrderDetails<br/>
+
 This is a JavaEE POS (Point of Sale) System built on the Java Platform, Enterprise Edition (JavaEE) architecture,
 designed to manage and streamline transactions in retail or hospitality environments. This system typically integrates
 various
@@ -19,6 +32,21 @@ of the retail
 or hospitality industry while benefiting from the portability and platform independence inherent in JavaEE.
 
 <div align="center">
+
+### How to use
+
+* Clone this repo https://github.com/Thushal2001/JavaEE-POS.git
+* Add project
+  database [Project Database](https://github.com/Thushal2001/JavaEE-POS/blob/master/src/main/java/lk/ijse/gdse66/pos/schema/db.sql)
+* Reload the `pom.xml`
+* Run the Application
+
+### Version
+
+1.1.0
+
+⭐️If you hava any bugs or issues ,If you want to explain code pleace contact me on :<br/>
+[kavithmathushal9007@gmail.com](https://www.kavithmathushal9007@gmail.com)
 
 #### This project is licensed under the [MIT License](LICENSE)
 
