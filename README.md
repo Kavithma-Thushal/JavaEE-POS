@@ -31,8 +31,6 @@ This architecture enables businesses to deploy a reliable and flexible POS solut
 of the retail
 or hospitality industry while benefiting from the portability and platform independence inherent in JavaEE.
 
-<div align="center">
-
 ### How to use
 
 * Clone this repo https://github.com/Thushal2001/JavaEE-POS.git
@@ -47,6 +45,8 @@ or hospitality industry while benefiting from the portability and platform indep
 
 ⭐️If you hava any bugs or issues ,If you want to explain code pleace contact me on :<br/>
 [kavithmathushal9007@gmail.com](https://www.kavithmathushal9007@gmail.com)
+
+<div align="center">
 
 #### This project is licensed under the [MIT License](LICENSE)
 
