@@ -3,8 +3,7 @@
 Technology :-<br/>
 ✅Java 11, MYSQL, HTML, CSS, JavaScript, AJAX<br/>
 ✅OOP Concepts<br/>
-✅MVC Architecture<br/>
-✅Singleton Design Pattern<br/>
+✅Layered Architecture<br/>
 ✅Maven<br/>
 
 Functions :-<br/>
@@ -44,7 +43,7 @@ or hospitality industry while benefiting from the portability and platform indep
 1.1.0
 
 ⭐️If you hava any bugs or issues ,If you want to explain code pleace contact me on :<br/>
-[kavithmathushal9007@gmail.com](https://www.kavithmathushal9007@gmail.com)
+[kavithmathushal9007@gmail.com](https://www.kavithmathushal9007@gmail.com)<br/>
 
 <div align="center">
 
