@@ -1,4 +1,4 @@
-# JavaEE POS System (Point of Sale)
+# ✌️JavaEE POS System (Point of Sale)
 
 Technology :-<br/>
 ✅Java 11, MYSQL, HTML, CSS, JavaScript, AJAX<br/>
