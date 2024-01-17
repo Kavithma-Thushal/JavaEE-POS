@@ -25,7 +25,7 @@ import java.sql.SQLException;
  * @project : JavaEE-POS
  * @since : 6:56 PM - 1/15/2024
  **/
-@WebServlet(urlPatterns = "/customers", loadOnStartup = 1, initParams = {
+@WebServlet(urlPatterns = "/customer", loadOnStartup = 1, initParams = {
         @WebInitParam(name = "username", value = "root"),
         @WebInitParam(name = "password", value = "1234"),
         @WebInitParam(name = "url", value = "jdbc:mysql://localhost:3306/javaee_pos")})
