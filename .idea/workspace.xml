@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="c">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5b44bb9a-40bb-4b70-b0e1-184201e31f78.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5b44bb9a-40bb-4b70-b0e1-184201e31f78.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +50,7 @@
     "Tomcat Server.Tomcat 9.0.831.executor": "Run",
     "last_opened_file_path": "D:/IJSE/Workspace/2nd Sem Repo/AAD/JavaEE/JavaEE-POS",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
@@ -170,6 +171,8 @@
       <workItem from="1705749715275" duration="5000" />
       <workItem from="1705750077723" duration="247000" />
       <workItem from="1705751242182" duration="89000" />
+      <workItem from="1705751714471" duration="87000" />
+      <workItem from="1705753324305" duration="45000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
