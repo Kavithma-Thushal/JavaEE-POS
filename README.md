@@ -1,16 +1,18 @@
 # ✌️JavaEE POS System (Point of Sale)
 
 Technology :-<br/>
-✅Java 8, MYSQL, HTML, CSS, JavaScript, AJAX, JNDI<br/>
+✅Java 8, MySQL<br/>
+✅HTML, CSS, JavaScript, JQuery<br/>
+✅AJAX, JNDI<br/>
 ✅OOP Concepts<br/>
 ✅Layered Architecture<br/>
 ✅Maven<br/>
 
 Functions :-<br/>
-✅User can manage customers<br/>
-✅User can manage Items<br/>
+✅User can Save, Search, Update, Delete & Get All Customers<br/>
+✅User can Save, Search, Update, Delete & Get All Items<br/>
 ✅User can manage Orders<br/>
-✅User can view OrderDetails<br/>
+✅User can view Order Details<br/>
 
 This is a JavaEE POS (Point of Sale) System built on the Java Platform, Enterprise Edition (JavaEE) architecture,
 designed to manage and streamline transactions in retail or hospitality environments. This system typically integrates
@@ -43,7 +45,7 @@ or hospitality industry while benefiting from the portability and platform indep
 1.1.0
 
 ⭐️If you hava any bugs or issues ,If you want to explain code pleace contact me on :<br/>
-[kavithmathushal9007@gmail.com](https://www.kavithmathushal9007@gmail.com)<br/>
+[kavithmathushal9007@gmail.com](https://www.kavithmathushal9007@gmail.com)<br/><br/>
 
 <div align="center">
 
