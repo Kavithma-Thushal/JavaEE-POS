@@ -1,8 +1,8 @@
 # ✌️JavaEE POS System (Point of Sale)
 
 Technology :-<br/>
-✅Java 8, JavaEE, MySQL<br/>
-✅HTML, CSS, JavaScript, JQuery, Bootstrap<br/>
+✅FrontEnd - HTML, CSS, JavaScript, JQuery, Bootstrap<br/>
+✅BackEnd  - Java 8, JavaEE, MySQL<br/>
 ✅AJAX, JNDI<br/>
 ✅OOP Concepts<br/>
 ✅Layered Architecture<br/>
