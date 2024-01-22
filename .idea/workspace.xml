@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Item Management Refactored" />
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Place Order Refactored">
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/orders.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -193,6 +195,7 @@
       <workItem from="1705915770459" duration="2912000" />
       <workItem from="1705918707692" duration="3574000" />
       <workItem from="1705922877444" duration="1047000" />
+      <workItem from="1705923934614" duration="3827000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
@@ -330,7 +333,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705923924418</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Place Order Refactored">
+      <option name="closed" value="true" />
+      <created>1705927667314</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1705927667314</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,6 +363,7 @@
     <MESSAGE value="Customer Management Shadow Refactored" />
     <MESSAGE value="Navi Bar Refactored" />
     <MESSAGE value="Item Management Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Item Management Refactored" />
+    <MESSAGE value="Place Order Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Place Order Refactored" />
   </component>
 </project>
