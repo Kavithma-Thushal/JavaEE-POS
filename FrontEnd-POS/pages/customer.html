@@ -15,20 +15,18 @@
 
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light shadow-lg posNavi position-relative">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark posNavi position-relative p-3">
         <div class="container-fluid">
-            <a class="navbar-brand text-dark fw-bold" href="#">
-                <img alt="Logo" class="d-inline-block align-text-center" src="../assets/styles/logo.png"
-                     width="50">
-                <span style="color: dodgerblue"> Thushal </span> POS System
+            <a class="navbar-brand text-light fw-bold" href="#">
+                WEB | <span style="color: dodgerblue">POS </span>
             </a>
             <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
                     class="navbar-toggler" data-bs-target="#navbarSupportedContent"
                     data-bs-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item" id="homeBtn">
                         <a aria-current="page" class="nav-link active" href="../index.html">Home</a>
                     </li>
@@ -45,10 +43,6 @@
                         <a class="nav-link active" href="orderDetails.html">Order Details</a>
                     </li>
                 </ul>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button class="btn btn-outline-primary btn-m" type="button">Sign Up</button>
-                    <button class="btn btn-outline-secondary" type="button">Log Out</button>
-                </div>
             </div>
         </div>
     </nav>
@@ -61,7 +55,7 @@
             <h2 id="H1-3"><i class="bi bi-people-fill"></i> Customer</h2>
         </div>
     </div>
-    <div class="container d-flex flex-grow-1 flex-column sectionBorder mb-5" style="background-color: #dfe4ea">
+    <div class="container d-flex flex-grow-1 flex-column sectionBorder mb-5" style="background-color: #f7f7f7">
         <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
             <h6 id="H6">Home > Customer</h6>
             <hr>
@@ -69,9 +63,8 @@
         <div class="row justify-content-around " style="height: max-content">
 
             <!--Customer Search-->
-            <div class="col-10 col-md-6 col-lg-5 p-0 mt-5 rounded-2 sectionBorder"
+            <div class="col-10 col-md-6 col-lg-5 p-0 mt-5 sectionBorder"
                  style="background-color: white; height: max-content ">
-                <h4 class="text-center p-2 text-light rounded-top" style="background: dodgerblue">Manage Customer</h4>
                 <div class="mb-3 ms-3 me-3 mt-3">
                     <label class="fw-bold" for="searchCusId">Search Customer</label>
                     <input class="form-control me-2 mt-2" id="searchCusId" type="search"
@@ -87,7 +80,7 @@
             </div>
 
             <!--Customer Form-->
-            <div class="col-10 col-md-5 col-lg-4 p-0 mt-4 mb-4 rounded-3 sectionBorder" style="background-color: white">
+            <div class="col-10 col-md-5 col-lg-4 p-0 mt-4 mb-4 sectionBorder" style="background-color: white">
                 <form action="customer" id="customerForm">
                     <div class="mb-3 ms-3 me-3 mt-3 ">
                         <label class="fw-bold" for="txtCusId">Customer ID</label>
