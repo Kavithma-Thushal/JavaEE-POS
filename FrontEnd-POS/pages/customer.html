@@ -60,17 +60,13 @@
             <!--Customer Search-->
             <div class="col-10 col-md-6 col-lg-5 p-0 mt-5 sectionBorder"
                  style="background-color: white; height: max-content ">
-                <div class="mb-3 ms-3 me-3 mt-3">
+                <div class="row mb-3 ms-3 me-3 mt-3">
                     <label class="fw-bold" for="searchCusId">Search Customer</label>
-                    <input class="form-control me-2 mt-2" id="searchCusId" type="search"
-                           placeholder="Input Customer ID">
-                </div>
-                <div class="m-4">
-                    <button class="btn btn-primary mt-2 m-2" id="btnSaveCustomer" type="button">Save Customer</button>
-                    <button class="btn btn-warning mt-2 m-2" id="btnUpdateCustomer" type="button">Update Customer
-                    </button>
-                    <button class="btn btn-danger mt-2 m-2" id="btnDeleteCustomer" type="button">Delete Customer
-                    </button>
+                    <div class="input-group">
+                        <input class="form-control me-2 mt-2 rounded-2 w-50" id="searchCusId" type="search" placeholder="Input Customer ID">
+                        <button class="btn btn-dark mt-2 rounded-2 w-25" id="btnSearchCustomer" type="button">Search</button>
+                    </div>
+                    <button class="btn btn-success mt-3 ms-3 rounded-2 w-25" id="btnGetAllCustomers" type="button">Search</button>
                 </div>
             </div>
             <!--Customer Form-->
@@ -95,6 +91,11 @@
                         <label class="fw-bold" for="txtCustomerSalary">Customer Salary</label>
                         <input class="form-control" id="txtCustomerSalary" type="text" name="salary">
                         <span class="control-error"></span>
+                    </div>
+                    <div class="m-4 text-center">
+                        <button class="btn btn-primary mt-2 m-2 w-25" id="btnSaveCustomer" type="button">Save</button>
+                        <button class="btn btn-warning mt-2 m-2 w-25" id="btnUpdateCustomer" type="button">Update</button>
+                        <button class="btn btn-danger mt-2 m-2 w-25" id="btnDeleteCustomer" type="button">Delete</button>
                     </div>
                 </form>
             </div>

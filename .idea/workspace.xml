@@ -9,14 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="All Tables Refactored">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/customer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/orderDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/orderDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/orders.html" afterDir="false" />
-    </list>
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Table Cursor Added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,7 +202,8 @@
       <workItem from="1705935335416" duration="212000" />
       <workItem from="1705935551605" duration="971000" />
       <workItem from="1705936530414" duration="742000" />
-      <workItem from="1705937391769" duration="437000" />
+      <workItem from="1705937391769" duration="731000" />
+      <workItem from="1705938132282" duration="729000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
@@ -403,7 +397,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705936518765</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Table Cursor Added">
+      <option name="closed" value="true" />
+      <created>1705938119324</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1705938119324</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,6 +433,7 @@
     <MESSAGE value="Order Details Updated" />
     <MESSAGE value="Refactored" />
     <MESSAGE value="All Tables Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="All Tables Refactored" />
+    <MESSAGE value="Table Cursor Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Table Cursor Added" />
   </component>
 </project>
