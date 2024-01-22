@@ -9,13 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Management Shadow Refactored">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Navi Bar Refactored">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/customer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/orderDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/orderDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/orders.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +195,8 @@
       <workItem from="1705911018539" duration="402000" />
       <workItem from="1705911431191" duration="4293000" />
       <workItem from="1705915770459" duration="2912000" />
-      <workItem from="1705918707692" duration="3499000" />
+      <workItem from="1705918707692" duration="3574000" />
+      <workItem from="1705922877444" duration="813000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
@@ -320,7 +318,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705918439214</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Navi Bar Refactored">
+      <option name="closed" value="true" />
+      <created>1705922722358</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1705922722358</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,6 +346,7 @@
     <MESSAGE value="Customer Management Refactored 4" />
     <MESSAGE value="Customer Management Refactored 5" />
     <MESSAGE value="Customer Management Shadow Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customer Management Shadow Refactored" />
+    <MESSAGE value="Navi Bar Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Navi Bar Refactored" />
   </component>
 </project>
