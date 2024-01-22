@@ -6,11 +6,11 @@
     color: white !important;
 }
 
-/*.sectionBorder {
+.sectionBorder {
     box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
     border-radius: 8px;
-    !*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*!
-}*/
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+}
 
 .control-error {
     color: red;
