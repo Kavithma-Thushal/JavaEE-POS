@@ -61,76 +61,69 @@
             <h2 id="H1-3"><i class="bi bi-people-fill"></i> Customer</h2>
         </div>
     </div>
-    <div class="container d-flex flex-grow-1 flex-column sectionBorder" style="background-color: #dfe4ea">
+    <div class="container d-flex flex-grow-1 flex-column sectionBorder mb-5" style="background-color: #dfe4ea">
         <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
             <h6 id="H6">Home > Customer</h6>
             <hr>
         </div>
         <div class="row justify-content-around " style="height: max-content">
+
             <!--Customer Search-->
             <div class="col-10 col-md-6 col-lg-5 p-0 mt-5 rounded-2 sectionBorder"
-                 style="background-color: white;height: max-content ">
+                 style="background-color: white; height: max-content ">
                 <h4 class="text-center p-2 text-light rounded-top" style="background: dodgerblue">Manage Customer</h4>
-
-                <div class="mb-3 ms-3 me-3 mt-3 ">
-                    <label class="fw-bold" for="searchCusId">Search Customer :</label>
-                    <input class="form-control me-2 mt-2" id="searchCusId" placeholder="Input Name/NIC/Tp Here"
-                           type="search">
+                <div class="mb-3 ms-3 me-3 mt-3">
+                    <label class="fw-bold" for="searchCusId">Search Customer</label>
+                    <input class="form-control me-2 mt-2" id="searchCusId" type="search"
+                           placeholder="Input Customer ID">
                 </div>
                 <div class="m-4">
-                    <button class="btn btn-success mt-2 m-2" id="btnSaveCustomer" type="button">+ New Customer
-                    </button>
-
+                    <button class="btn btn-primary mt-2 m-2" id="btnSaveCustomer" type="button">Save Customer</button>
                     <button class="btn btn-warning mt-2 m-2" id="btnUpdateCustomer" type="button">Update Customer
                     </button>
-
                     <button class="btn btn-danger mt-2 m-2" id="btnDeleteCustomer" type="button">Delete Customer
                     </button>
-
                 </div>
             </div>
-            <!--Customer Form-->
-            <div class="col-10 col-md-5 col-lg-4 p-0 mt-2 rounded-3 sectionBorder" style="background-color: white">
 
+            <!--Customer Form-->
+            <div class="col-10 col-md-5 col-lg-4 p-0 mt-4 mb-4 rounded-3 sectionBorder" style="background-color: white">
                 <form action="customer" id="customerForm">
                     <div class="mb-3 ms-3 me-3 mt-3 ">
-                        <label class="fw-bold" for="txtCusId">Customer ID :</label>
+                        <label class="fw-bold" for="txtCusId">Customer ID</label>
                         <input class="form-control" id="txtCusId" type="text" name="id">
                         <span class="control-error"></span>
                     </div>
-
                     <div class="mb-3 ms-3 me-3 mt-3 ">
-                        <label class="fw-bold" for="txtCusName">Customer Name :</label>
+                        <label class="fw-bold" for="txtCusName">Customer Name</label>
                         <input class="form-control" id="txtCusName" type="text" name="name">
                         <span class="control-error"></span>
                     </div>
-
                     <div class="mb-3 ms-3 me-3 mt-3 ">
-                        <label class="fw-bold" for="txtCusAddress">Customer Address :</label>
+                        <label class="fw-bold" for="txtCusAddress">Customer Address</label>
                         <input class="form-control" id="txtCusAddress" type="text" name="address">
                         <span class="control-error"></span>
                     </div>
-
                     <div class="mb-3 ms-3 me-3 mt-3 ">
-                        <label class="fw-bold" for="txtCustomerSalary">Customer Salary :</label>
+                        <label class="fw-bold" for="txtCustomerSalary">Customer Salary</label>
                         <input class="form-control" id="txtCustomerSalary" type="text" name="salary">
                         <span class="control-error"></span>
                     </div>
                 </form>
-
             </div>
+
         </div>
-        <div class="row mt-1 mt-md-2 mt-lg-4 justify-content-around" style="height: 320px;">
+        <div class="row mt-5 mt-md-2 mt-lg-4 justify-content-around" style="height: 330px">
             <!--Customer Table-->
             <div class="col-11 justify-content-around sectionBorder" style="height: 290px; background: white">
-                <div class="customerTableDiv overflow-auto" style="height: 270px;">
-                    <table class="table table-success table-striped table-bordered table-hover">
+                <div class="customerTableDiv overflow-auto" style="height: 270px">
+                    <table class="table table-primary table-striped table-bordered table-hover mt-3">
                         <thead class="text-light table-dark text-center table-bordered sticky-top">
                         <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Address</th>
-                            <th>Salary</th>
+                            <th>Customer ID</th>
+                            <th>Customer Name</th>
+                            <th>Customer Address</th>
+                            <th>Customer Salary</th>
                         </tr>
                         </thead>
                         <tbody id="customerTable"></tbody>
