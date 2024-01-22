@@ -19,7 +19,7 @@
             <a class="navbar-brand text-dark fw-bold" href="#">
                 <img alt="Logo" class="d-inline-block align-text-center" src="assets/styles/logo.png"
                      width="50">
-                <span class="text-primary"> Thushal </span> POS System
+                <span style="color: dodgerblue"> Thushal </span> POS System
             </a>
             <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
                     class="navbar-toggler" data-bs-target="#navbarSupportedContent"
@@ -55,45 +55,43 @@
 
 <!--Home-->
 <main class="container-fluid mt-2" id="HomeSection">
-    <div class="jumbotron pt-md-4">
+    <div class="jumbotron pt-md-5">
         <div id="home-tiles">
             <div class="row">
                 <div class="col-lg-6 col-xl-3 mb-2">
                     <div class="card sectionBorder">
-                        <div class="card-header bg-secondary font-weight-bolder">Customers</div>
-                        <div class="card-body">
-                            <div class="dash-tile-icon"><i class="bi bi-people-fill"></i></div>
-                            <div class="dash-tile-text text-right text-black-50"><h2 id="txtCustomerCount">00</h2></div>
+                        <div class="card-header font-weight-bolder" style="background-color: dodgerblue">Customers</div>
+                        <div class="card-body d-flex justify-content-around align-items-center">
+                            <div class="dash-tile-icon me-2"><i class="bi bi-people-fill"></i></div>
+                            <div class="dash-tile-text text-black-50"><h1 id="txtCustomerCount">00</h1></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-3 mb-2">
                     <div class="card sectionBorder">
-                        <div class="card-header bg-secondary font-weight-bolder">Items</div>
-                        <div class="card-body">
+                        <div class="card-header font-weight-bolder" style="background-color: dodgerblue">Items</div>
+                        <div class="card-body d-flex justify-content-around align-items-center">
                             <div class="dash-tile-icon"><i class="bi bi-boxes"></i></div>
-                            <div class="dash-tile-text text-right text-black-50"><h2 id="txtItemsCount">00</h2></div>
+                            <div class="dash-tile-text text-black-50"><h1 id="txtItemsCount">00</h1></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-3 mb-2">
                     <div class="card sectionBorder">
-                        <div class="card-header bg-secondary font-weight-bolder">Orders</div>
-                        <div class="card-body">
+                        <div class="card-header font-weight-bolder" style="background-color: dodgerblue">Orders</div>
+                        <div class="card-body d-flex justify-content-around align-items-center">
                             <div class="dash-tile-icon"><i class="bi bi-cart-fill"></i></div>
-                            <div class="dash-tile-text text-right text-black-50"><h2 id="txtOrderCount">00</h2></div>
+                            <div class="dash-tile-text text-black-50"><h1 id="txtOrderCount">00</h1></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-3 mb-2">
                     <div class="card sectionBorder">
-                        <div class="card-header bg-secondary font-weight-bolder">Settings</div>
-                        <div class="card-body">
+                        <div class="card-header font-weight-bolder" style="background-color: dodgerblue">Settings</div>
+                        <div class="card-body d-flex justify-content-around align-items-center">
                             <div class="dash-tile-icon" style=""><i class="bi bi-gear-wide-connected"></i></div>
-                            <div class="dash-tile-text text-right text-black-50">
-                                <h2>
-                                    <button class="btn btn-primary">New</button>
-                                </h2>
+                            <div>
+                                <button class="btn btn-danger">New</button>
                             </div>
                         </div>
                     </div>
