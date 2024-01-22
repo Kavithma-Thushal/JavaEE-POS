@@ -9,8 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="c">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5b44bb9a-40bb-4b70-b0e1-184201e31f78.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5b44bb9a-40bb-4b70-b0e1-184201e31f78.xml" afterDir="false" />
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="ReadMe.md Updated">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +49,10 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat 9.0.831.executor": "Run",
     "last_opened_file_path": "D:/IJSE/Workspace/2nd Sem Repo/AAD/JavaEE/JavaEE-POS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
@@ -173,6 +177,7 @@
       <workItem from="1705751242182" duration="89000" />
       <workItem from="1705751714471" duration="87000" />
       <workItem from="1705753324305" duration="45000" />
+      <workItem from="1705901341673" duration="650000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
@@ -182,7 +187,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705750296332</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ReadMe.md Updated">
+      <option name="closed" value="true" />
+      <created>1705901415723</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705901415723</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ReadMe.md Updated">
+      <option name="closed" value="true" />
+      <created>1705901448089</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705901448089</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +211,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="c" />
-    <option name="LAST_COMMIT_MESSAGE" value="c" />
+    <MESSAGE value="ReadMe.md Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="ReadMe.md Updated" />
   </component>
 </project>
