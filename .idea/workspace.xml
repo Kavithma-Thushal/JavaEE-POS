@@ -9,11 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Management Refactored" />
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Management Refactored 5">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/customer.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,6 +52,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -180,6 +192,9 @@
       <workItem from="1705903020343" duration="2229000" />
       <workItem from="1705905270836" duration="1510000" />
       <workItem from="1705906798405" duration="4174000" />
+      <workItem from="1705911018539" duration="402000" />
+      <workItem from="1705911431191" duration="4293000" />
+      <workItem from="1705915770459" duration="2442000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
@@ -253,7 +268,39 @@
       <option name="project" value="LOCAL" />
       <updated>1705910993652</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Customer Management Refactored 2">
+      <option name="closed" value="true" />
+      <created>1705911413430</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1705911413430</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Customer Management Refactored 3">
+      <option name="closed" value="true" />
+      <created>1705914856491</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1705914856492</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Customer Management Refactored 4">
+      <option name="closed" value="true" />
+      <created>1705915181271</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1705915181271</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Customer Management Refactored 5">
+      <option name="closed" value="true" />
+      <created>1705915753291</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1705915753291</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +315,10 @@
     <MESSAGE value="Home Cards Refactored" />
     <MESSAGE value="Customer Header" />
     <MESSAGE value="Customer Management Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customer Management Refactored" />
+    <MESSAGE value="Customer Management Refactored 2" />
+    <MESSAGE value="Customer Management Refactored 3" />
+    <MESSAGE value="Customer Management Refactored 4" />
+    <MESSAGE value="Customer Management Refactored 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customer Management Refactored 5" />
   </component>
 </project>
