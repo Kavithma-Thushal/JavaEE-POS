@@ -60,15 +60,16 @@
             <!--Item Search-->
             <div class="col-10 col-md-6 col-lg-5 p-0 mt-5 sectionBorder"
                  style="background-color: white; height: max-content">
-                <div class="mb-3 ms-3 me-3 mt-3">
+                <div class="row mb-3 ms-3 me-3 mt-3">
                     <label class="fw-bold" for="ItemIdSearch">Search Item</label>
-                    <input class="form-control me-2 mt-2" id="ItemIdSearch" type="search"
-                           placeholder="Input Item Code">
-                </div>
-                <div class="m-4">
-                    <button class="btn btn-primary mt-2 m-2" id="btnAddItem" type="button">Add Item</button>
-                    <button class="btn btn-warning mt-2 m-2" id="btnUpdateItem" type="button">Update Item</button>
-                    <button class="btn btn-danger mt-2 m-2" id="btnDeleteItem" type="button">Delete Item</button>
+                    <div class="input-group">
+                        <input class="form-control me-3 mt-2 rounded-2 w-50" id="ItemIdSearch" type="search"
+                               placeholder="Input Item Code">
+                        <button class="btn btn-dark mt-2 rounded-2 w-25" id="btnSearchItem" type="button">Search
+                        </button>
+                    </div>
+                    <button class="btn btn-success mt-3 ms-3 rounded-2 w-25" id="btnGetAllItems" type="button">Get All
+                    </button>
                 </div>
             </div>
             <!--Item Form-->
@@ -93,6 +94,11 @@
                         <label class="fw-bold" for="txtItemPrice">Unit Price</label>
                         <input class="form-control " id="txtItemPrice" name="unitPrice" type="text">
                         <span class="control-error"></span>
+                    </div>
+                    <div class="m-4 text-center">
+                        <button class="btn btn-primary mt-2 m-2 w-25" id="btnAddItem" type="button">Save</button>
+                        <button class="btn btn-warning mt-2 m-2 w-25" id="btnUpdateItem" type="button">Update</button>
+                        <button class="btn btn-danger mt-2 m-2 w-25" id="btnDeleteItem" type="button">Delete</button>
                     </div>
                 </form>
             </div>
