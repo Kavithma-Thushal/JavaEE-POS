@@ -9,7 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Place Order Refactored 2" />
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Readme.md Updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/orderDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/orderDetails.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,6 +197,8 @@
       <workItem from="1705918707692" duration="3574000" />
       <workItem from="1705922877444" duration="1047000" />
       <workItem from="1705923934614" duration="4438000" />
+      <workItem from="1705930331384" duration="299000" />
+      <workItem from="1705930789222" duration="1782000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
@@ -347,7 +352,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705928406637</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Readme.md Updated">
+      <option name="closed" value="true" />
+      <created>1705930618215</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1705930618215</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,6 +384,7 @@
     <MESSAGE value="Item Management Refactored" />
     <MESSAGE value="Place Order Refactored" />
     <MESSAGE value="Place Order Refactored 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Place Order Refactored 2" />
+    <MESSAGE value="Readme.md Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme.md Updated" />
   </component>
 </project>
