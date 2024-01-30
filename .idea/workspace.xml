@@ -9,69 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Styles Refactored">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Styles Refactored 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-grid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-grid.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-grid.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-grid.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-grid.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-grid.rtl.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-grid.rtl.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-grid.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-grid.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-reboot.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-reboot.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-reboot.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-reboot.rtl.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-reboot.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-utilities.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-utilities.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-utilities.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-utilities.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-utilities.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-utilities.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-utilities.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-utilities.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-utilities.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-utilities.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-utilities.rtl.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-utilities.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap.rtl.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap.rtl.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/css/bootstrap.rtl.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/css/bootstrap.rtl.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/js/bootstrap.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/js/bootstrap.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/js/bootstrap.esm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/js/bootstrap.esm.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/js/bootstrap.esm.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/js/bootstrap.esm.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/js/bootstrap.esm.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/js/bootstrap.esm.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/js/bootstrap.esm.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/js/bootstrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/js/bootstrap.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-5.2.1/js/bootstrap.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-5.2.1/js/bootstrap.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-icons/bootstrap-icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-icons/bootstrap-icons.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-icons/bootstrap-icons.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-icons/bootstrap-icons.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-icons/fonts/bootstrap-icons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-icons/fonts/bootstrap-icons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-icons/fonts/bootstrap-icons.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-icons/fonts/bootstrap-icons.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/bootstrap-icons/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/Bootstrap/bootstrap-icons/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/sweetalert-11.6.16/sweetalert.all.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert-11.6.16/sweetalert.all.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/sweetalert-11.6.16/sweetalert.all.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert-11.6.16/sweetalert.all.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/sweetalert-11.6.16/sweetalert.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert-11.6.16/sweetalert.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/sweetalert-11.6.16/sweetalert.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert-11.6.16/sweetalert.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/sweetalert-11.6.16/sweetalert.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert-11.6.16/sweetalert.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/sweetalert-11.6.16/sweetalert.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert-11.6.16/sweetalert.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/customer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/orderDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/orderDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/orders.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +235,8 @@
       <workItem from="1706579548933" duration="564000" />
       <workItem from="1706580117463" duration="605000" />
       <workItem from="1706580741856" duration="346000" />
-      <workItem from="1706581094690" duration="2060000" />
+      <workItem from="1706581094690" duration="2229000" />
+      <workItem from="1706586337876" duration="217000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
@@ -554,14 +494,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706580730070</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Styles Refactored 2">
+      <option name="closed" value="true" />
+      <created>1706586328299</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1706586328299</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cc" />
     <MESSAGE value="Style Refactored" />
     <MESSAGE value="Navigation Bar Refactored" />
     <MESSAGE value="Home Cards Refactored" />
@@ -586,6 +533,7 @@
     <MESSAGE value="Order Details Refactored" />
     <MESSAGE value="Alert Refactored" />
     <MESSAGE value="Styles Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Styles Refactored" />
+    <MESSAGE value="Styles Refactored 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Styles Refactored 2" />
   </component>
 </project>
