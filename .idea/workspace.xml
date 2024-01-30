@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Styles Refactored 2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Bootstrap Refactored 2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,9 +73,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\JavaEE\JavaEE-POS\FrontEnd-POS\assets" />
       <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\JavaEE\JavaEE-POS\FrontEnd-POS\assets\Styles" />
       <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\JavaEE\JavaEE-POS\FrontEnd-POS\assets\Bootstrap" />
-      <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\JavaEE\JavaEE-POS\FrontEnd-POS\assets" />
     </key>
   </component>
   <component name="RunManager">
@@ -237,6 +235,7 @@
       <workItem from="1706580741856" duration="346000" />
       <workItem from="1706581094690" duration="2229000" />
       <workItem from="1706586337876" duration="217000" />
+      <workItem from="1706586690039" duration="407000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
@@ -502,14 +501,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706586328299</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Bootstrap Refactored 2">
+      <option name="closed" value="true" />
+      <created>1706587090486</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1706587090486</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Style Refactored" />
     <MESSAGE value="Navigation Bar Refactored" />
     <MESSAGE value="Home Cards Refactored" />
     <MESSAGE value="Customer Header" />
@@ -534,6 +540,7 @@
     <MESSAGE value="Alert Refactored" />
     <MESSAGE value="Styles Refactored" />
     <MESSAGE value="Styles Refactored 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Styles Refactored 2" />
+    <MESSAGE value="Bootstrap Refactored 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bootstrap Refactored 2" />
   </component>
 </project>
