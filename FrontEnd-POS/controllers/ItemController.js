@@ -194,8 +194,11 @@ function blindClickEvents() {
         $("#txtItemName").val(description);
         $("#txtItemQty").val(qty);
         $("#txtItemPrice").val(unitPrice);
+
+        $("#btnAddItem").attr('disabled', true);
+        $("#btnUpdateItem").attr('disabled', false);
+        $("#btnDeleteItem").attr('disabled', false);
     });
-    $("#btnAddItem").attr('disabled', true);
 }
 
 /**

@@ -194,8 +194,11 @@ function blindClickEvents() {
         $("#txtCusName").val(name);
         $("#txtCusAddress").val(address);
         $("#txtCustomerSalary").val(salary);
+
+        $("#btnSaveCustomer").attr('disabled', true);
+        $("#btnUpdateCustomer").attr('disabled', false);
+        $("#btnDeleteCustomer").attr('disabled', false);
     });
-    //$("#btnSaveCustomer").attr('disabled', true);
 }
 
 /**
