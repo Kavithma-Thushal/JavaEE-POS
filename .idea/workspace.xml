@@ -10,7 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Order Details Refactored">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert2-11.6.16/sweetalert2.all.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert-11.6.16/sweetalert.all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert2-11.6.16/sweetalert2.all.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert-11.6.16/sweetalert.all.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert2-11.6.16/sweetalert2.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert-11.6.16/sweetalert.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert2-11.6.16/sweetalert2.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert-11.6.16/sweetalert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert2-11.6.16/sweetalert2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert-11.6.16/sweetalert.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert2-11.6.16/sweetalert2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert-11.6.16/sweetalert.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/orders.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,14 +66,14 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Tomcat Server.Tomcat 9.0.831.executor&quot;: &quot;Run&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IJSE/Workspace/2nd Sem Repo/Friends/Krishan Mihiranga/pos-system&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IJSE/Workspace/2nd Sem Repo/Github-Attendance&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -211,6 +222,21 @@
       <workItem from="1705940481426" duration="720000" />
       <workItem from="1705941285003" duration="728000" />
       <workItem from="1705942021740" duration="91000" />
+      <workItem from="1705945369461" duration="209000" />
+      <workItem from="1705945584475" duration="57000" />
+      <workItem from="1706023378985" duration="476000" />
+      <workItem from="1706274641722" duration="923000" />
+      <workItem from="1706277083497" duration="258000" />
+      <workItem from="1706495127303" duration="54000" />
+      <workItem from="1706495186709" duration="106000" />
+      <workItem from="1706495933613" duration="511000" />
+      <workItem from="1706496449272" duration="1188000" />
+      <workItem from="1706530047214" duration="56000" />
+      <workItem from="1706530719317" duration="123000" />
+      <workItem from="1706533711878" duration="272000" />
+      <workItem from="1706534358601" duration="4000" />
+      <workItem from="1706577644017" duration="676000" />
+      <workItem from="1706579548933" duration="356000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
@@ -444,7 +470,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705942012943</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Order Details Refactored">
+      <option name="closed" value="true" />
+      <created>1705945562140</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1705945562140</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
