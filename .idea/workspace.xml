@@ -9,11 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Get All Updated">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" afterDir="false" />
-    </list>
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Table Listener Updated" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -246,7 +242,7 @@
       <workItem from="1706592290709" duration="826000" />
       <workItem from="1706593122668" duration="532000" />
       <workItem from="1706593659232" duration="214000" />
-      <workItem from="1706607097923" duration="1588000" />
+      <workItem from="1706607097923" duration="2294000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
@@ -568,14 +564,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706593644289</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Customer Table Listener Updated">
+      <option name="closed" value="true" />
+      <created>1706609048173</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1706609048173</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Customer Management Refactored 4" />
     <MESSAGE value="Customer Management Refactored 5" />
     <MESSAGE value="Customer Management Shadow Refactored" />
     <MESSAGE value="Navi Bar Refactored" />
@@ -600,6 +603,7 @@
     <MESSAGE value="Customer Save and Search Updated" />
     <MESSAGE value="Customer Update and Delete Updated" />
     <MESSAGE value="Customer Get All Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customer Get All Updated" />
+    <MESSAGE value="Customer Table Listener Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customer Table Listener Updated" />
   </component>
 </project>

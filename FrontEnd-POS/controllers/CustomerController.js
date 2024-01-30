@@ -158,7 +158,7 @@ function loadAllCustomer() {
             }
             generateCustomerID();
             blindClickEvents();
-            //setTextFieldValues("", "", "", "");
+            clearInputFields("", "", "", "");
         },
         error: function (error) {
             let message = JSON.parse(error.responseText).message;
@@ -188,7 +188,7 @@ function blindClickEvents() {
 /**
  * Clear Input Fields
  **/
-function setTextFieldValues(id, name, address, salary) {
+function clearInputFields(id, name, address, salary) {
     $("#txtCusId").val(id);
     $("#txtCusName").val(name);
     $("#txtCusAddress").val(address);
