@@ -27,7 +27,8 @@ $("#btnSaveCustomer").click(function () {
         success: function (res) {
             saveUpdateAlert("Customer", res.message);
             loadAllCustomer();
-        }, error: function (error) {
+        },
+        error: function (error) {
             unSuccessUpdateAlert("Customer", JSON.parse(error.responseText).message);
         }
     });
@@ -244,7 +245,7 @@ function setButtonState(value) {
 }
 
 /**
- * Validations
+ * Customer Validations
  **/
 $("#txtCusId").focus();
 const regExCusID = /^(C00-)[0-9]{3,4}$/;
