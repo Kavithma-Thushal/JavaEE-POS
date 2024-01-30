@@ -132,6 +132,18 @@ $("#btnDeleteItem").click(function () {
 });
 
 /**
+ * Clear Item Form
+ **/
+$("#btnClearAllItem").click(function () {
+    $('#txtItemID').val("");
+    $('#txtItemName').val("");
+    $('#txtItemPrice').val("");
+    $('#txtItemQty').val("");
+    $('#ItemIdSearch').val("");
+    loadAllItems();
+});
+
+/**
  * Get All Items
  **/
 $('#btnGetAllItems').click(function () {

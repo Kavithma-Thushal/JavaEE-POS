@@ -9,8 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Item Management Modified">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Comments Modified">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5b44bb9a-40bb-4b70-b0e1-184201e31f78.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5b44bb9a-40bb-4b70-b0e1-184201e31f78.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/ItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/ItemController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/customer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/item.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,6 +264,10 @@
       <workItem from="1706625571398" duration="24000" />
       <workItem from="1706631055254" duration="303000" />
       <workItem from="1706631999850" duration="7000" />
+      <workItem from="1706632156741" duration="518000" />
+      <workItem from="1706632680567" duration="64000" />
+      <workItem from="1706634181803" duration="133000" />
+      <workItem from="1706635049535" duration="1048000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
@@ -628,14 +637,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706615055602</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Comments Modified">
+      <option name="closed" value="true" />
+      <created>1706632666905</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1706632666905</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Place Order Refactored 2" />
     <MESSAGE value="Readme.md Updated" />
     <MESSAGE value="Order Details Updated" />
     <MESSAGE value="Refactored" />
@@ -660,6 +676,7 @@
     <MESSAGE value="Customer Validations Updated" />
     <MESSAGE value="Customer Disable TAB" />
     <MESSAGE value="Item Management Modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="Item Management Modified" />
+    <MESSAGE value="Comments Modified" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comments Modified" />
   </component>
 </project>

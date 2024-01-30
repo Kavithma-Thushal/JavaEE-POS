@@ -963,7 +963,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="283" parent="1" name="javaee_pos">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-01-20.11:18:20</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-01-30.16:31:25</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="284" parent="1" name="mysql.infoschema">

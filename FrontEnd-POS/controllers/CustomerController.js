@@ -132,6 +132,18 @@ $("#btnDeleteCustomer").click(function () {
 });
 
 /**
+ * Clear Customer Form
+ **/
+$("#btnClearAllCustomer").click(function () {
+    $('#txtCusId').val("");
+    $('#txtCusName').val("");
+    $('#txtCusAddress').val("");
+    $('#txtCustomerSalary').val("");
+    $('#searchCusId').val("");
+    loadAllCustomer();
+});
+
+/**
  * Get All Customers
  **/
 $('#btnGetAllCustomers').click(function () {
