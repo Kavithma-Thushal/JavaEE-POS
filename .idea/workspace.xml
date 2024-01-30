@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Bootstrap Refactored 2" />
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Comments Refactored" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -236,6 +236,7 @@
       <workItem from="1706581094690" duration="2229000" />
       <workItem from="1706586337876" duration="217000" />
       <workItem from="1706586690039" duration="407000" />
+      <workItem from="1706587110667" duration="1133000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
@@ -509,15 +510,29 @@
       <option name="project" value="LOCAL" />
       <updated>1706587090486</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Orders Refactored 2">
+      <option name="closed" value="true" />
+      <created>1706587416525</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1706587416525</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Comments Refactored">
+      <option name="closed" value="true" />
+      <created>1706588235724</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1706588235724</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Navigation Bar Refactored" />
-    <MESSAGE value="Home Cards Refactored" />
     <MESSAGE value="Customer Header" />
     <MESSAGE value="Customer Management Refactored" />
     <MESSAGE value="Customer Management Refactored 2" />
@@ -541,6 +556,8 @@
     <MESSAGE value="Styles Refactored" />
     <MESSAGE value="Styles Refactored 2" />
     <MESSAGE value="Bootstrap Refactored 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bootstrap Refactored 2" />
+    <MESSAGE value="Orders Refactored 2" />
+    <MESSAGE value="Comments Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comments Refactored" />
   </component>
 </project>
