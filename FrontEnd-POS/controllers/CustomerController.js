@@ -229,6 +229,21 @@ function generateCustomerID() {
 }
 
 /**
+ * Disable/Enable Buttons
+ **/
+function setButtonState(value) {
+    if (value > 0) {
+        $("#btnSaveCustomer").attr('disabled', true);
+        $("#btnUpdateCustomer").attr('disabled', true);
+        $("#btnDeleteCustomer").attr('disabled', true);
+    } else {
+        $("#btnSaveCustomer").attr('disabled', false);
+        $("#btnUpdateCustomer").attr('disabled', false);
+        $("#btnDeleteCustomer").attr('disabled', false);
+    }
+}
+
+/**
  * Auto Forces Input Fields
  **/
 $("#txtCusId").focus();
@@ -301,15 +316,3 @@ $("#txtCustomerSalary").on('keydown', function (event) {
         }
     }
 });
-
-function setButtonState(value) {
-    if (value > 0) {
-        $("#btnSaveCustomer").attr('disabled', true);
-        $("#btnUpdateCustomer").attr('disabled', true);
-        $("#btnDeleteCustomer").attr('disabled', true);
-    } else {
-        $("#btnSaveCustomer").attr('disabled', false);
-        $("#btnUpdateCustomer").attr('disabled', false);
-        $("#btnDeleteCustomer").attr('disabled', false);
-    }
-}
