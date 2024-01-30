@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Save and Search Updated" />
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Update and Delete Updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -239,6 +241,7 @@
       <workItem from="1706587110667" duration="1268000" />
       <workItem from="1706588388193" duration="734000" />
       <workItem from="1706589126738" duration="3144000" />
+      <workItem from="1706592290709" duration="826000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
@@ -544,14 +547,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706592281314</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Customer Update and Delete Updated">
+      <option name="closed" value="true" />
+      <created>1706592942075</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1706592942075</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Customer Management Refactored 2" />
     <MESSAGE value="Customer Management Refactored 3" />
     <MESSAGE value="Customer Management Refactored 4" />
     <MESSAGE value="Customer Management Refactored 5" />
@@ -576,6 +586,7 @@
     <MESSAGE value="Comments Refactored" />
     <MESSAGE value="JS Refactored" />
     <MESSAGE value="Customer Save and Search Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customer Save and Search Updated" />
+    <MESSAGE value="Customer Update and Delete Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customer Update and Delete Updated" />
   </component>
 </project>

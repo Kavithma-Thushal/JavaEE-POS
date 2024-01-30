@@ -6,6 +6,8 @@
 
 let baseUrl = "http://localhost:8080/javaee_pos/";
 
+loadAllCustomer();
+
 /**
  * Save Customer
  **/
@@ -123,9 +125,11 @@ $("#btnDeleteCustomer").click(function () {
 });
 
 /**
- * Load All Customers
+ * Get All Customers
  **/
-loadAllCustomer();
+$('#btnGetAllCustomers').click(function () {
+    loadAllCustomer();
+});
 
 /**
  * Disable Buttons
@@ -158,38 +162,6 @@ function generateCustomerID() {
         },
         error: function (ob, statusText, error) {
             console.log("Error : ", error);
-        }
-    });
-}
-
-/**
- * Load All Customers Method
- **/
-function loadAllCustomer() {
-    $("#customerTable").empty();
-    $.ajax({
-        url: baseUrl + "customer?option=loadAllCustomer",
-        method: "GET",
-        dataType: "json",
-        success: function (res) {
-            console.log(res);
-            for (let i of res.data) {
-                let id = i.id;
-                let name = i.name;
-                let address = i.address;
-                let salary = i.salary;
-
-                let row = "<tr><td>" + id + "</td><td>" + name + "</td><td>" + address + "</td><td>" + salary + "</td></tr>";
-                $("#customerTable").append(row);
-            }
-            blindClickEvents();
-            generateCustomerID();
-            setTextFieldValues("", "", "", "");
-            console.log(res.message);
-        },
-        error: function (error) {
-            let message = JSON.parse(error.responseText).message;
-            console.log(message);
         }
     });
 }
@@ -311,4 +283,34 @@ function setTextFieldValues(id, name, address, salary) {
     $("#btnSaveCustomer").attr('disabled', true);
     $("#btnUpdateCustomer").attr('disabled', true);
     $("#btnDeleteCustomer").attr('disabled', true);
+}
+
+/**
+ * Load All Customers
+ **/
+function loadAllCustomer() {
+    $("#customerTable").empty();
+    $.ajax({
+        url: baseUrl + "customer?option=loadAllCustomer",
+        method: "GET",
+        dataType: "json",
+        success: function (res) {
+            for (let i of res.data) {
+                let id = i.id;
+                let name = i.name;
+                let address = i.address;
+                let salary = i.salary;
+
+                let row = "<tr><td>" + id + "</td><td>" + name + "</td><td>" + address + "</td><td>" + salary + "</td></tr>";
+                $("#customerTable").append(row);
+            }
+            blindClickEvents();
+            generateCustomerID();
+            setTextFieldValues("", "", "", "");
+        },
+        error: function (error) {
+            let message = JSON.parse(error.responseText).message;
+            console.log(message);
+        }
+    });
 }
