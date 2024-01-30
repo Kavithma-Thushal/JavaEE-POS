@@ -32,43 +32,6 @@ public class ItemServlet extends HttpServlet {
     DataSource dataSource;
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String code = req.getParameter("code");
-        String description = req.getParameter("description");
-        int qty = Integer.parseInt(req.getParameter("qty"));
-        double unitPrice = Double.parseDouble(req.getParameter("unitPrice"));
-
-        try (Connection connection = dataSource.getConnection()) {
-            ItemDTO i = new ItemDTO(code, description, qty, unitPrice);
-            boolean b = itemBO.saveItem(i, connection);
-
-            if (b) {
-                JsonObjectBuilder responseObject = Json.createObjectBuilder();
-                responseObject.add("state", "Ok");
-                responseObject.add("message", "Successfully added..!");
-                responseObject.add("data", "");
-                resp.getWriter().print(responseObject.build());
-            }
-
-        } catch (SQLException e) {
-            JsonObjectBuilder error = Json.createObjectBuilder();
-            error.add("state", "Error");
-            error.add("message", e.getLocalizedMessage());
-            error.add("data", "");
-            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            resp.getWriter().print(error.build());
-
-        } catch (ClassNotFoundException e) {
-            JsonObjectBuilder error = Json.createObjectBuilder();
-            error.add("state", "Error");
-            error.add("message", e.getLocalizedMessage());
-            error.add("data", "");
-            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            resp.getWriter().print(error.build());
-        }
-    }
-
-    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         JsonArrayBuilder allItems = Json.createArrayBuilder();
 
@@ -173,6 +136,43 @@ public class ItemServlet extends HttpServlet {
                     resp.getWriter().print(rjo.build());
                 }
                 break;
+        }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String code = req.getParameter("code");
+        String description = req.getParameter("description");
+        int qty = Integer.parseInt(req.getParameter("qty"));
+        double unitPrice = Double.parseDouble(req.getParameter("unitPrice"));
+
+        try (Connection connection = dataSource.getConnection()) {
+            ItemDTO i = new ItemDTO(code, description, qty, unitPrice);
+            boolean b = itemBO.saveItem(i, connection);
+
+            if (b) {
+                JsonObjectBuilder responseObject = Json.createObjectBuilder();
+                responseObject.add("state", "Ok");
+                responseObject.add("message", "Successfully added..!");
+                responseObject.add("data", "");
+                resp.getWriter().print(responseObject.build());
+            }
+
+        } catch (SQLException e) {
+            JsonObjectBuilder error = Json.createObjectBuilder();
+            error.add("state", "Error");
+            error.add("message", e.getLocalizedMessage());
+            error.add("data", "");
+            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            resp.getWriter().print(error.build());
+
+        } catch (ClassNotFoundException e) {
+            JsonObjectBuilder error = Json.createObjectBuilder();
+            error.add("state", "Error");
+            error.add("message", e.getLocalizedMessage());
+            error.add("data", "");
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            resp.getWriter().print(error.build());
         }
     }
 

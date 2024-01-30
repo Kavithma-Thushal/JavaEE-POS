@@ -33,43 +33,6 @@ public class CustomerServlet extends HttpServlet {
     DataSource dataSource;
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String id = req.getParameter("id");
-        String name = req.getParameter("name");
-        String address = req.getParameter("address");
-        double salary = Double.parseDouble(req.getParameter("salary"));
-
-        try (Connection connection = dataSource.getConnection()) {
-            CustomerDTO c = new CustomerDTO(id, name, address, salary);
-            boolean b = customerBO.saveCustomer(c, connection);
-
-            if (b) {
-                JsonObjectBuilder responseObject = Json.createObjectBuilder();
-                responseObject.add("state", "Ok");
-                responseObject.add("message", "Successfully added..!");
-                responseObject.add("data", "");
-                resp.getWriter().print(responseObject.build());
-            }
-
-        } catch (SQLException e) {
-            JsonObjectBuilder error = Json.createObjectBuilder();
-            error.add("state", "Error");
-            error.add("message", e.getLocalizedMessage());
-            error.add("data", "");
-            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            resp.getWriter().print(error.build());
-
-        } catch (ClassNotFoundException e) {
-            JsonObjectBuilder error = Json.createObjectBuilder();
-            error.add("state", "Error");
-            error.add("message", e.getLocalizedMessage());
-            error.add("data", "");
-            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            resp.getWriter().print(error.build());
-        }
-    }
-
-    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         JsonArrayBuilder allCustomers = Json.createArrayBuilder();
 
@@ -175,6 +138,43 @@ public class CustomerServlet extends HttpServlet {
                     resp.getWriter().print(rjo.build());
                 }
                 break;
+        }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String id = req.getParameter("id");
+        String name = req.getParameter("name");
+        String address = req.getParameter("address");
+        double salary = Double.parseDouble(req.getParameter("salary"));
+
+        try (Connection connection = dataSource.getConnection()) {
+            CustomerDTO c = new CustomerDTO(id, name, address, salary);
+            boolean b = customerBO.saveCustomer(c, connection);
+
+            if (b) {
+                JsonObjectBuilder responseObject = Json.createObjectBuilder();
+                responseObject.add("state", "Ok");
+                responseObject.add("message", "Successfully added..!");
+                responseObject.add("data", "");
+                resp.getWriter().print(responseObject.build());
+            }
+
+        } catch (SQLException e) {
+            JsonObjectBuilder error = Json.createObjectBuilder();
+            error.add("state", "Error");
+            error.add("message", e.getLocalizedMessage());
+            error.add("data", "");
+            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            resp.getWriter().print(error.build());
+
+        } catch (ClassNotFoundException e) {
+            JsonObjectBuilder error = Json.createObjectBuilder();
+            error.add("state", "Error");
+            error.add("message", e.getLocalizedMessage());
+            error.add("data", "");
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            resp.getWriter().print(error.build());
         }
     }
 
