@@ -62,7 +62,6 @@ function searchCustomer() {
  * Update Customer
  **/
 $("#btnUpdateCustomer").click(function () {
-
     let cusId = $("#txtCusId").val();
     let cusName = $("#txtCusName").val();
     let cusAddress = $("#txtCusAddress").val();
@@ -77,7 +76,7 @@ $("#btnUpdateCustomer").click(function () {
 
     $.ajax({
         url: baseUrl + "customer",
-        method: "put",
+        method: "PUT",
         contentType: "application/json",
         data: JSON.stringify(customerOb),
         success: function (res) {
@@ -95,7 +94,6 @@ $("#btnUpdateCustomer").click(function () {
  * Delete Customer
  **/
 $("#btnDeleteCustomer").click(function () {
-
     let cusId = $("#txtCusId").val();
     let cusName = $("#txtCusName").val();
     let cusAddress = $("#txtCusAddress").val();
@@ -110,7 +108,7 @@ $("#btnDeleteCustomer").click(function () {
 
     $.ajax({
         url: baseUrl + "customer",
-        method: "delete",
+        method: "DELETE",
         contentType: "application/json",
         data: JSON.stringify(customerOb),
         success: function (res) {

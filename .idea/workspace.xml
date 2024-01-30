@@ -9,14 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="JS Refactored">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/CustomerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/ItemServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/ItemServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/OrdersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/OrdersServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" afterDir="false" />
-    </list>
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Save and Search Updated" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -245,7 +238,7 @@
       <workItem from="1706586690039" duration="407000" />
       <workItem from="1706587110667" duration="1268000" />
       <workItem from="1706588388193" duration="734000" />
-      <workItem from="1706589126738" duration="2633000" />
+      <workItem from="1706589126738" duration="3144000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
@@ -543,14 +536,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706588379775</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Customer Save and Search Updated">
+      <option name="closed" value="true" />
+      <created>1706592281314</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1706592281314</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Customer Management Refactored" />
     <MESSAGE value="Customer Management Refactored 2" />
     <MESSAGE value="Customer Management Refactored 3" />
     <MESSAGE value="Customer Management Refactored 4" />
@@ -575,6 +575,7 @@
     <MESSAGE value="Orders Refactored 2" />
     <MESSAGE value="Comments Refactored" />
     <MESSAGE value="JS Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="JS Refactored" />
+    <MESSAGE value="Customer Save and Search Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customer Save and Search Updated" />
   </component>
 </project>
