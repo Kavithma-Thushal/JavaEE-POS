@@ -9,20 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Order Details Refactored">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert2-11.6.16/sweetalert2.all.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert-11.6.16/sweetalert.all.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert2-11.6.16/sweetalert2.all.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert-11.6.16/sweetalert.all.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert2-11.6.16/sweetalert2.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert-11.6.16/sweetalert.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert2-11.6.16/sweetalert2.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert-11.6.16/sweetalert.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert2-11.6.16/sweetalert2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert-11.6.16/sweetalert.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert2-11.6.16/sweetalert2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/assets/styles/sweetalert-11.6.16/sweetalert.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/customer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/orders.html" afterDir="false" />
-    </list>
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Alert Refactored" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -236,7 +223,7 @@
       <workItem from="1706533711878" duration="272000" />
       <workItem from="1706534358601" duration="4000" />
       <workItem from="1706577644017" duration="676000" />
-      <workItem from="1706579548933" duration="356000" />
+      <workItem from="1706579548933" duration="564000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
@@ -478,14 +465,21 @@
       <option name="project" value="LOCAL" />
       <updated>1705945562140</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Alert Refactored">
+      <option name="closed" value="true" />
+      <created>1706580106209</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1706580106209</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="c" />
     <MESSAGE value="ReadMe.md Updated" />
     <MESSAGE value="cc" />
     <MESSAGE value="Style Refactored" />
@@ -510,6 +504,7 @@
     <MESSAGE value="Customer Buttons Refactored" />
     <MESSAGE value="Item Buttons Refactored" />
     <MESSAGE value="Order Details Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Order Details Refactored" />
+    <MESSAGE value="Alert Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alert Refactored" />
   </component>
 </project>
