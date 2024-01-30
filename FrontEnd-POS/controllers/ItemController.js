@@ -275,7 +275,9 @@ ItemsValidations.push({
     error: 'Item Salary Pattern is Wrong : 100 or 100.00'
 });
 
-//Disable TAB key of 4 input fields using grouping selector in CSS
+/**
+ * Disable TAB-KEY
+ **/
 $("#txtItemID,#txtItemName,#txtItemQty,#txtItemPrice").on('keydown', function (event) {
     if (event.key === "Tab") {
         event.preventDefault();
@@ -290,6 +292,9 @@ $("#txtItemID,#txtItemName,#txtItemQty,#txtItemPrice").on('blur', function (even
     checkValidity(ItemsValidations);
 });
 
+/**
+ * Enable ENTER-KEY
+ **/
 $("#txtItemID").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExItemCode, $("#txtItemID"))) {
         $("#txtItemName").focus();
@@ -297,19 +302,16 @@ $("#txtItemID").on('keydown', function (event) {
         focusText($("#txtItemID"));
     }
 });
-
 $("#txtItemName").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExItemName, $("#txtItemName"))) {
         focusText($("#txtItemQty"));
     }
 });
-
 $("#txtItemQty").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExItemPrice, $("#txtItemQty"))) {
         focusText($("#txtItemPrice"));
     }
 });
-
 $("#txtItemPrice").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExItemQtyOnHand, $("#txtItemPrice"))) {
         if (event.which === 13) {

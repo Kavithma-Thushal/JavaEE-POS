@@ -275,7 +275,9 @@ customerValidations.push({
     error: 'Customer Salary Pattern is Wrong : 0-9{1,}.0-9{1,2}'
 });
 
-//Disable TAB key of 4 input fields using grouping selector in CSS
+/**
+ * Disable TAB-KEY
+ **/
 $("#txtCusId,#txtCusName,#txtCusAddress,#txtCustomerSalary").on('keydown', function (event) {
     if (event.key === "Tab") {
         event.preventDefault();
@@ -290,6 +292,9 @@ $("#txtCusId,#txtCusName,#txtCusAddress,#txtCustomerSalary").on('blur', function
     checkValidity(customerValidations);
 });
 
+/**
+ * Enable ENTER-KEY
+ **/
 $("#txtCusId").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExCusID, $("#txtCusId"))) {
         $("#txtCusName").focus();
@@ -297,19 +302,16 @@ $("#txtCusId").on('keydown', function (event) {
         focusText($("#txtCusId"));
     }
 });
-
 $("#txtCusName").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExCusName, $("#txtCusName"))) {
         focusText($("#txtCusAddress"));
     }
 });
-
 $("#txtCusAddress").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExCusAddress, $("#txtCusAddress"))) {
         focusText($("#txtCustomerSalary"));
     }
 });
-
 $("#txtCustomerSalary").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExSalary, $("#txtCustomerSalary"))) {
         if (event.which === 13) {
