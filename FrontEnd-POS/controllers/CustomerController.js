@@ -274,7 +274,7 @@ customerValidations.push({
     error: 'Customer Salary Pattern is Wrong : 0-9{1,}.0-9{1,2}'
 });
 
-//disable tab key of all 4 text fields using grouping selector in CSS
+//Disable TAB key of 4 input fields using grouping selector in CSS
 $("#txtCusId,#txtCusName,#txtCusAddress,#txtCustomerSalary").on('keydown', function (event) {
     if (event.key === "Tab") {
         event.preventDefault();
