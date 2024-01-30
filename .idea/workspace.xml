@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Clear Input Field Updated" />
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Disable/Enable Buttons Updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -244,6 +246,9 @@
       <workItem from="1706593659232" duration="214000" />
       <workItem from="1706607097923" duration="2294000" />
       <workItem from="1706609409774" duration="404000" />
+      <workItem from="1706609818808" duration="295000" />
+      <workItem from="1706611586543" duration="307000" />
+      <workItem from="1706611949843" duration="343000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
@@ -581,14 +586,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706609798931</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Customer Disable/Enable Buttons Updated">
+      <option name="closed" value="true" />
+      <created>1706610106744</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1706610106744</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Customer Management Shadow Refactored" />
     <MESSAGE value="Navi Bar Refactored" />
     <MESSAGE value="Item Management Refactored" />
     <MESSAGE value="Place Order Refactored" />
@@ -613,6 +625,7 @@
     <MESSAGE value="Customer Get All Updated" />
     <MESSAGE value="Customer Table Listener Updated" />
     <MESSAGE value="Customer Clear Input Field Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customer Clear Input Field Updated" />
+    <MESSAGE value="Customer Disable/Enable Buttons Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customer Disable/Enable Buttons Updated" />
   </component>
 </project>
