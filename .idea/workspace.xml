@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Generate New Customer Id" />
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Servlet Refactored" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -298,22 +298,7 @@
       <workItem from="1706728355429" duration="173000" />
       <workItem from="1706728531592" duration="951000" />
       <workItem from="1706729862902" duration="1406000" />
-    </task>
-    <task id="LOCAL-00010" summary="Customer Management Refactored 2">
-      <option name="closed" value="true" />
-      <created>1705911413430</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1705911413430</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Customer Management Refactored 3">
-      <option name="closed" value="true" />
-      <created>1705914856491</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1705914856492</updated>
+      <workItem from="1706731276148" duration="636000" />
     </task>
     <task id="LOCAL-00012" summary="Customer Management Refactored 4">
       <option name="closed" value="true" />
@@ -691,15 +676,29 @@
       <option name="project" value="LOCAL" />
       <updated>1706731265751</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Clear Input Fields">
+      <option name="closed" value="true" />
+      <created>1706731850922</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1706731850922</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Customer Servlet Refactored">
+      <option name="closed" value="true" />
+      <created>1706731904597</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1706731904597</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Bootstrap Refactored 2" />
-    <MESSAGE value="Orders Refactored 2" />
     <MESSAGE value="Comments Refactored" />
     <MESSAGE value="JS Refactored" />
     <MESSAGE value="Customer Save and Search Updated" />
@@ -723,6 +722,8 @@
     <MESSAGE value="Clear All Customers Refactored" />
     <MESSAGE value="Table Listener Added" />
     <MESSAGE value="Generate New Customer Id" />
-    <option name="LAST_COMMIT_MESSAGE" value="Generate New Customer Id" />
+    <MESSAGE value="Clear Input Fields" />
+    <MESSAGE value="Customer Servlet Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customer Servlet Refactored" />
   </component>
 </project>
