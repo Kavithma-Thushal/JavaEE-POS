@@ -24,6 +24,30 @@ function unSuccessUpdateAlert(value, value2) {
     })
 }
 
+function emptyMassage(value) {
+    let timerInterval;
+    Swal.fire({
+        title: value + ' Empty Result...!',
+        html: 'I will close in <b></b> milliseconds',
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: () => {
+            Swal.showLoading()
+            let b = Swal.getHtmlContainer().querySelector('b')
+            timerInterval = setInterval(() => {
+                b.textContent = Swal.getTimerLeft()
+            }, 100)
+        },
+        willClose: () => {
+            clearInterval(timerInterval)
+        }
+    }).then((result) => {
+        if (result.dismiss === Swal.DismissReason.timer) {
+            console.log('I was closed by the timer...!')
+        }
+    })
+}
+
 function yesNoAlertIDelete(value) {
     Swal.fire({
         title: 'Do you want to Delete the \n' + value + ' ?',
@@ -56,29 +80,4 @@ function yesNoAlertIDelete(value) {
             Swal.fire(value + ' Delete Canceled!', '', 'info')
         }
     });
-}
-
-function emptyMassage(value) {
-    let timerInterval
-    Swal.fire({
-        title: value + ' Empty Result!',
-        html: 'I will close in <b></b> milliseconds.',
-        timer: 2000,
-        timerProgressBar: true,
-        didOpen: () => {
-            Swal.showLoading()
-            const b = Swal.getHtmlContainer().querySelector('b')
-            timerInterval = setInterval(() => {
-                b.textContent = Swal.getTimerLeft()
-            }, 100)
-        },
-        willClose: () => {
-            clearInterval(timerInterval)
-        }
-    }).then((result) => {
-        /* Read more about handling dismissals below */
-        if (result.dismiss === Swal.DismissReason.timer) {
-            console.log('I was closed by the timer')
-        }
-    })
 }

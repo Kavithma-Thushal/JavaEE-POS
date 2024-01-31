@@ -80,14 +80,6 @@ $("#btnDeleteCustomer").click(function () {
 });
 
 /**
- * Disable Buttons
- **/
-$("#btnSaveCustomer").attr('disabled', true);
-$("#btnUpdateCustomer").attr('disabled', true);
-$("#btnDeleteCustomer").attr('disabled', true);
-loadAllCustomer();
-
-/**
  * Search Customer
  **/
 $("#btnSearchCustomer").click(function () {
@@ -100,25 +92,32 @@ $("#txtSearchCusId").on("keypress", function (event) {
 });
 
 function searchCustomer() {
-    var search = $("#txtSearchCusId").val();
-    $("#customerTable").empty();
+    let searchId = $("#txtSearchCusId").val();
     $.ajax({
-        url: baseUrl + "customer?id=" + search + "&option=searchCusId",
+        url: baseUrl + "customer?id=" + searchId + "&option=searchCusId",
         method: "GET",
         contentType: "application/json",
         dataType: "json",
         success: function (res) {
+            $("#customerTable").empty();
             let row = "<tr><td>" + res.id + "</td><td>" + res.name + "</td><td>" + res.address + "</td><td>" + res.salary + "</td></tr>";
             $("#customerTable").append(row);
             blindClickEvents();
         },
         error: function (error) {
+            emptyMassage(JSON.parse(error.responseText).message);
             loadAllCustomer();
-            let message = JSON.parse(error.responseText).message;
-            emptyMassage(message);
         }
-    })
-};
+    });
+}
+
+/**
+ * Disable Buttons
+ **/
+$("#btnSaveCustomer").attr('disabled', true);
+$("#btnUpdateCustomer").attr('disabled', true);
+$("#btnDeleteCustomer").attr('disabled', true);
+loadAllCustomer();
 
 /**
  * Clear Customer Form
