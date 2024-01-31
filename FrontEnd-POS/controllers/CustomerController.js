@@ -18,7 +18,7 @@ $("#btnSaveCustomer").click(function () {
         dataType: "json",
         success: function (res) {
             saveUpdateAlert("Customer", res.message);
-            loadAllCustomer();
+            loadAllCustomers();
         },
         error: function (error) {
             unSuccessUpdateAlert("Customer", JSON.parse(error.responseText).message);
@@ -50,7 +50,7 @@ $("#btnUpdateCustomer").click(function () {
         dataType: "json",
         success: function (res) {
             saveUpdateAlert("Customer", res.message);
-            loadAllCustomer();
+            loadAllCustomers();
         },
         error: function (error) {
             unSuccessUpdateAlert("Customer", JSON.parse(error.responseText).message);
@@ -71,7 +71,7 @@ $("#btnDeleteCustomer").click(function () {
         dataType: "json",
         success: function (res) {
             saveUpdateAlert("Customer", res.message);
-            loadAllCustomer();
+            loadAllCustomers();
         },
         error: function (error) {
             unSuccessUpdateAlert("Customer", JSON.parse(error.responseText).message);
@@ -106,46 +106,27 @@ function searchCustomer() {
         },
         error: function (error) {
             emptyMassage(JSON.parse(error.responseText).message);
-            loadAllCustomer();
+            loadAllCustomers();
         }
     });
 }
 
 /**
- * Disable Buttons
- **/
-$("#btnSaveCustomer").attr('disabled', true);
-$("#btnUpdateCustomer").attr('disabled', true);
-$("#btnDeleteCustomer").attr('disabled', true);
-loadAllCustomer();
-
-/**
- * Clear Customer Form
- **/
-$("#btnClearAllCustomer").click(function () {
-    $('#txtCusId').val("");
-    $('#txtCusName').val("");
-    $('#txtCusAddress').val("");
-    $('#txtCusSalary').val("");
-    $('#txtSearchCusId').val("");
-    loadAllCustomer();
-});
-
-/**
  * Get All Customers
  **/
 $('#btnGetAllCustomers').click(function () {
-    loadAllCustomer();
+    loadAllCustomers();
 });
 
 /**
  * Load All Customers
  **/
-function loadAllCustomer() {
+function loadAllCustomers() {
     $("#customerTable").empty();
     $.ajax({
         url: baseUrl + "customer?option=loadAllCustomer",
         method: "GET",
+        contentType: "application/json",
         dataType: "json",
         success: function (res) {
             for (let i of res.data) {
@@ -157,16 +138,35 @@ function loadAllCustomer() {
                 let row = "<tr><td>" + id + "</td><td>" + name + "</td><td>" + address + "</td><td>" + salary + "</td></tr>";
                 $("#customerTable").append(row);
             }
-            generateCustomerID();
             blindClickEvents();
+            generateCustomerID();
             clearInputFields("", "", "", "");
         },
         error: function (error) {
-            let message = JSON.parse(error.responseText).message;
-            console.log(message);
+            console.log("Load All Error : " + error);
         }
     });
 }
+
+/**
+ * Disable Buttons
+ **/
+$("#btnSaveCustomer").attr('disabled', true);
+$("#btnUpdateCustomer").attr('disabled', true);
+$("#btnDeleteCustomer").attr('disabled', true);
+loadAllCustomers();
+
+/**
+ * Clear Customer Form
+ **/
+$("#btnClearAllCustomer").click(function () {
+    $('#txtCusId').val("");
+    $('#txtCusName').val("");
+    $('#txtCusAddress').val("");
+    $('#txtCusSalary').val("");
+    $('#txtSearchCusId').val("");
+    loadAllCustomers();
+});
 
 /**
  * Table Listener
