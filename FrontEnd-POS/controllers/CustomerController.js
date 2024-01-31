@@ -122,13 +122,14 @@ $('#btnGetAllCustomers').click(function () {
  * Load All Customers
  **/
 function loadAllCustomers() {
-    $("#customerTable").empty();
     $.ajax({
         url: baseUrl + "customer?option=loadAllCustomer",
         method: "GET",
         contentType: "application/json",
         dataType: "json",
         success: function (res) {
+            $("#customerTable").empty();
+
             for (let i of res.data) {
                 let id = i.id;
                 let name = i.name;
@@ -182,14 +183,6 @@ function blindClickEvents() {
 }
 
 /**
- * Disable Buttons
- **/
-$("#btnSaveCustomer").attr('disabled', true);
-$("#btnUpdateCustomer").attr('disabled', true);
-$("#btnDeleteCustomer").attr('disabled', true);
-loadAllCustomers();
-
-/**
  * Generate Customer ID
  **/
 function generateCustomerID() {
@@ -211,11 +204,19 @@ function generateCustomerID() {
                 $("#txtCusId").val("C00-" + tempId);
             }
         },
-        error: function (ob, statusText, error) {
-            console.log("Error : ", error);
+        error: function (error) {
+            console.log("Generate Customer Id Error : ", error);
         }
     });
 }
+
+/**
+ * Disable Buttons
+ **/
+$("#btnSaveCustomer").attr('disabled', true);
+$("#btnUpdateCustomer").attr('disabled', true);
+$("#btnDeleteCustomer").attr('disabled', true);
+loadAllCustomers();
 
 /**
  * Clear Input Fields
