@@ -40,14 +40,14 @@ $("#btnSaveCustomer").click(function () {
 $("#btnSearchCustomer").click(function () {
     searchCustomer();
 });
-$("#searchCusId").on("keypress", function (event) {
+$("#txtSearchCusId").on("keypress", function (event) {
     if (event.which === 13) {
         searchCustomer();
     }
 });
 
 function searchCustomer() {
-    var search = $("#searchCusId").val();
+    var search = $("#txtSearchCusId").val();
     $("#customerTable").empty();
     $.ajax({
         url: baseUrl + "customer?id=" + search + "&option=searchCusId",
@@ -74,7 +74,7 @@ $("#btnUpdateCustomer").click(function () {
     let cusId = $("#txtCusId").val();
     let cusName = $("#txtCusName").val();
     let cusAddress = $("#txtCusAddress").val();
-    let cusSalary = $("#txtCustomerSalary").val();
+    let cusSalary = $("#txtCusSalary").val();
 
     const customerOb = {
         id: cusId,
@@ -106,7 +106,7 @@ $("#btnDeleteCustomer").click(function () {
     let cusId = $("#txtCusId").val();
     let cusName = $("#txtCusName").val();
     let cusAddress = $("#txtCusAddress").val();
-    let cusSalary = $("#txtCustomerSalary").val();
+    let cusSalary = $("#txtCusSalary").val();
 
     const customerOb = {
         id: cusId,
@@ -138,8 +138,8 @@ $("#btnClearAllCustomer").click(function () {
     $('#txtCusId').val("");
     $('#txtCusName').val("");
     $('#txtCusAddress').val("");
-    $('#txtCustomerSalary').val("");
-    $('#searchCusId').val("");
+    $('#txtCusSalary').val("");
+    $('#txtSearchCusId').val("");
     loadAllCustomer();
 });
 
@@ -193,7 +193,7 @@ function blindClickEvents() {
         $("#txtCusId").val(id);
         $("#txtCusName").val(name);
         $("#txtCusAddress").val(address);
-        $("#txtCustomerSalary").val(salary);
+        $("#txtCusSalary").val(salary);
 
         $("#btnSaveCustomer").attr('disabled', true);
         $("#btnUpdateCustomer").attr('disabled', false);
@@ -236,7 +236,7 @@ function clearInputFields(id, name, address, salary) {
     $("#txtCusId").val(id);
     $("#txtCusName").val(name);
     $("#txtCusAddress").val(address);
-    $("#txtCustomerSalary").val(salary);
+    $("#txtCusSalary").val(salary);
     $("#txtCusName").focus();
     checkValidity(customerValidations);
     $("#btnSaveCustomer").attr('disabled', true);
@@ -286,24 +286,24 @@ customerValidations.push({
 });
 customerValidations.push({
     reg: regExSalary,
-    field: $('#txtCustomerSalary'),
+    field: $('#txtCusSalary'),
     error: 'Customer Salary Pattern is Wrong : 0-9{1,}.0-9{1,2}'
 });
 
 /**
  * Disable TAB-KEY
  **/
-$("#txtCusId,#txtCusName,#txtCusAddress,#txtCustomerSalary").on('keydown', function (event) {
+$("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keydown', function (event) {
     if (event.key === "Tab") {
         event.preventDefault();
     }
 });
 
-$("#txtCusId,#txtCusName,#txtCusAddress,#txtCustomerSalary").on('keyup', function (event) {
+$("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keyup', function (event) {
     checkValidity(customerValidations);
 });
 
-$("#txtCusId,#txtCusName,#txtCusAddress,#txtCustomerSalary").on('blur', function (event) {
+$("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('blur', function (event) {
     checkValidity(customerValidations);
 });
 
@@ -324,11 +324,11 @@ $("#txtCusName").on('keydown', function (event) {
 });
 $("#txtCusAddress").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExCusAddress, $("#txtCusAddress"))) {
-        focusText($("#txtCustomerSalary"));
+        focusText($("#txtCusSalary"));
     }
 });
-$("#txtCustomerSalary").on('keydown', function (event) {
-    if (event.key === "Enter" && check(regExSalary, $("#txtCustomerSalary"))) {
+$("#txtCusSalary").on('keydown', function (event) {
+    if (event.key === "Enter" && check(regExSalary, $("#txtCusSalary"))) {
         if (event.which === 13) {
             $('#btnSaveCustomer').focus();
         }
