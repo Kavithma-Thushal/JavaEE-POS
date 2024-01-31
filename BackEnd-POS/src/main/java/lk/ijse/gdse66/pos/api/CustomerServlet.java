@@ -145,112 +145,88 @@ public class CustomerServlet extends HttpServlet {
         String address = req.getParameter("address");
         double salary = Double.parseDouble(req.getParameter("salary"));
 
+        CustomerDTO customerDTO = new CustomerDTO(id, name, address, salary);
         try (Connection connection = dataSource.getConnection()) {
-            CustomerDTO c = new CustomerDTO(id, name, address, salary);
-            boolean b = customerBO.saveCustomer(c, connection);
+            boolean customerSaved = customerBO.saveCustomer(customerDTO, connection);
 
-            if (b) {
-                JsonObjectBuilder responseObject = Json.createObjectBuilder();
-                responseObject.add("state", "Ok");
-                responseObject.add("message", "Successfully added..!");
-                responseObject.add("data", "");
-                resp.getWriter().print(responseObject.build());
+            if (customerSaved) {
+                JsonObjectBuilder successResponse = Json.createObjectBuilder();
+                successResponse.add("status", "200 OK");
+                successResponse.add("message", "Added Successfully...!");
+                resp.getWriter().print(successResponse.build());
+            } else {
+                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                resp.getWriter().println("Failed to save customer");
             }
 
-        } catch (SQLException e) {
-            JsonObjectBuilder error = Json.createObjectBuilder();
-            error.add("state", "Error");
-            error.add("message", e.getLocalizedMessage());
-            error.add("data", "");
-            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            resp.getWriter().print(error.build());
-
-        } catch (ClassNotFoundException e) {
-            JsonObjectBuilder error = Json.createObjectBuilder();
-            error.add("state", "Error");
-            error.add("message", e.getLocalizedMessage());
-            error.add("data", "");
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+            JsonObjectBuilder errorResponse = Json.createObjectBuilder();
+            errorResponse.add("status", "Error");
+            errorResponse.add("message", e.getMessage());
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            resp.getWriter().print(error.build());
+            resp.getWriter().print(errorResponse.build());
         }
     }
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        JsonReader reader = Json.createReader(req.getReader());
-        JsonObject customer = reader.readObject();
+        JsonReader jsonReader = Json.createReader(req.getReader());
+        JsonObject jsonObject = jsonReader.readObject();
 
-        String id = customer.getString("id");
-        String name = customer.getString("name");
-        String address = customer.getString("address");
-        double salary = Double.parseDouble(customer.getString("salary"));
+        String id = jsonObject.getString("id");
+        String name = jsonObject.getString("name");
+        String address = jsonObject.getString("address");
+        double salary = Double.parseDouble(jsonObject.getString("salary"));
 
-        CustomerDTO cU = new CustomerDTO(id, name, address, salary);
+        CustomerDTO customerDTO = new CustomerDTO(id, name, address, salary);
         try (Connection connection = dataSource.getConnection()) {
-            boolean b = customerBO.updateCustomer(cU, connection);
-            if (b) {
-                JsonObjectBuilder responseObject = Json.createObjectBuilder();
-                responseObject.add("state", "Ok");
-                responseObject.add("message", "Successfully Updated..!");
-                responseObject.add("data", "");
-                resp.getWriter().print(responseObject.build());
+            boolean customerUpdated = customerBO.updateCustomer(customerDTO, connection);
 
+            if (customerUpdated) {
+                JsonObjectBuilder successResponse = Json.createObjectBuilder();
+                successResponse.add("status", "200 OK");
+                successResponse.add("message", "Updated Successfully...!");
+                resp.getWriter().print(successResponse.build());
             } else {
-                throw new RuntimeException("Wrong ID, Please Check The ID..!");
+                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                resp.getWriter().println("Failed to update customer");
             }
 
-        } catch (RuntimeException e) {
-            JsonObjectBuilder rjo = Json.createObjectBuilder();
-            rjo.add("state", "Error");
-            rjo.add("message", e.getLocalizedMessage());
-            rjo.add("data", "");
-            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            resp.getWriter().print(rjo.build());
-
-        } catch (ClassNotFoundException | SQLException e) {
-            JsonObjectBuilder rjo = Json.createObjectBuilder();
-            rjo.add("state", "Error");
-            rjo.add("message", e.getLocalizedMessage());
-            rjo.add("data", "");
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+            JsonObjectBuilder errorResponse = Json.createObjectBuilder();
+            errorResponse.add("status", "Error");
+            errorResponse.add("message", e.getMessage());
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            resp.getWriter().print(rjo.build());
+            resp.getWriter().print(errorResponse.build());
         }
     }
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        JsonReader reader = Json.createReader(req.getReader());
-        JsonObject customer = reader.readObject();
+        String id = req.getParameter("id");
 
-        String id = customer.getString("id");
         try (Connection connection = dataSource.getConnection()) {
-            boolean b = customerBO.deleteCustomer(id, connection);
-            if (b) {
-                JsonObjectBuilder rjo = Json.createObjectBuilder();
-                rjo.add("state", "Ok");
-                rjo.add("message", "Successfully Deleted..!");
-                rjo.add("data", "");
-                resp.getWriter().print(rjo.build());
+            boolean customerDeleted = customerBO.deleteCustomer(id, connection);
 
+            if (customerDeleted) {
+                JsonObjectBuilder successResponse = Json.createObjectBuilder();
+                successResponse.add("status", "200 OK");
+                successResponse.add("message", "Deleted Successfully...!");
+                resp.getWriter().print(successResponse.build());
             } else {
-                throw new RuntimeException("There is no such customer for that ID..!");
+                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                resp.getWriter().println("Failed to delete customer");
             }
 
-        } catch (RuntimeException e) {
-            JsonObjectBuilder rjo = Json.createObjectBuilder();
-            rjo.add("state", "Error");
-            rjo.add("message", e.getLocalizedMessage());
-            rjo.add("data", "");
-            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            resp.getWriter().print(rjo.build());
-
-        } catch (ClassNotFoundException | SQLException e) {
-            JsonObjectBuilder rjo = Json.createObjectBuilder();
-            rjo.add("state", "Error");
-            rjo.add("message", e.getLocalizedMessage());
-            rjo.add("data", "");
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+            JsonObjectBuilder errorResponse = Json.createObjectBuilder();
+            errorResponse.add("status", "Error");
+            errorResponse.add("message", e.getMessage());
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            resp.getWriter().print(rjo.build());
+            resp.getWriter().print(errorResponse.build());
         }
     }
 }

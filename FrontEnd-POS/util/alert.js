@@ -4,23 +4,23 @@
  * @since : 6:56 PM - 1/15/2024
  **/
 
-function saveUpdateAlert(vale, value2) {
+function saveUpdateAlert(value, value2) {
     Swal.fire({
         position: 'bottom-end',
         icon: 'success',
-        title: vale + ' has been ' + value2,
+        title: value + ' has been ' + value2,
         showConfirmButton: false,
-        timer: 2500
+        timer: 2000
     });
 }
 
-function unSuccessUpdateAlert(vale, vale2) {
+function unSuccessUpdateAlert(value, value2) {
     Swal.fire({
         position: 'bottom-end',
         icon: 'error',
-        title: vale + " " + vale2,
+        title: value + " " + value2,
         showConfirmButton: false,
-        timer: 1500
+        timer: 2000
     })
 }
 

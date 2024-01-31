@@ -9,10 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer, Item, Orders Count Updated">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="ID's Updated">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/CustomerServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/customer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,15 +295,8 @@
       <workItem from="1706711842740" duration="646000" />
       <workItem from="1706712496764" duration="78000" />
       <workItem from="1706715501969" duration="4129000" />
-      <workItem from="1706719655069" duration="469000" />
-    </task>
-    <task id="LOCAL-00003" summary="ReadMe.md Updated">
-      <option name="closed" value="true" />
-      <created>1705901448089</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1705901448089</updated>
+      <workItem from="1706719655069" duration="711000" />
+      <workItem from="1706720380261" duration="2853000" />
     </task>
     <task id="LOCAL-00004" summary="cc">
       <option name="closed" value="true" />
@@ -688,14 +682,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706719639830</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="ID's Updated">
+      <option name="closed" value="true" />
+      <created>1706720370296</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1706720370296</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Table Cursor Added" />
     <MESSAGE value="Customer Buttons Refactored" />
     <MESSAGE value="Item Buttons Refactored" />
     <MESSAGE value="Order Details Refactored" />
@@ -720,6 +721,7 @@
     <MESSAGE value="Navigation Refactored" />
     <MESSAGE value="POM Updated" />
     <MESSAGE value="Customer, Item, Orders Count Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customer, Item, Orders Count Updated" />
+    <MESSAGE value="ID's Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="ID's Updated" />
   </component>
 </project>

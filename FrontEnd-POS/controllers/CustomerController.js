@@ -7,14 +7,6 @@
 let baseUrl = "http://localhost:8080/javaee_pos/";
 
 /**
- * Disable Buttons
- **/
-$("#btnSaveCustomer").attr('disabled', true);
-$("#btnUpdateCustomer").attr('disabled', true);
-$("#btnDeleteCustomer").attr('disabled', true);
-loadAllCustomer();
-
-/**
  * Save Customer
  **/
 $("#btnSaveCustomer").click(function () {
@@ -33,6 +25,67 @@ $("#btnSaveCustomer").click(function () {
         }
     });
 });
+
+/**
+ * Update Customer
+ **/
+$("#btnUpdateCustomer").click(function () {
+    let cusId = $("#txtCusId").val();
+    let cusName = $("#txtCusName").val();
+    let cusAddress = $("#txtCusAddress").val();
+    let cusSalary = $("#txtCusSalary").val();
+
+    const customerObj = {
+        id: cusId,
+        name: cusName,
+        address: cusAddress,
+        salary: cusSalary
+    };
+
+    $.ajax({
+        url: baseUrl + "customer",
+        method: "PUT",
+        contentType: "application/json",
+        data: JSON.stringify(customerObj),
+        dataType: "json",
+        success: function (res) {
+            saveUpdateAlert("Customer", res.message);
+            loadAllCustomer();
+        },
+        error: function (error) {
+            unSuccessUpdateAlert("Customer", JSON.parse(error.responseText).message);
+        }
+    });
+});
+
+/**
+ * Delete Customer
+ **/
+$("#btnDeleteCustomer").click(function () {
+    let cusId = $("#txtCusId").val();
+
+    $.ajax({
+        url: baseUrl + "customer?id=" + cusId,
+        method: "DELETE",
+        contentType: "application/json",
+        dataType: "json",
+        success: function (res) {
+            saveUpdateAlert("Customer", res.message);
+            loadAllCustomer();
+        },
+        error: function (error) {
+            unSuccessUpdateAlert("Customer", JSON.parse(error.responseText).message);
+        }
+    });
+});
+
+/**
+ * Disable Buttons
+ **/
+$("#btnSaveCustomer").attr('disabled', true);
+$("#btnUpdateCustomer").attr('disabled', true);
+$("#btnDeleteCustomer").attr('disabled', true);
+loadAllCustomer();
 
 /**
  * Search Customer
@@ -66,70 +119,6 @@ function searchCustomer() {
         }
     })
 };
-
-/**
- * Update Customer
- **/
-$("#btnUpdateCustomer").click(function () {
-    let cusId = $("#txtCusId").val();
-    let cusName = $("#txtCusName").val();
-    let cusAddress = $("#txtCusAddress").val();
-    let cusSalary = $("#txtCusSalary").val();
-
-    const customerOb = {
-        id: cusId,
-        name: cusName,
-        address: cusAddress,
-        salary: cusSalary
-    };
-
-    $.ajax({
-        url: baseUrl + "customer",
-        method: "PUT",
-        contentType: "application/json",
-        data: JSON.stringify(customerOb),
-        success: function (res) {
-            saveUpdateAlert("Customer", res.message);
-            loadAllCustomer();
-        },
-        error: function (error) {
-            let message = JSON.parse(error.responseText).message;
-            unSuccessUpdateAlert("Customer", message);
-        }
-    });
-});
-
-/**
- * Delete Customer
- **/
-$("#btnDeleteCustomer").click(function () {
-    let cusId = $("#txtCusId").val();
-    let cusName = $("#txtCusName").val();
-    let cusAddress = $("#txtCusAddress").val();
-    let cusSalary = $("#txtCusSalary").val();
-
-    const customerOb = {
-        id: cusId,
-        name: cusName,
-        address: cusAddress,
-        salary: cusSalary
-    };
-
-    $.ajax({
-        url: baseUrl + "customer",
-        method: "DELETE",
-        contentType: "application/json",
-        data: JSON.stringify(customerOb),
-        success: function (res) {
-            saveUpdateAlert("Customer", res.message);
-            loadAllCustomer();
-        },
-        error: function (error) {
-            let message = JSON.parse(error.responseText).message;
-            unSuccessUpdateAlert("Customer", message);
-        }
-    });
-});
 
 /**
  * Clear Customer Form
