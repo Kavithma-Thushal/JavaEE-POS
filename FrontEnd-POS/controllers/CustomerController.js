@@ -161,14 +161,6 @@ $("#btnClearAllCustomer").click(function () {
 });
 
 /**
- * Disable Buttons
- **/
-$("#btnSaveCustomer").attr('disabled', true);
-$("#btnUpdateCustomer").attr('disabled', true);
-$("#btnDeleteCustomer").attr('disabled', true);
-loadAllCustomers();
-
-/**
  * Table Listener
  **/
 function blindClickEvents() {
@@ -188,6 +180,14 @@ function blindClickEvents() {
         $("#btnDeleteCustomer").attr('disabled', false);
     });
 }
+
+/**
+ * Disable Buttons
+ **/
+$("#btnSaveCustomer").attr('disabled', true);
+$("#btnUpdateCustomer").attr('disabled', true);
+$("#btnDeleteCustomer").attr('disabled', true);
+loadAllCustomers();
 
 /**
  * Generate Customer ID
