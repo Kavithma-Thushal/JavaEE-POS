@@ -9,10 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Form Clear Button Added">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Navigation Refactored">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/ItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/ItemController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd-POS/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +57,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Tomcat Server.Tomcat 9.0.831.executor&quot;: &quot;Run&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IJSE/Workspace/2nd Sem Repo/Github-Attendance&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IJSE/Workspace/2nd Sem Repo/AAD/JavaEE/JavaEE&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -265,7 +265,33 @@
       <workItem from="1706632680567" duration="64000" />
       <workItem from="1706634181803" duration="133000" />
       <workItem from="1706635049535" duration="1263000" />
-      <workItem from="1706636522536" duration="330000" />
+      <workItem from="1706636522536" duration="914000" />
+      <workItem from="1706637441210" duration="38000" />
+      <workItem from="1706638165820" duration="139000" />
+      <workItem from="1706639143970" duration="262000" />
+      <workItem from="1706670044763" duration="7280000" />
+      <workItem from="1706681036532" duration="1397000" />
+      <workItem from="1706682443051" duration="3720000" />
+      <workItem from="1706686203831" duration="3548000" />
+      <workItem from="1706689772468" duration="629000" />
+      <workItem from="1706690405573" duration="837000" />
+      <workItem from="1706691257783" duration="716000" />
+      <workItem from="1706692133691" duration="2742000" />
+      <workItem from="1706695098605" duration="902000" />
+      <workItem from="1706696013814" duration="1343000" />
+      <workItem from="1706697366038" duration="564000" />
+      <workItem from="1706697938951" duration="720000" />
+      <workItem from="1706698670028" duration="511000" />
+      <workItem from="1706699186723" duration="32000" />
+      <workItem from="1706699221316" duration="778000" />
+      <workItem from="1706702310161" duration="1119000" />
+      <workItem from="1706703440704" duration="916000" />
+      <workItem from="1706704368199" duration="1498000" />
+      <workItem from="1706708107812" duration="1812000" />
+      <workItem from="1706709940538" duration="1075000" />
+      <workItem from="1706711035087" duration="734000" />
+      <workItem from="1706711779205" duration="62000" />
+      <workItem from="1706711842740" duration="646000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
@@ -651,14 +677,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706636308870</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Navigation Refactored">
+      <option name="closed" value="true" />
+      <created>1706637429198</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1706637429198</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Order Details Updated" />
     <MESSAGE value="Refactored" />
     <MESSAGE value="All Tables Refactored" />
     <MESSAGE value="Table Cursor Added" />
@@ -683,6 +716,7 @@
     <MESSAGE value="Item Management Modified" />
     <MESSAGE value="Comments Modified" />
     <MESSAGE value="Form Clear Button Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Form Clear Button Added" />
+    <MESSAGE value="Navigation Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Navigation Refactored" />
   </component>
 </project>
