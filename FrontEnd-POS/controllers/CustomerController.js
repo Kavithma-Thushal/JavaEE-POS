@@ -141,7 +141,7 @@ function loadAllCustomers() {
             }
             blindClickEvents();
             generateCustomerID();
-            clearInputFields("", "", "", "");
+            clearInputFields();
         },
         error: function (error) {
             console.log("Load All Error : " + error);
@@ -153,11 +153,7 @@ function loadAllCustomers() {
  * Clear All Button
  **/
 $("#btnClearAllCustomer").click(function () {
-    $('#txtCusId').val("");
-    $('#txtCusName').val("");
-    $('#txtCusAddress').val("");
-    $('#txtCusSalary').val("");
-    $('#txtSearchCusId').val("");
+    clearInputFields();
     loadAllCustomers();
 });
 
@@ -221,16 +217,14 @@ loadAllCustomers();
 /**
  * Clear Input Fields
  **/
-function clearInputFields(id, name, address, salary) {
-    $("#txtCusId").val(id);
-    $("#txtCusName").val(name);
-    $("#txtCusAddress").val(address);
-    $("#txtCusSalary").val(salary);
+function clearInputFields() {
     $("#txtCusName").focus();
+    $('#txtCusId').val("");
+    $('#txtCusName').val("");
+    $('#txtCusAddress').val("");
+    $('#txtCusSalary').val("");
+    $('#txtSearchCusId').val("");
     checkValidity(customerValidations);
-    $("#btnSaveCustomer").attr('disabled', true);
-    $("#btnUpdateCustomer").attr('disabled', true);
-    $("#btnDeleteCustomer").attr('disabled', true);
 }
 
 /**
