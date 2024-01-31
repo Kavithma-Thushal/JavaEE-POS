@@ -149,15 +149,7 @@ function loadAllCustomers() {
 }
 
 /**
- * Disable Buttons
- **/
-$("#btnSaveCustomer").attr('disabled', true);
-$("#btnUpdateCustomer").attr('disabled', true);
-$("#btnDeleteCustomer").attr('disabled', true);
-loadAllCustomers();
-
-/**
- * Clear Customer Form
+ * Clear All Button
  **/
 $("#btnClearAllCustomer").click(function () {
     $('#txtCusId').val("");
@@ -167,6 +159,14 @@ $("#btnClearAllCustomer").click(function () {
     $('#txtSearchCusId').val("");
     loadAllCustomers();
 });
+
+/**
+ * Disable Buttons
+ **/
+$("#btnSaveCustomer").attr('disabled', true);
+$("#btnUpdateCustomer").attr('disabled', true);
+$("#btnDeleteCustomer").attr('disabled', true);
+loadAllCustomers();
 
 /**
  * Table Listener
