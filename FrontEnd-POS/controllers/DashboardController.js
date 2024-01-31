@@ -13,11 +13,10 @@ $.ajax({
     contentType: "application/json",
     dataType: "json",
     success: function (resp) {
-        let num = resp.count;
-        $("#txtCustomerCount").text(num);
+        $("#txtCustomerCount").text(resp.count);
     },
-    error: function (ob, statusText, error) {
-        console.log("Error : ", error);
+    error: function (error) {
+        console.log("Customer Count Error : ", error);
     }
 });
 
@@ -28,11 +27,10 @@ $.ajax({
     contentType: "application/json",
     dataType: "json",
     success: function (resp) {
-        let num = resp.count;
-        $("#txtItemsCount").text(num);
+        $("#txtItemsCount").text(resp.count);
     },
-    error: function (ob, statusText, error) {
-        console.log("Error : ", error);
+    error: function (error) {
+        console.log("Item Count Error : ", error);
     }
 });
 
@@ -43,10 +41,9 @@ $.ajax({
     contentType: "application/json",
     dataType: "json",
     success: function (resp) {
-        let num = resp.count;
-        $("#txtOrderCount").text(num);
+        $("#txtOrderCount").text(resp.count);
     },
-    error: function (ob, statusText, error) {
-        console.log("Error : ", error);
+    error: function (error) {
+        console.log("Orders Count Error : ", error);
     }
 });

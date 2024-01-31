@@ -9,10 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Navigation Refactored">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="POM Updated">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/CustomerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/ItemServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/ItemServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/OrdersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/OrdersServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/DashboardController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/DashboardController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,14 +295,8 @@
       <workItem from="1706711035087" duration="734000" />
       <workItem from="1706711779205" duration="62000" />
       <workItem from="1706711842740" duration="646000" />
-    </task>
-    <task id="LOCAL-00001" summary="c">
-      <option name="closed" value="true" />
-      <created>1705750296332</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1705750296332</updated>
+      <workItem from="1706712496764" duration="78000" />
+      <workItem from="1706715501969" duration="3994000" />
     </task>
     <task id="LOCAL-00002" summary="ReadMe.md Updated">
       <option name="closed" value="true" />
@@ -685,14 +682,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706637429198</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="POM Updated">
+      <option name="closed" value="true" />
+      <created>1706712561071</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1706712561071</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored" />
     <MESSAGE value="All Tables Refactored" />
     <MESSAGE value="Table Cursor Added" />
     <MESSAGE value="Customer Buttons Refactored" />
@@ -717,6 +721,7 @@
     <MESSAGE value="Comments Modified" />
     <MESSAGE value="Form Clear Button Added" />
     <MESSAGE value="Navigation Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Navigation Refactored" />
+    <MESSAGE value="POM Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="POM Updated" />
   </component>
 </project>

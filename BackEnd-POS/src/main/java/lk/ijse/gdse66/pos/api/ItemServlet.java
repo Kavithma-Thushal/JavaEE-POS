@@ -33,12 +33,10 @@ public class ItemServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        JsonArrayBuilder allItems = Json.createArrayBuilder();
-
         String code = req.getParameter("code");
         String option = req.getParameter("option");
 
-        PrintWriter writer = resp.getWriter();
+        JsonArrayBuilder allItems = Json.createArrayBuilder();
         switch (option) {
             case "searchItemCode":
                 try (Connection connection = dataSource.getConnection()) {
@@ -58,7 +56,7 @@ public class ItemServlet extends HttpServlet {
                             item.add("description", itemDTO.getDescription());
                             item.add("qty", itemDTO.getQty());
                             item.add("unitPrice", itemDTO.getUnitPrice());
-                            writer.print(item.build());
+                            resp.getWriter().print(item.build());
                         }
                     }
 
@@ -107,7 +105,7 @@ public class ItemServlet extends HttpServlet {
 
                     JsonObjectBuilder ItemID = Json.createObjectBuilder();
                     ItemID.add("code", iCode);
-                    writer.print(ItemID.build());
+                    resp.getWriter().print(ItemID.build());
 
                 } catch (SQLException | ClassNotFoundException e) {
                     JsonObjectBuilder rjo = Json.createObjectBuilder();
@@ -121,19 +119,18 @@ public class ItemServlet extends HttpServlet {
 
             case "itemCount":
                 try (Connection connection = dataSource.getConnection()) {
-                    int countItems = queryBO.getItem(connection);
-
-                    JsonObjectBuilder count = Json.createObjectBuilder();
-                    count.add("count", countItems);
-                    writer.print(count.build());
+                    int count = queryBO.getItem(connection);
+                    JsonObjectBuilder successResponse = Json.createObjectBuilder();
+                    successResponse.add("count", count);
+                    resp.getWriter().print(successResponse.build());
 
                 } catch (SQLException | ClassNotFoundException e) {
-                    JsonObjectBuilder rjo = Json.createObjectBuilder();
-                    rjo.add("state", "Error");
-                    rjo.add("message", e.getLocalizedMessage());
-                    rjo.add("data", "");
+                    e.printStackTrace();
+                    JsonObjectBuilder errorResponse = Json.createObjectBuilder();
+                    errorResponse.add("status", "Error");
+                    errorResponse.add("message", e.getMessage());
                     resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                    resp.getWriter().print(rjo.build());
+                    resp.getWriter().print(errorResponse.build());
                 }
                 break;
         }
