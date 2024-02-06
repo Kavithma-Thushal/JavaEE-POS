@@ -212,6 +212,7 @@ function generateCustomerID() {
 $("#btnSaveCustomer").attr('disabled', true);
 $("#btnUpdateCustomer").attr('disabled', true);
 $("#btnDeleteCustomer").attr('disabled', true);
+$("#txtCusId").attr('disabled', true);
 loadAllCustomers();
 
 /**
@@ -219,7 +220,6 @@ loadAllCustomers();
  **/
 function clearInputFields() {
     $("#txtCusName").focus();
-    $('#txtCusId').val("");
     $('#txtCusName').val("");
     $('#txtCusAddress').val("");
     $('#txtCusSalary').val("");
