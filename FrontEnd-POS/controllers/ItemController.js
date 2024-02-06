@@ -233,7 +233,7 @@ function generateItemID() {
  * Clear Input Fields
  **/
 function clearInputFields(code, description, qty, price) {
-    $("#txtItemID").val(code);
+    //$("#txtItemID").val(code);
     $("#txtItemName").val(description);
     $("#txtItemQty").val(qty);
     $("#txtItemPrice").val(price);

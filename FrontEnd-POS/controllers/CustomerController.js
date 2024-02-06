@@ -212,7 +212,6 @@ function generateCustomerID() {
 $("#btnSaveCustomer").attr('disabled', true);
 $("#btnUpdateCustomer").attr('disabled', true);
 $("#btnDeleteCustomer").attr('disabled', true);
-$("#txtCusId").attr('disabled', true);
 loadAllCustomers();
 
 /**
