@@ -146,26 +146,25 @@ public class CustomerServlet extends HttpServlet {
         try (Connection connection = pool.getConnection()) {
             boolean customerSaved = customerBO.saveCustomer(customerDTO, connection);
 
+            JsonObjectBuilder response = Json.createObjectBuilder();
             if (customerSaved) {
-                JsonObjectBuilder successResponse = Json.createObjectBuilder();
-                successResponse.add("status", "200 OK");
-                successResponse.add("message", "Saved Successfully...!");
-                resp.getWriter().print(successResponse.build());
+                response.add("status", "200 OK");
+                response.add("message", "Saved Successfully...!");
+                resp.setStatus(HttpServletResponse.SC_OK);
             } else {
-                JsonObjectBuilder errorResponse = Json.createObjectBuilder();
-                errorResponse.add("status", "Error 500");
-                errorResponse.add("message", "Failed to save the customer");
+                response.add("status", "Error 500");
+                response.add("message", "Failed to save the customer");
                 resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                resp.getWriter().print(errorResponse.build());
             }
+            resp.getWriter().print(response.build());
 
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
-            JsonObjectBuilder errorResponse = Json.createObjectBuilder();
-            errorResponse.add("status", "Error 500");
-            errorResponse.add("message", e.getMessage());
+            JsonObjectBuilder response = Json.createObjectBuilder();
+            response.add("status", "Error 500");
+            response.add("message", e.getMessage());
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            resp.getWriter().print(errorResponse.build());
+            resp.getWriter().print(response.build());
         }
     }
 

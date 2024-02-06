@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="CustomerController.js Refactored">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="CustomerController.js Refactored 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/CustomerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -319,15 +318,8 @@
       <workItem from="1707237543757" duration="18000" />
       <workItem from="1707238262183" duration="843000" />
       <workItem from="1707240098443" duration="968000" />
-      <workItem from="1707241080092" duration="1594000" />
-    </task>
-    <task id="LOCAL-00015" summary="Customer Management Shadow Refactored">
-      <option name="closed" value="true" />
-      <created>1705918439214</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1705918439214</updated>
+      <workItem from="1707241080092" duration="1770000" />
+      <workItem from="1707242875931" duration="611000" />
     </task>
     <task id="LOCAL-00016" summary="Navi Bar Refactored">
       <option name="closed" value="true" />
@@ -713,14 +705,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707241056578</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="CustomerController.js Refactored 2">
+      <option name="closed" value="true" />
+      <created>1707242851724</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1707242851724</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Customer Update and Delete Updated" />
     <MESSAGE value="Customer Get All Updated" />
     <MESSAGE value="Customer Table Listener Updated" />
     <MESSAGE value="Customer Clear Input Field Updated" />
@@ -745,6 +744,7 @@
     <MESSAGE value="CustomerController.js modified" />
     <MESSAGE value="All Controller.js modified" />
     <MESSAGE value="CustomerController.js Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="CustomerController.js Refactored" />
+    <MESSAGE value="CustomerController.js Refactored 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="CustomerController.js Refactored 2" />
   </component>
 </project>
