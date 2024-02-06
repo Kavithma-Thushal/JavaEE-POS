@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -30,7 +29,7 @@ public class CustomerServlet extends HttpServlet {
     private final QueryBO queryBO = (QueryBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.CUSTOM);
 
     @Resource(name = "java:comp/env/jdbc/pool")
-    DataSource dataSource;
+    DataSource pool;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -39,7 +38,7 @@ public class CustomerServlet extends HttpServlet {
 
         switch (option) {
             case "searchCusId":
-                try (Connection connection = dataSource.getConnection()) {
+                try (Connection connection = pool.getConnection()) {
                     ArrayList<CustomerDTO> arrayList = customerBO.customerSearchId(id, connection);
 
                     if (!arrayList.isEmpty()) {
@@ -71,7 +70,7 @@ public class CustomerServlet extends HttpServlet {
                 break;
 
             case "loadAllCustomer":
-                try (Connection connection = dataSource.getConnection()) {
+                try (Connection connection = pool.getConnection()) {
                     JsonArrayBuilder jsonAllCustomersArray = Json.createArrayBuilder();
                     ArrayList<CustomerDTO> arrayList = customerBO.getAllCustomers(connection);
 
@@ -101,7 +100,7 @@ public class CustomerServlet extends HttpServlet {
                 break;
 
             case "CustomerIdGenerate":
-                try (Connection connection = dataSource.getConnection()) {
+                try (Connection connection = pool.getConnection()) {
                     String newCustomerId = customerBO.generateNewCustomerID(connection);
                     JsonObjectBuilder successResponse = Json.createObjectBuilder();
                     successResponse.add("id", newCustomerId);
@@ -118,7 +117,7 @@ public class CustomerServlet extends HttpServlet {
                 break;
 
             case "CustomerCount":
-                try (Connection connection = dataSource.getConnection()) {
+                try (Connection connection = pool.getConnection()) {
                     int count = queryBO.getCustomer(connection);
                     JsonObjectBuilder successResponse = Json.createObjectBuilder();
                     successResponse.add("count", count);
@@ -144,23 +143,26 @@ public class CustomerServlet extends HttpServlet {
         double salary = Double.parseDouble(req.getParameter("salary"));
 
         CustomerDTO customerDTO = new CustomerDTO(id, name, address, salary);
-        try (Connection connection = dataSource.getConnection()) {
+        try (Connection connection = pool.getConnection()) {
             boolean customerSaved = customerBO.saveCustomer(customerDTO, connection);
 
             if (customerSaved) {
                 JsonObjectBuilder successResponse = Json.createObjectBuilder();
                 successResponse.add("status", "200 OK");
-                successResponse.add("message", "Added Successfully...!");
+                successResponse.add("message", "Saved Successfully...!");
                 resp.getWriter().print(successResponse.build());
             } else {
+                JsonObjectBuilder errorResponse = Json.createObjectBuilder();
+                errorResponse.add("status", "Error 500");
+                errorResponse.add("message", "Failed to save the customer");
                 resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                resp.getWriter().println("Failed to save customer");
+                resp.getWriter().print(errorResponse.build());
             }
 
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
             JsonObjectBuilder errorResponse = Json.createObjectBuilder();
-            errorResponse.add("status", "Error");
+            errorResponse.add("status", "Error 500");
             errorResponse.add("message", e.getMessage());
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             resp.getWriter().print(errorResponse.build());
@@ -178,7 +180,7 @@ public class CustomerServlet extends HttpServlet {
         double salary = Double.parseDouble(jsonObject.getString("salary"));
 
         CustomerDTO customerDTO = new CustomerDTO(id, name, address, salary);
-        try (Connection connection = dataSource.getConnection()) {
+        try (Connection connection = pool.getConnection()) {
             boolean customerUpdated = customerBO.updateCustomer(customerDTO, connection);
 
             if (customerUpdated) {
@@ -205,7 +207,7 @@ public class CustomerServlet extends HttpServlet {
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String id = req.getParameter("id");
 
-        try (Connection connection = dataSource.getConnection()) {
+        try (Connection connection = pool.getConnection()) {
             boolean customerDeleted = customerBO.deleteCustomer(id, connection);
 
             if (customerDeleted) {

@@ -24,8 +24,8 @@ $("#btnSaveCustomer").click(function () {
         method: "POST",
         data: formData,
         dataType: "json",
-        success: function (res) {
-            saveUpdateAlert("Customer", res.message);
+        success: function (resp) {
+            saveUpdateAlert("Customer", resp.message);
             loadAllCustomers();
         },
         error: function (error) {
