@@ -25,11 +25,11 @@ $("#btnSaveCustomer").click(function () {
         data: formData,
         dataType: "json",
         success: function (resp) {
-            saveUpdateAlert("Customer", resp.message);
+            successAlert("Customer", resp.message);
             loadAllCustomers();
         },
         error: function (error) {
-            unSuccessUpdateAlert("Customer", JSON.parse(error.responseText).message);
+            unSuccessAlert("Customer", JSON.parse(error.responseText).message);
         }
     });
 });
@@ -57,11 +57,11 @@ $("#btnUpdateCustomer").click(function () {
         data: JSON.stringify(customerObj),
         dataType: "json",
         success: function (res) {
-            saveUpdateAlert("Customer", res.message);
+            successAlert("Customer", res.message);
             loadAllCustomers();
         },
         error: function (error) {
-            unSuccessUpdateAlert("Customer", JSON.parse(error.responseText).message);
+            unSuccessAlert("Customer", JSON.parse(error.responseText).message);
         }
     });
 });
@@ -78,11 +78,11 @@ $("#btnDeleteCustomer").click(function () {
         contentType: "application/json",
         dataType: "json",
         success: function (res) {
-            saveUpdateAlert("Customer", res.message);
+            successAlert("Customer", res.message);
             loadAllCustomers();
         },
         error: function (error) {
-            unSuccessUpdateAlert("Customer", JSON.parse(error.responseText).message);
+            unSuccessAlert("Customer", JSON.parse(error.responseText).message);
         }
     });
 });

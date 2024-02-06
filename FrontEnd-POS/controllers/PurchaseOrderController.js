@@ -342,13 +342,13 @@ $("#btnPurchase").click(function () {
         dataType: "json",
         data: JSON.stringify(orderOb),
         success: function (res) {
-            saveUpdateAlert("Order", res.message);
+            successAlert("Order", res.message);
             generateOrderID();
 
         },
         error: function (error) {
             let message = JSON.parse(error.responseText).message;
-            unSuccessUpdateAlert("Order", message);
+            unSuccessAlert("Order", message);
         }
     });
 

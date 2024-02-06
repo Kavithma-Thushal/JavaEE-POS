@@ -25,11 +25,11 @@ $("#btnAddItem").click(function () {
         data: formData,
         dataType: "json",
         success: function (res) {
-            saveUpdateAlert("item", res.message);
+            successAlert("item", res.message);
             loadAllItems();
         },
         error: function (error) {
-            unSuccessUpdateAlert("item", JSON.parse(error.responseText).message);
+            unSuccessAlert("item", JSON.parse(error.responseText).message);
         }
     });
 });
@@ -89,12 +89,12 @@ $("#btnUpdateItem").click(function () {
         contentType: "application/json",
         data: JSON.stringify(itemOb),
         success: function (res) {
-            saveUpdateAlert("Item", res.message);
+            successAlert("Item", res.message);
             loadAllItems();
         },
         error: function (error) {
             let message = JSON.parse(error.responseText).message;
-            unSuccessUpdateAlert("Item", message);
+            unSuccessAlert("Item", message);
         }
     });
 });
@@ -121,12 +121,12 @@ $("#btnDeleteItem").click(function () {
         contentType: "application/json",
         data: JSON.stringify(itemOb),
         success: function (res) {
-            saveUpdateAlert("Item", res.message);
+            successAlert("Item", res.message);
             loadAllItems();
         },
         error: function (error) {
             let message = JSON.parse(error.responseText).message;
-            unSuccessUpdateAlert("Item", message);
+            unSuccessAlert("Item", message);
         }
     });
 });
