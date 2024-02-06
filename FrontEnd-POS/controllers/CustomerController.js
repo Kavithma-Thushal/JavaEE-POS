@@ -7,6 +7,14 @@
 let baseUrl = "http://localhost:8080/javaee_pos/";
 
 /**
+ * Disable Buttons
+ **/
+$("#btnSaveCustomer").attr('disabled', true);
+$("#btnUpdateCustomer").attr('disabled', true);
+$("#btnDeleteCustomer").attr('disabled', true);
+loadAllCustomers();
+
+/**
  * Save Customer
  **/
 $("#btnSaveCustomer").click(function () {
@@ -102,7 +110,7 @@ function searchCustomer() {
             $("#customerTable").empty();
             let row = "<tr><td>" + res.id + "</td><td>" + res.name + "</td><td>" + res.address + "</td><td>" + res.salary + "</td></tr>";
             $("#customerTable").append(row);
-            blindClickEvents();
+            tableListener();
         },
         error: function (error) {
             emptyMassage(JSON.parse(error.responseText).message);
@@ -139,7 +147,7 @@ function loadAllCustomers() {
                 let row = "<tr><td>" + id + "</td><td>" + name + "</td><td>" + address + "</td><td>" + salary + "</td></tr>";
                 $("#customerTable").append(row);
             }
-            blindClickEvents();
+            tableListener();
             generateCustomerID();
             clearInputFields();
         },
@@ -150,7 +158,7 @@ function loadAllCustomers() {
 }
 
 /**
- * Clear All Button
+ * Clear All Customers
  **/
 $("#btnClearAllCustomer").click(function () {
     clearInputFields();
@@ -158,9 +166,21 @@ $("#btnClearAllCustomer").click(function () {
 });
 
 /**
+ * Clear Input Fields
+ **/
+function clearInputFields() {
+    $("#txtCusName").focus();
+    $('#txtCusName').val("");
+    $('#txtCusAddress').val("");
+    $('#txtCusSalary').val("");
+    $('#txtSearchCusId').val("");
+    checkValidity(customerValidations);
+}
+
+/**
  * Table Listener
  **/
-function blindClickEvents() {
+function tableListener() {
     $("#customerTable>tr").on("click", function () {
         let id = $(this).children().eq(0).text();
         let name = $(this).children().eq(1).text();
@@ -204,26 +224,6 @@ function generateCustomerID() {
             console.log("Generate Customer Id Error : ", error);
         }
     });
-}
-
-/**
- * Disable Buttons
- **/
-$("#btnSaveCustomer").attr('disabled', true);
-$("#btnUpdateCustomer").attr('disabled', true);
-$("#btnDeleteCustomer").attr('disabled', true);
-loadAllCustomers();
-
-/**
- * Clear Input Fields
- **/
-function clearInputFields() {
-    $("#txtCusName").focus();
-    $('#txtCusName').val("");
-    $('#txtCusAddress').val("");
-    $('#txtCusSalary').val("");
-    $('#txtSearchCusId').val("");
-    checkValidity(customerValidations);
 }
 
 /**
