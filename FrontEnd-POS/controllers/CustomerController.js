@@ -224,6 +224,7 @@ function clearInputFields() {
     $("#btnSaveCustomer").attr('disabled', true);
     $("#btnUpdateCustomer").attr('disabled', true);
     $("#btnDeleteCustomer").attr('disabled', true);
+    checkValidity(customerValidations);
 }
 
 /**

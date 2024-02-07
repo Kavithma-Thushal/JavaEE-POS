@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Validations Refactored 4" />
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Focus Added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -361,14 +363,8 @@
       <workItem from="1707302362788" duration="1010000" />
       <workItem from="1707303385132" duration="599000" />
       <workItem from="1707304194882" duration="164000" />
-    </task>
-    <task id="LOCAL-00047" summary="Comments Modified">
-      <option name="closed" value="true" />
-      <created>1706632666905</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1706632666905</updated>
+      <workItem from="1707304362600" duration="901000" />
+      <workItem from="1707305275120" duration="544000" />
     </task>
     <task id="LOCAL-00048" summary="Form Clear Button Added">
       <option name="closed" value="true" />
@@ -754,14 +750,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707304352276</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="Focus Added">
+      <option name="closed" value="true" />
+      <created>1707305265122</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1707305265122</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Error Alert Refactored 3" />
     <MESSAGE value="Refactored" />
     <MESSAGE value="Modified" />
     <MESSAGE value="Customer Update Modified" />
@@ -786,6 +789,7 @@
     <MESSAGE value="Customer Validations Refactored 2" />
     <MESSAGE value="Customer Validations Refactored 3" />
     <MESSAGE value="Customer Validations Refactored 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customer Validations Refactored 4" />
+    <MESSAGE value="Focus Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Focus Added" />
   </component>
 </project>
