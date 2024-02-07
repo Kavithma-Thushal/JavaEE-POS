@@ -9,7 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Alert Refactored 3">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Error Alert Refactored 3">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,12 +28,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Thushal2001"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Thushal2001&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -334,14 +335,8 @@
       <workItem from="1707241080092" duration="1770000" />
       <workItem from="1707242875931" duration="997000" />
       <workItem from="1707243896204" duration="253000" />
-    </task>
-    <task id="LOCAL-00018" summary="Place Order Refactored">
-      <option name="closed" value="true" />
-      <created>1705927667314</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1705927667314</updated>
+      <workItem from="1707267974253" duration="710000" />
+      <workItem from="1707268691128" duration="467000" />
     </task>
     <task id="LOCAL-00019" summary="Place Order Refactored 2">
       <option name="closed" value="true" />
@@ -727,14 +722,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707243868356</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Error Alert Refactored 3">
+      <option name="closed" value="true" />
+      <created>1707268678546</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1707268678547</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Customer Clear Input Field Updated" />
     <MESSAGE value="Customer Disable/Enable Buttons Updated" />
     <MESSAGE value="Customer Validations Updated" />
     <MESSAGE value="Customer Disable TAB" />
@@ -759,6 +761,7 @@
     <MESSAGE value="CustomerController.js Refactored 2" />
     <MESSAGE value="CustomerController.js Refactored 3" />
     <MESSAGE value="Alert Refactored 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alert Refactored 3" />
+    <MESSAGE value="Error Alert Refactored 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Error Alert Refactored 3" />
   </component>
 </project>

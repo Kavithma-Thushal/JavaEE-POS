@@ -23,7 +23,6 @@ $("#btnSaveCustomer").click(function () {
         url: baseUrl + "customer",
         method: "POST",
         data: formData,
-        dataType: "json",
         success: function (resp) {
             successAlert("Customer", resp.message);
             loadAllCustomers();
