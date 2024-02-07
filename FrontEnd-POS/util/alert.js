@@ -24,7 +24,7 @@ function errorAlert(value, value2) {
     })
 }
 
-function emptyMassage(value) {
+function emptyMessage(value) {
     let timerInterval;
     Swal.fire({
         title: value + ' Empty Result...!',
@@ -46,38 +46,4 @@ function emptyMassage(value) {
             console.log('I was closed by the timer...!')
         }
     })
-}
-
-function yesNoAlertIDelete(value) {
-    Swal.fire({
-        title: 'Do you want to Delete the \n' + value + ' ?',
-        showDenyButton: true,
-        showCancelButton: true,
-        confirmButtonText: 'Delete',
-        denyButtonText: `Don't Delete`,
-    }).then((result) => {
-        if (result.isConfirmed) {
-            if (deleteItems(value)) {
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'Delete Successfully',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
-                $(this).remove();
-                loadAllItems();
-            } else {
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'error',
-                    title: 'Delete Unsuccessfully',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
-            }
-        } else if (result.isDenied) {
-            Swal.fire(value + ' Delete Canceled!', '', 'info')
-        }
-    });
 }

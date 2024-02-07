@@ -63,13 +63,13 @@ $("#btnUpdateCustomer").click(function () {
  * Delete Customer Button
  **/
 $("#btnDeleteCustomer").click(function () {
-    let cusId = $("#txtCusId").val();
+    let deleteCusId = $("#txtCusId").val();
 
     $.ajax({
         url: baseUrl + "customer",
         method: "DELETE",
         contentType: "application/json",
-        data: JSON.stringify({id: cusId}),
+        data: JSON.stringify({id: deleteCusId}),
         success: function (res) {
             successAlert("Customer", res.message);
             loadAllCustomers();
@@ -109,7 +109,7 @@ function searchCustomer() {
             tableListener();
         },
         error: function (error) {
-            emptyMassage(JSON.parse(error.responseText).message);
+            emptyMessage(JSON.parse(error.responseText).message);
             loadAllCustomers();
         }
     });
