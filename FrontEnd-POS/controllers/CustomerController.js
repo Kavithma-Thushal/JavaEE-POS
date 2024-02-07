@@ -203,7 +203,7 @@ function tableListener() {
 function generateCustomerId() {
     $("#txtCusId").val("C00-001");
     $.ajax({
-        url: baseUrl + "customer?option=CustomerIdGenerate",
+        url: baseUrl + "customer?option=generateCusId",
         method: "GET",
         contentType: "application/json",
         dataType: "json",

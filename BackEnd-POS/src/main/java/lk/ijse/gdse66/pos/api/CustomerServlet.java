@@ -214,20 +214,21 @@ public class CustomerServlet extends HttpServlet {
                 }
                 break;
 
-            case "CustomerIdGenerate":
+            case "generateCusId":
                 try (Connection connection = pool.getConnection()) {
-                    String newCustomerId = customerBO.generateNewCustomerID(connection);
-                    JsonObjectBuilder successResponse = Json.createObjectBuilder();
-                    successResponse.add("id", newCustomerId);
-                    resp.getWriter().print(successResponse.build());
+                    String cusId = customerBO.generateNewCustomerID(connection);
+
+                    JsonObjectBuilder response = Json.createObjectBuilder();
+                    response.add("id", cusId);
+                    resp.getWriter().print(response.build());
 
                 } catch (SQLException | ClassNotFoundException e) {
                     e.printStackTrace();
-                    JsonObjectBuilder errorResponse = Json.createObjectBuilder();
-                    errorResponse.add("status", "Error");
-                    errorResponse.add("message", e.getMessage());
+                    JsonObjectBuilder response = Json.createObjectBuilder();
+                    response.add("status", "Error 500");
+                    response.add("message", e.getMessage());
                     resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                    resp.getWriter().print(errorResponse.build());
+                    resp.getWriter().print(response.build());
                 }
                 break;
         }
