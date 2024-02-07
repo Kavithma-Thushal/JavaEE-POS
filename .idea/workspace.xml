@@ -9,8 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="dataType:'json'Added">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Comments Added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/CustomerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -343,14 +345,11 @@
       <workItem from="1707284319896" duration="3245000" />
       <workItem from="1707287585274" duration="1350000" />
       <workItem from="1707288945783" duration="475000" />
-    </task>
-    <task id="LOCAL-00033" summary="Styles Refactored 2">
-      <option name="closed" value="true" />
-      <created>1706586328299</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1706586328299</updated>
+      <workItem from="1707289425842" duration="941000" />
+      <workItem from="1707290378552" duration="77000" />
+      <workItem from="1707290458493" duration="15000" />
+      <workItem from="1707291834658" duration="717000" />
+      <workItem from="1707292560418" duration="1069000" />
     </task>
     <task id="LOCAL-00034" summary="Bootstrap Refactored 2">
       <option name="closed" value="true" />
@@ -736,14 +735,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707289248164</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Comments Added">
+      <option name="closed" value="true" />
+      <created>1707290368287</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1707290368287</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Customer SearchById Refactored" />
     <MESSAGE value="Load All Customers Refactored" />
     <MESSAGE value="Clear All Customers Refactored" />
     <MESSAGE value="Table Listener Added" />
@@ -768,6 +774,7 @@
     <MESSAGE value="Customer Search Modified 4" />
     <MESSAGE value="Customer Search Modified 5" />
     <MESSAGE value="dataType:'json'Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="dataType:'json'Added" />
+    <MESSAGE value="Comments Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comments Added" />
   </component>
 </project>

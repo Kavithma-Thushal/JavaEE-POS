@@ -184,33 +184,33 @@ public class CustomerServlet extends HttpServlet {
                 }
                 break;
 
-            case "loadAllCustomer":
+            case "loadAllCustomers":
                 try (Connection connection = pool.getConnection()) {
-                    JsonArrayBuilder jsonAllCustomersArray = Json.createArrayBuilder();
-                    ArrayList<CustomerDTO> arrayList = customerBO.getAllCustomers(connection);
+                    ArrayList<CustomerDTO> customerArrayList = customerBO.getAllCustomers(connection);
+                    JsonArrayBuilder jsonAllCustomersArrayBuilder = Json.createArrayBuilder();
 
-                    for (CustomerDTO customerDTO : arrayList) {
-                        JsonObjectBuilder successResponse = Json.createObjectBuilder();
-                        successResponse.add("id", customerDTO.getId());
-                        successResponse.add("name", customerDTO.getName());
-                        successResponse.add("address", customerDTO.getAddress());
-                        successResponse.add("salary", customerDTO.getSalary());
-                        jsonAllCustomersArray.add(successResponse.build());
+                    JsonObjectBuilder response = Json.createObjectBuilder();
+                    for (CustomerDTO customerDTO : customerArrayList) {
+                        response.add("id", customerDTO.getId());
+                        response.add("name", customerDTO.getName());
+                        response.add("address", customerDTO.getAddress());
+                        response.add("salary", customerDTO.getSalary());
+                        jsonAllCustomersArrayBuilder.add(response.build());
                     }
 
-                    JsonObjectBuilder successResponse = Json.createObjectBuilder();
-                    successResponse.add("status", "200 OK");
-                    successResponse.add("message", "Loaded Successfully...!");
-                    successResponse.add("data", jsonAllCustomersArray.build());
-                    resp.getWriter().print(successResponse.build());
+                    response.add("status", "200 OK");
+                    response.add("message", "Loaded Successfully...!");
+                    response.add("data", jsonAllCustomersArrayBuilder.build());
+                    resp.setStatus(HttpServletResponse.SC_OK);
+                    resp.getWriter().print(response.build());
 
                 } catch (SQLException | ClassNotFoundException e) {
                     e.printStackTrace();
-                    JsonObjectBuilder errorResponse = Json.createObjectBuilder();
-                    errorResponse.add("status", "Error");
-                    errorResponse.add("message", e.getMessage());
+                    JsonObjectBuilder response = Json.createObjectBuilder();
+                    response.add("status", "Error 500");
+                    response.add("message", e.getMessage());
                     resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                    resp.getWriter().print(errorResponse.build());
+                    resp.getWriter().print(response.build());
                 }
                 break;
 

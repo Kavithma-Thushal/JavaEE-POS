@@ -103,6 +103,7 @@ function searchCustomer() {
     $.ajax({
         url: baseUrl + "customer?id=" + searchCusId + "&option=searchCusId",
         method: "GET",
+        contentType: "application/json",
         dataType:'json',
         success: function (resp) {
             $("#customerTable").empty();
@@ -129,14 +130,14 @@ $('#btnGetAllCustomers').click(function () {
  **/
 function loadAllCustomers() {
     $.ajax({
-        url: baseUrl + "customer?option=loadAllCustomer",
+        url: baseUrl + "customer?option=loadAllCustomers",
         method: "GET",
         contentType: "application/json",
         dataType: "json",
-        success: function (res) {
+        success: function (resp) {
             $("#customerTable").empty();
 
-            for (let i of res.data) {
+            for (let i of resp.data) {
                 let id = i.id;
                 let name = i.name;
                 let address = i.address;
@@ -146,8 +147,8 @@ function loadAllCustomers() {
                 $("#customerTable").append(row);
             }
             tableListener();
-            generateCustomerID();
             clearInputFields();
+            generateCustomerId();
         },
         error: function (error) {
             console.log("Load All Error : " + error);
@@ -199,7 +200,7 @@ function tableListener() {
 /**
  * Generate CustomerId Method
  **/
-function generateCustomerID() {
+function generateCustomerId() {
     $("#txtCusId").val("C00-001");
     $.ajax({
         url: baseUrl + "customer?option=CustomerIdGenerate",
