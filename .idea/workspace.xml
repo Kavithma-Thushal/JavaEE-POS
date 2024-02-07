@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Search Modified 4">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Search Modified 5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -341,14 +341,7 @@
       <workItem from="1707273812429" duration="45000" />
       <workItem from="1707273906772" duration="2466000" />
       <workItem from="1707284319896" duration="3245000" />
-    </task>
-    <task id="LOCAL-00031" summary="Alert Refactored">
-      <option name="closed" value="true" />
-      <created>1706580106209</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1706580106209</updated>
+      <workItem from="1707287585274" duration="1350000" />
     </task>
     <task id="LOCAL-00032" summary="Styles Refactored">
       <option name="closed" value="true" />
@@ -734,14 +727,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707286792347</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Customer Search Modified 5">
+      <option name="closed" value="true" />
+      <created>1707287751399</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1707287751399</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ID's Updated" />
     <MESSAGE value="Customer Saved, Updated, Deleted Modified" />
     <MESSAGE value="Customer SearchById Refactored" />
     <MESSAGE value="Load All Customers Refactored" />
@@ -766,6 +766,7 @@
     <MESSAGE value="Customer Search Modified 2" />
     <MESSAGE value="Customer Search Modified 3" />
     <MESSAGE value="Customer Search Modified 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customer Search Modified 4" />
+    <MESSAGE value="Customer Search Modified 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customer Search Modified 5" />
   </component>
 </project>

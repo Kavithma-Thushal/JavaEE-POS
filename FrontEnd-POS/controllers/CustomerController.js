@@ -18,6 +18,7 @@ $("#btnSaveCustomer").click(function () {
         url: baseUrl + "customer",
         method: "POST",
         data: formData,
+        dataType:'json',
         success: function (resp) {
             successAlert("Customer", resp.message);
             loadAllCustomers();
@@ -49,6 +50,7 @@ $("#btnUpdateCustomer").click(function () {
         method: "PUT",
         contentType: "application/json",
         data: JSON.stringify(customerObj),
+        dataType:'json',
         success: function (resp) {
             successAlert("Customer", resp.message);
             loadAllCustomers();
@@ -70,6 +72,7 @@ $("#btnDeleteCustomer").click(function () {
         method: "DELETE",
         contentType: "application/json",
         data: JSON.stringify({id: deleteCusId}),
+        dataType:'json',
         success: function (resp) {
             successAlert("Customer", resp.message);
             loadAllCustomers();
@@ -100,6 +103,7 @@ function searchCustomer() {
     $.ajax({
         url: baseUrl + "customer?id=" + searchCusId + "&option=searchCusId",
         method: "GET",
+        dataType:'json',
         success: function (resp) {
             $("#customerTable").empty();
             let row = "<tr><td>" + resp.id + "</td><td>" + resp.name + "</td><td>" + resp.address + "</td><td>" + resp.salary + "</td></tr>";
