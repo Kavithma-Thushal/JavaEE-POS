@@ -10,7 +10,7 @@ disableButtons();
 loadAllCustomers();
 
 /**
- * Save Customer
+ * Save Customer Button
  **/
 $("#btnSaveCustomer").click(function () {
     let formData = $("#customerForm").serialize();
@@ -29,7 +29,7 @@ $("#btnSaveCustomer").click(function () {
 });
 
 /**
- * Update Customer
+ * Update Customer Button
  **/
 $("#btnUpdateCustomer").click(function () {
     let cusId = $("#txtCusId").val();
@@ -61,7 +61,7 @@ $("#btnUpdateCustomer").click(function () {
 });
 
 /**
- * Delete Customer
+ * Delete Customer Button
  **/
 $("#btnDeleteCustomer").click(function () {
     let cusId = $("#txtCusId").val();
@@ -82,7 +82,7 @@ $("#btnDeleteCustomer").click(function () {
 });
 
 /**
- * Search Customer
+ * Search Customer Button
  **/
 $("#btnSearchCustomer").click(function () {
     searchCustomer();
@@ -117,14 +117,14 @@ function searchCustomer() {
 }
 
 /**
- * Get All Customers
+ * Get All Customers Button
  **/
 $('#btnGetAllCustomers').click(function () {
     loadAllCustomers();
 });
 
 /**
- * Load All Customers
+ * Load All Customers Method
  **/
 function loadAllCustomers() {
     $.ajax({
@@ -155,7 +155,7 @@ function loadAllCustomers() {
 }
 
 /**
- * Clear All Customers
+ * Clear All Customers Button
  **/
 $("#btnClearAllCustomer").click(function () {
     clearInputFields();
@@ -163,7 +163,7 @@ $("#btnClearAllCustomer").click(function () {
 });
 
 /**
- * Clear Input Fields
+ * Clear Input Fields Method
  **/
 function clearInputFields() {
     $("#txtCusName").focus();
@@ -175,7 +175,7 @@ function clearInputFields() {
 }
 
 /**
- * Table Listener
+ * Table Listener Method
  **/
 function tableListener() {
     $("#customerTable>tr").on("click", function () {
@@ -196,7 +196,7 @@ function tableListener() {
 }
 
 /**
- * Generate Customer Id
+ * Generate CustomerId Method
  **/
 function generateCustomerID() {
     $("#txtCusId").val("C00-001");
@@ -224,7 +224,7 @@ function generateCustomerID() {
 }
 
 /**
- * Disable Buttons
+ * Disable Buttons Method
  **/
 function disableButtons() {
     $("#btnSaveCustomer").attr('disabled', true);
