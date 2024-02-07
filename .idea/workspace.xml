@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Focus Added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Modified" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -365,14 +363,7 @@
       <workItem from="1707304194882" duration="164000" />
       <workItem from="1707304362600" duration="901000" />
       <workItem from="1707305275120" duration="544000" />
-    </task>
-    <task id="LOCAL-00048" summary="Form Clear Button Added">
-      <option name="closed" value="true" />
-      <created>1706636308870</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1706636308870</updated>
+      <workItem from="1707305830443" duration="635000" />
     </task>
     <task id="LOCAL-00049" summary="Navigation Refactored">
       <option name="closed" value="true" />
@@ -758,7 +749,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707305265122</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="Modified">
+      <option name="closed" value="true" />
+      <created>1707306460934</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1707306460934</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -766,7 +765,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactored" />
-    <MESSAGE value="Modified" />
     <MESSAGE value="Customer Update Modified" />
     <MESSAGE value="Customer Delete Modified" />
     <MESSAGE value="Customer Search Modified" />
@@ -790,6 +788,7 @@
     <MESSAGE value="Customer Validations Refactored 3" />
     <MESSAGE value="Customer Validations Refactored 4" />
     <MESSAGE value="Focus Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Focus Added" />
+    <MESSAGE value="Modified" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified" />
   </component>
 </project>

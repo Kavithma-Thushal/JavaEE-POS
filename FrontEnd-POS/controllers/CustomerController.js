@@ -108,6 +108,7 @@ function searchCustomer() {
             $("#customerTable").empty();
             let row = "<tr><td>" + resp.id + "</td><td>" + resp.name + "</td><td>" + resp.address + "</td><td>" + resp.salary + "</td></tr>";
             $("#customerTable").append(row);
+            clearInputFields();
             tableListener();
         },
         error: function (error) {
@@ -146,6 +147,7 @@ function loadAllCustomers() {
                 $("#customerTable").append(row);
             }
             clearInputFields();
+            checkValidity(customerValidations);
             tableListener();
             generateCustomerId();
         },
@@ -224,7 +226,6 @@ function clearInputFields() {
     $("#btnSaveCustomer").attr('disabled', true);
     $("#btnUpdateCustomer").attr('disabled', true);
     $("#btnDeleteCustomer").attr('disabled', true);
-    checkValidity(customerValidations);
 }
 
 /**
