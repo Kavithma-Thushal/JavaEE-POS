@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="CustomerController.js Modified 2">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Validations Refactored">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" afterDir="false" />
     </list>
@@ -359,15 +359,8 @@
       <workItem from="1707299149945" duration="205000" />
       <workItem from="1707299360944" duration="222000" />
       <workItem from="1707299588777" duration="685000" />
-      <workItem from="1707300281725" duration="394000" />
-    </task>
-    <task id="LOCAL-00043" summary="Customer Disable/Enable Buttons Updated">
-      <option name="closed" value="true" />
-      <created>1706610106744</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1706610106744</updated>
+      <workItem from="1707300281725" duration="487000" />
+      <workItem from="1707300778141" duration="731000" />
     </task>
     <task id="LOCAL-00044" summary="Customer Validations Updated">
       <option name="closed" value="true" />
@@ -753,14 +746,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707300270644</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Customer Validations Refactored">
+      <option name="closed" value="true" />
+      <created>1707300768448</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1707300768448</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CustomerController.js Refactored" />
     <MESSAGE value="CustomerController.js Refactored 2" />
     <MESSAGE value="CustomerController.js Refactored 3" />
     <MESSAGE value="Alert Refactored 3" />
@@ -785,6 +785,7 @@
     <MESSAGE value="Customer Validation Refactored 2" />
     <MESSAGE value="CustomerController.js Modified" />
     <MESSAGE value="CustomerController.js Modified 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="CustomerController.js Modified 2" />
+    <MESSAGE value="Customer Validations Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customer Validations Refactored" />
   </component>
 </project>

@@ -229,31 +229,31 @@ function clearInputFields() {
 /**
  * Customer Validations
  **/
-let regExCusId = /^(C00-)[0-9]{3,4}$/;
+let regExCusId = /^(C00-)[0-9]{3}$/;
 let regExCusName = /^[A-z]{3,20}$/;
-let regExCusAddress = /^[A-z0-9/]{4,30}$/;
-let regExCusSalary = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+let regExCusAddress = /^[A-Za-z0-9/, -]{4,30}$/;
+let regExCusSalary = /^[0-9]{1,}[.]?[0-9]{2}$/;
 
 let customerValidations = [];
 customerValidations.push({
     reg: regExCusId,
     field: $('#txtCusId'),
-    error: 'Customer Id Pattern is Wrong : C00-001'
+    error: 'Customer Id must match the pattern C00-001'
 });
 customerValidations.push({
     reg: regExCusName,
     field: $('#txtCusName'),
-    error: 'Customer Name Pattern is Wrong : A-z 3-20'
+    error: 'Customer Name must be between 3-20 characters'
 });
 customerValidations.push({
     reg: regExCusAddress,
     field: $('#txtCusAddress'),
-    error: 'Customer Address Pattern is Wrong : A-z 0-9 ,/'
+    error: 'Customer Address must be between 4-30 characters'
 });
 customerValidations.push({
     reg: regExCusSalary,
     field: $('#txtCusSalary'),
-    error: 'Customer Salary Pattern is Wrong : 0-9{1,}.0-9{1,2}'
+    error: 'Customer salary  must have 3 digits with 2 decimal places'
 });
 
 /**
