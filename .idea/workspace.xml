@@ -9,7 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Search Modified" />
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Search Modified 3">
+      <change beforePath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/CustomerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -338,22 +341,7 @@
       <workItem from="1707269923612" duration="3863000" />
       <workItem from="1707273812429" duration="45000" />
       <workItem from="1707273906772" duration="2466000" />
-    </task>
-    <task id="LOCAL-00028" summary="Item Buttons Refactored">
-      <option name="closed" value="true" />
-      <created>1705941200307</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1705941200307</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Order Details Refactored">
-      <option name="closed" value="true" />
-      <created>1705942012943</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1705942012943</updated>
+      <workItem from="1707284319896" duration="2251000" />
     </task>
     <task id="LOCAL-00030" summary="Order Details Refactored">
       <option name="closed" value="true" />
@@ -731,15 +719,29 @@
       <option name="project" value="LOCAL" />
       <updated>1707276699361</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Customer Search Modified 2">
+      <option name="closed" value="true" />
+      <created>1707285028449</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1707285028449</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Customer Search Modified 3">
+      <option name="closed" value="true" />
+      <created>1707285696886</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1707285696886</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Navigation Refactored" />
-    <MESSAGE value="POM Updated" />
     <MESSAGE value="Customer, Item, Orders Count Updated" />
     <MESSAGE value="ID's Updated" />
     <MESSAGE value="Customer Saved, Updated, Deleted Modified" />
@@ -763,6 +765,8 @@
     <MESSAGE value="Customer Update Modified" />
     <MESSAGE value="Customer Delete Modified" />
     <MESSAGE value="Customer Search Modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customer Search Modified" />
+    <MESSAGE value="Customer Search Modified 2" />
+    <MESSAGE value="Customer Search Modified 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customer Search Modified 3" />
   </component>
 </project>

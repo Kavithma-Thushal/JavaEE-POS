@@ -137,27 +137,12 @@ public class CustomerServlet extends HttpServlet {
         String option = req.getParameter("option");
 
         switch (option) {
-            case "searchCusId":
+            case "CustomerCount":
                 try (Connection connection = pool.getConnection()) {
-                    ArrayList<CustomerDTO> arrayList = customerBO.customerSearchId(id, connection);
-
-                    if (!arrayList.isEmpty()) {
-                        for (CustomerDTO customerDTO : arrayList) {
-                            JsonObjectBuilder successResponse = Json.createObjectBuilder();
-                            successResponse.add("id", customerDTO.getId());
-                            successResponse.add("name", customerDTO.getName());
-                            successResponse.add("address", customerDTO.getAddress());
-                            successResponse.add("salary", customerDTO.getSalary());
-                            resp.getWriter().print(successResponse.build());
-                        }
-
-                    } else {
-                        JsonObjectBuilder errorResponse = Json.createObjectBuilder();
-                        errorResponse.add("status", "Error");
-                        errorResponse.add("message", "Customer");
-                        resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                        resp.getWriter().print(errorResponse.build());
-                    }
+                    int count = queryBO.getCustomer(connection);
+                    JsonObjectBuilder successResponse = Json.createObjectBuilder();
+                    successResponse.add("count", count);
+                    resp.getWriter().print(successResponse.build());
 
                 } catch (SQLException | ClassNotFoundException e) {
                     e.printStackTrace();
@@ -166,6 +151,36 @@ public class CustomerServlet extends HttpServlet {
                     errorResponse.add("message", e.getMessage());
                     resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
                     resp.getWriter().print(errorResponse.build());
+                }
+                break;
+
+            case "searchCusId":
+                try (Connection connection = pool.getConnection()) {
+                    ArrayList<CustomerDTO> customerArrayList = customerBO.customerSearchId(id, connection);
+
+                    JsonObjectBuilder response = Json.createObjectBuilder();
+                    if (!customerArrayList.isEmpty()) {
+                        for (CustomerDTO customerDetails : customerArrayList) {
+                            response.add("id", customerDetails.getId());
+                            response.add("name", customerDetails.getName());
+                            response.add("address", customerDetails.getAddress());
+                            response.add("salary", customerDetails.getSalary());
+                        }
+
+                    } else {
+                        response.add("status", "Error 500");
+                        response.add("message", "Failed to search the customer");
+                        resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                    }
+                    resp.getWriter().print(response.build());
+
+                } catch (SQLException | ClassNotFoundException e) {
+                    e.printStackTrace();
+                    JsonObjectBuilder response = Json.createObjectBuilder();
+                    response.add("status", "Error 500");
+                    response.add("message", e.getMessage());
+                    resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                    resp.getWriter().print(response.build());
                 }
                 break;
 
@@ -204,23 +219,6 @@ public class CustomerServlet extends HttpServlet {
                     String newCustomerId = customerBO.generateNewCustomerID(connection);
                     JsonObjectBuilder successResponse = Json.createObjectBuilder();
                     successResponse.add("id", newCustomerId);
-                    resp.getWriter().print(successResponse.build());
-
-                } catch (SQLException | ClassNotFoundException e) {
-                    e.printStackTrace();
-                    JsonObjectBuilder errorResponse = Json.createObjectBuilder();
-                    errorResponse.add("status", "Error");
-                    errorResponse.add("message", e.getMessage());
-                    resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                    resp.getWriter().print(errorResponse.build());
-                }
-                break;
-
-            case "CustomerCount":
-                try (Connection connection = pool.getConnection()) {
-                    int count = queryBO.getCustomer(connection);
-                    JsonObjectBuilder successResponse = Json.createObjectBuilder();
-                    successResponse.add("count", count);
                     resp.getWriter().print(successResponse.build());
 
                 } catch (SQLException | ClassNotFoundException e) {

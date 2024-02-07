@@ -70,8 +70,8 @@ $("#btnDeleteCustomer").click(function () {
         method: "DELETE",
         contentType: "application/json",
         data: JSON.stringify({id: deleteCusId}),
-        success: function (res) {
-            successAlert("Customer", res.message);
+        success: function (resp) {
+            successAlert("Customer", resp.message);
             loadAllCustomers();
         },
         error: function (error) {
@@ -101,7 +101,6 @@ function searchCustomer() {
         url: baseUrl + "customer?id=" + searchCusId + "&option=searchCusId",
         method: "GET",
         contentType: "application/json",
-        dataType: "json",
         success: function (resp) {
             $("#customerTable").empty();
             let row = "<tr><td>" + resp.id + "</td><td>" + resp.name + "</td><td>" + resp.address + "</td><td>" + resp.salary + "</td></tr>";
