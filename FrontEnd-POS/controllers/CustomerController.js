@@ -257,20 +257,23 @@ customerValidations.push({
 });
 
 /**
- * Disable TAB-KEY
+ * Check Customer for Validations
  **/
-$("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keydown', function (event) {
-    if (event.key === "Tab") {
-        event.preventDefault();
-    }
-});
-
 $("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keyup', function (event) {
     checkValidity(customerValidations);
 });
 
 $("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('blur', function (event) {
     checkValidity(customerValidations);
+});
+
+/**
+ * Disable TAB-KEY
+ **/
+$("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keydown', function (event) {
+    if (event.key === "Tab") {
+        event.preventDefault();
+    }
 });
 
 /**
