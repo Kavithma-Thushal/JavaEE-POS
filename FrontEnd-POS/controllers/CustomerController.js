@@ -37,7 +37,7 @@ $("#btnUpdateCustomer").click(function () {
     let cusAddress = $("#txtCusAddress").val();
     let cusSalary = $("#txtCusSalary").val();
 
-    const customerObj = {
+    let customerObj = {
         id: cusId,
         name: cusName,
         address: cusAddress,
@@ -49,9 +49,8 @@ $("#btnUpdateCustomer").click(function () {
         method: "PUT",
         contentType: "application/json",
         data: JSON.stringify(customerObj),
-        dataType: "json",
-        success: function (res) {
-            successAlert("Customer", res.message);
+        success: function (resp) {
+            successAlert("Customer", resp.message);
             loadAllCustomers();
         },
         error: function (error) {
