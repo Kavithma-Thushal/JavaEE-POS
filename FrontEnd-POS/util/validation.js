@@ -11,7 +11,7 @@ function checkValidity(object) {
             textSuccess(validation.field, "");
         } else {
             errorCount = errorCount + 1;
-            setTextError(validation.field, validation.error);
+            textError(validation.field, validation.error);
         }
     }
     setButtonState(errorCount);
@@ -22,20 +22,20 @@ function check(regex, txtField) {
     return regex.test(inputValue) ? true : false;
 }
 
-function setTextError(txtField, error) {
-    if (txtField.val().length <= 0) {
-        defaultText(txtField, "");
-    } else {
-        txtField.css('border', '2px solid red');
-        txtField.parent().children('span').text(error);
-    }
-}
-
 function textSuccess(txtField, error) {
     if (txtField.val().length <= 0) {
         defaultText(txtField, "");
     } else {
         txtField.css('border', '2px solid green');
+        txtField.parent().children('span').text(error);
+    }
+}
+
+function textError(txtField, error) {
+    if (txtField.val().length <= 0) {
+        defaultText(txtField, "");
+    } else {
+        txtField.css('border', '2px solid red');
         txtField.parent().children('span').text(error);
     }
 }
@@ -92,4 +92,49 @@ customerValidations.push({
     reg: regExSalary,
     field: $('#txtCusSalary'),
     error: 'Customer Salary Pattern is Wrong : 0-9{1,}.0-9{1,2}'
+});
+
+/**
+ * Disable TAB-KEY
+ **/
+$("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keydown', function (event) {
+    if (event.key === "Tab") {
+        event.preventDefault();
+    }
+});
+
+$("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keyup', function (event) {
+    checkValidity(customerValidations);
+});
+
+$("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('blur', function (event) {
+    checkValidity(customerValidations);
+});
+
+/**
+ * Enable ENTER-KEY
+ **/
+$("#txtCusId").on('keydown', function (event) {
+    if (event.key === "Enter" && check(regExCusID, $("#txtCusId"))) {
+        $("#txtCusName").focus();
+    } else {
+        focusText($("#txtCusId"));
+    }
+});
+$("#txtCusName").on('keydown', function (event) {
+    if (event.key === "Enter" && check(regExCusName, $("#txtCusName"))) {
+        focusText($("#txtCusAddress"));
+    }
+});
+$("#txtCusAddress").on('keydown', function (event) {
+    if (event.key === "Enter" && check(regExCusAddress, $("#txtCusAddress"))) {
+        focusText($("#txtCusSalary"));
+    }
+});
+$("#txtCusSalary").on('keydown', function (event) {
+    if (event.key === "Enter" && check(regExSalary, $("#txtCusSalary"))) {
+        if (event.which === 13) {
+            $('#btnSaveCustomer').focus();
+        }
+    }
 });
