@@ -93,6 +93,9 @@ $("#txtSearchCusId").on("keypress", function (event) {
     }
 });
 
+/**
+ * Search Customer Method
+ **/
 function searchCustomer() {
     let searchId = $("#txtSearchCusId").val();
     $.ajax({
@@ -193,7 +196,7 @@ function tableListener() {
 }
 
 /**
- * Generate Customer ID
+ * Generate Customer Id
  **/
 function generateCustomerID() {
     $("#txtCusId").val("C00-001");
