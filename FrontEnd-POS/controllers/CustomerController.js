@@ -69,7 +69,7 @@ $("#btnDeleteCustomer").click(function () {
         url: baseUrl + "customer",
         method: "DELETE",
         contentType: "application/json",
-        data:JSON.stringify({id:cusId}),
+        data: JSON.stringify({id: cusId}),
         success: function (res) {
             successAlert("Customer", res.message);
             loadAllCustomers();
@@ -87,7 +87,7 @@ $("#btnSearchCustomer").click(function () {
     searchCustomer();
 });
 $("#txtSearchCusId").on("keypress", function (event) {
-    if (event.which === 13) {
+    if (event.key === "Enter") {
         searchCustomer();
     }
 });
