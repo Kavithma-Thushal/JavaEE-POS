@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Update Modified">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Delete Modified">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/CustomerServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" afterDir="false" />
@@ -339,15 +339,7 @@
       <workItem from="1707267974253" duration="710000" />
       <workItem from="1707268691128" duration="675000" />
       <workItem from="1707269374502" duration="543000" />
-      <workItem from="1707269923612" duration="2113000" />
-    </task>
-    <task id="LOCAL-00025" summary="Table Cursor Added">
-      <option name="closed" value="true" />
-      <created>1705938119324</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1705938119324</updated>
+      <workItem from="1707269923612" duration="3719000" />
     </task>
     <task id="LOCAL-00026" summary="Customer Buttons Refactored">
       <option name="closed" value="true" />
@@ -733,14 +725,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707271376482</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Customer Delete Modified">
+      <option name="closed" value="true" />
+      <created>1707272136847</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1707272136847</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Comments Modified" />
     <MESSAGE value="Form Clear Button Added" />
     <MESSAGE value="Navigation Refactored" />
     <MESSAGE value="POM Updated" />
@@ -765,6 +764,7 @@
     <MESSAGE value="CustomerController.js Modified" />
     <MESSAGE value="Modified" />
     <MESSAGE value="Customer Update Modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customer Update Modified" />
+    <MESSAGE value="Customer Delete Modified" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customer Delete Modified" />
   </component>
 </project>

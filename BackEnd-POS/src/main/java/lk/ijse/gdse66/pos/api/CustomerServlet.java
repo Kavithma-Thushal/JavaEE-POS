@@ -102,7 +102,9 @@ public class CustomerServlet extends HttpServlet {
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String id = req.getParameter("id");
+        JsonReader jsonReader = Json.createReader(req.getReader());
+        JsonObject jsonObject = jsonReader.readObject();
+        String id = jsonObject.getString("id");
 
         try (Connection connection = pool.getConnection()) {
             boolean customerDeleted = customerBO.deleteCustomer(id, connection);
