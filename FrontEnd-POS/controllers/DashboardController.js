@@ -8,7 +8,7 @@ let baseUrl = "http://localhost:8080/javaee_pos/";
 
 $("#txtCustomerCount").val("00");
 $.ajax({
-    url: baseUrl + "customer?option=CustomerCount",
+    url: baseUrl + "customer?option=customerCount",
     method: "GET",
     contentType: "application/json",
     dataType: "json",

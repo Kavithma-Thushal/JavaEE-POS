@@ -137,20 +137,21 @@ public class CustomerServlet extends HttpServlet {
         String option = req.getParameter("option");
 
         switch (option) {
-            case "CustomerCount":
+            case "customerCount":
                 try (Connection connection = pool.getConnection()) {
                     int count = queryBO.getCustomer(connection);
-                    JsonObjectBuilder successResponse = Json.createObjectBuilder();
-                    successResponse.add("count", count);
-                    resp.getWriter().print(successResponse.build());
+
+                    JsonObjectBuilder response = Json.createObjectBuilder();
+                    response.add("count", count);
+                    resp.getWriter().print(response.build());
 
                 } catch (SQLException | ClassNotFoundException e) {
                     e.printStackTrace();
-                    JsonObjectBuilder errorResponse = Json.createObjectBuilder();
-                    errorResponse.add("status", "Error");
-                    errorResponse.add("message", e.getMessage());
+                    JsonObjectBuilder response = Json.createObjectBuilder();
+                    response.add("status", "Error 500");
+                    response.add("message", e.getMessage());
                     resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                    resp.getWriter().print(errorResponse.build());
+                    resp.getWriter().print(response.build());
                 }
                 break;
 
