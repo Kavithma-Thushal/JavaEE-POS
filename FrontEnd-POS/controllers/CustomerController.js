@@ -173,7 +173,6 @@ function clearInputFields() {
     $('#txtCusAddress').val("");
     $('#txtCusSalary').val("");
     $('#txtSearchCusId').val("");
-    checkValidity(customerValidations);
 }
 
 /**
