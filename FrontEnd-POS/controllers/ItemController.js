@@ -29,7 +29,7 @@ $("#btnAddItem").click(function () {
             loadAllItems();
         },
         error: function (error) {
-            unSuccessAlert("item", JSON.parse(error.responseText).message);
+            errorAlert("item", JSON.parse(error.responseText).message);
         }
     });
 });
@@ -94,7 +94,7 @@ $("#btnUpdateItem").click(function () {
         },
         error: function (error) {
             let message = JSON.parse(error.responseText).message;
-            unSuccessAlert("Item", message);
+            errorAlert("Item", message);
         }
     });
 });
@@ -126,7 +126,7 @@ $("#btnDeleteItem").click(function () {
         },
         error: function (error) {
             let message = JSON.parse(error.responseText).message;
-            unSuccessAlert("Item", message);
+            errorAlert("Item", message);
         }
     });
 });

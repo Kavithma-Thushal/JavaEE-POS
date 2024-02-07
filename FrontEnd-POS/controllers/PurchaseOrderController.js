@@ -348,7 +348,7 @@ $("#btnPurchase").click(function () {
         },
         error: function (error) {
             let message = JSON.parse(error.responseText).message;
-            unSuccessAlert("Order", message);
+            errorAlert("Order", message);
         }
     });
 

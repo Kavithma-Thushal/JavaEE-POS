@@ -9,9 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="CustomerController.js Refactored 2">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Alert Refactored 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/CustomerServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +26,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Thushal2001"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b31f42cb-9c17-4da4-a072-ddabb50a2d9c" />
+        <option name="url" value="https://github.com/Thushal2001/JavaEE-POS.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -319,23 +332,8 @@
       <workItem from="1707238262183" duration="843000" />
       <workItem from="1707240098443" duration="968000" />
       <workItem from="1707241080092" duration="1770000" />
-      <workItem from="1707242875931" duration="611000" />
-    </task>
-    <task id="LOCAL-00016" summary="Navi Bar Refactored">
-      <option name="closed" value="true" />
-      <created>1705922722358</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1705922722358</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Item Management Refactored">
-      <option name="closed" value="true" />
-      <created>1705923924418</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1705923924418</updated>
+      <workItem from="1707242875931" duration="997000" />
+      <workItem from="1707243896204" duration="253000" />
     </task>
     <task id="LOCAL-00018" summary="Place Order Refactored">
       <option name="closed" value="true" />
@@ -713,15 +711,29 @@
       <option name="project" value="LOCAL" />
       <updated>1707242851724</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="CustomerController.js Refactored 3">
+      <option name="closed" value="true" />
+      <created>1707243604108</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1707243604108</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Alert Refactored 3">
+      <option name="closed" value="true" />
+      <created>1707243868355</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1707243868356</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Customer Get All Updated" />
-    <MESSAGE value="Customer Table Listener Updated" />
     <MESSAGE value="Customer Clear Input Field Updated" />
     <MESSAGE value="Customer Disable/Enable Buttons Updated" />
     <MESSAGE value="Customer Validations Updated" />
@@ -745,6 +757,8 @@
     <MESSAGE value="All Controller.js modified" />
     <MESSAGE value="CustomerController.js Refactored" />
     <MESSAGE value="CustomerController.js Refactored 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="CustomerController.js Refactored 2" />
+    <MESSAGE value="CustomerController.js Refactored 3" />
+    <MESSAGE value="Alert Refactored 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alert Refactored 3" />
   </component>
 </project>

@@ -29,7 +29,7 @@ $("#btnSaveCustomer").click(function () {
             loadAllCustomers();
         },
         error: function (error) {
-            unSuccessAlert("Customer", JSON.parse(error.responseText).message);
+            errorAlert("Customer", JSON.parse(error.responseText).message);
         }
     });
 });
@@ -61,7 +61,7 @@ $("#btnUpdateCustomer").click(function () {
             loadAllCustomers();
         },
         error: function (error) {
-            unSuccessAlert("Customer", JSON.parse(error.responseText).message);
+            errorAlert("Customer", JSON.parse(error.responseText).message);
         }
     });
 });
@@ -82,7 +82,7 @@ $("#btnDeleteCustomer").click(function () {
             loadAllCustomers();
         },
         error: function (error) {
-            unSuccessAlert("Customer", JSON.parse(error.responseText).message);
+            errorAlert("Customer", JSON.parse(error.responseText).message);
         }
     });
 });
