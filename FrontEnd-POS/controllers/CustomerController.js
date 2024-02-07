@@ -6,7 +6,6 @@
 
 let baseUrl = "http://localhost:8080/javaee_pos/";
 
-disableButtons();
 loadAllCustomers();
 
 /**
@@ -146,53 +145,13 @@ function loadAllCustomers() {
                 let row = "<tr><td>" + id + "</td><td>" + name + "</td><td>" + address + "</td><td>" + salary + "</td></tr>";
                 $("#customerTable").append(row);
             }
-            tableListener();
             clearInputFields();
+            tableListener();
             generateCustomerId();
         },
         error: function (error) {
             console.log("Load All Customers Error : " + error);
         }
-    });
-}
-
-/**
- * Clear All Customers Button
- **/
-$("#btnClearAllCustomer").click(function () {
-    clearInputFields();
-    loadAllCustomers();
-});
-
-/**
- * Clear Input Fields Method
- **/
-function clearInputFields() {
-    $("#txtCusName").focus();
-    $('#txtCusName').val("");
-    $('#txtCusAddress').val("");
-    $('#txtCusSalary').val("");
-    $('#txtSearchCusId').val("");
-}
-
-/**
- * Table Listener Method
- **/
-function tableListener() {
-    $("#customerTable>tr").on("click", function () {
-        let id = $(this).children().eq(0).text();
-        let name = $(this).children().eq(1).text();
-        let address = $(this).children().eq(2).text();
-        let salary = $(this).children().eq(3).text();
-
-        $("#txtCusId").val(id);
-        $("#txtCusName").val(name);
-        $("#txtCusAddress").val(address);
-        $("#txtCusSalary").val(salary);
-
-        $("#btnSaveCustomer").attr('disabled', true);
-        $("#btnUpdateCustomer").attr('disabled', false);
-        $("#btnDeleteCustomer").attr('disabled', false);
     });
 }
 
@@ -225,9 +184,43 @@ function generateCustomerId() {
 }
 
 /**
- * Disable Buttons Method
+ * Table Listener Method
  **/
-function disableButtons() {
+function tableListener() {
+    $("#customerTable>tr").on("click", function () {
+        let id = $(this).children().eq(0).text();
+        let name = $(this).children().eq(1).text();
+        let address = $(this).children().eq(2).text();
+        let salary = $(this).children().eq(3).text();
+
+        $("#txtCusId").val(id);
+        $("#txtCusName").val(name);
+        $("#txtCusAddress").val(address);
+        $("#txtCusSalary").val(salary);
+
+        $("#btnSaveCustomer").attr('disabled', true);
+        $("#btnUpdateCustomer").attr('disabled', false);
+        $("#btnDeleteCustomer").attr('disabled', false);
+    });
+}
+
+/**
+ * Clear All Customers Button
+ **/
+$("#btnClearAllCustomer").click(function () {
+    loadAllCustomers();
+});
+
+/**
+ * Clear Input Fields
+ **/
+function clearInputFields() {
+    $("#txtCusName").focus();
+    $('#txtCusName').val("");
+    $('#txtCusAddress').val("");
+    $('#txtCusSalary').val("");
+    $('#txtSearchCusId').val("");
+
     $("#btnSaveCustomer").attr('disabled', true);
     $("#btnUpdateCustomer").attr('disabled', true);
     $("#btnDeleteCustomer").attr('disabled', true);
