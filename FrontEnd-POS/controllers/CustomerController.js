@@ -18,7 +18,7 @@ $("#btnSaveCustomer").click(function () {
         url: baseUrl + "customer",
         method: "POST",
         data: formData,
-        dataType:'json',
+        dataType: 'json',
         success: function (resp) {
             successAlert("Customer", resp.message);
             loadAllCustomers();
@@ -50,7 +50,7 @@ $("#btnUpdateCustomer").click(function () {
         method: "PUT",
         contentType: "application/json",        // Specify content type of the request body, Now server hope this type
         data: JSON.stringify(customerObj),      // This is the Actual Request
-        dataType:'json',    // Specify that you're expecting JSON data from the Server
+        dataType: 'json',    // Specify that you're expecting JSON data from the Server
         success: function (resp) {
             successAlert("Customer", resp.message);
             loadAllCustomers();
@@ -72,7 +72,7 @@ $("#btnDeleteCustomer").click(function () {
         method: "DELETE",
         contentType: "application/json",
         data: JSON.stringify({id: deleteCusId}),
-        dataType:'json',
+        dataType: 'json',
         success: function (resp) {
             successAlert("Customer", resp.message);
             loadAllCustomers();
@@ -104,7 +104,7 @@ function searchCustomer() {
         url: baseUrl + "customer?id=" + searchCusId + "&option=searchCusId",
         method: "GET",
         contentType: "application/json",
-        dataType:'json',
+        dataType: 'json',
         success: function (resp) {
             $("#customerTable").empty();
             let row = "<tr><td>" + resp.id + "</td><td>" + resp.name + "</td><td>" + resp.address + "</td><td>" + resp.salary + "</td></tr>";
