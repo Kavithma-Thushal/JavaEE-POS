@@ -100,7 +100,6 @@ function searchCustomer() {
     $.ajax({
         url: baseUrl + "customer?id=" + searchCusId + "&option=searchCusId",
         method: "GET",
-        contentType: "application/json",
         success: function (resp) {
             $("#customerTable").empty();
             let row = "<tr><td>" + resp.id + "</td><td>" + resp.name + "</td><td>" + resp.address + "</td><td>" + resp.salary + "</td></tr>";
