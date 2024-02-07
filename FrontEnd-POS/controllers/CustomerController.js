@@ -151,7 +151,7 @@ function loadAllCustomers() {
             generateCustomerId();
         },
         error: function (error) {
-            console.log("Load All Error : " + error);
+            console.log("Load All Customers Error : " + error);
         }
     });
 }
