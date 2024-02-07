@@ -229,16 +229,16 @@ function clearInputFields() {
 /**
  * Customer Validations
  **/
-const regExCusID = /^(C00-)[0-9]{3,4}$/;
-const regExCusName = /^[A-z ]{3,20}$/;
-const regExCusAddress = /^[A-z0-9/ ]{4,30}$/;
-const regExSalary = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+let regExCusId = /^(C00-)[0-9]{3,4}$/;
+let regExCusName = /^[A-z]{3,20}$/;
+let regExCusAddress = /^[A-z0-9/]{4,30}$/;
+let regExCusSalary = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
 let customerValidations = [];
 customerValidations.push({
-    reg: regExCusID,
+    reg: regExCusId,
     field: $('#txtCusId'),
-    error: 'Customer ID Pattern is Wrong : C00-001'
+    error: 'Customer Id Pattern is Wrong : C00-001'
 });
 customerValidations.push({
     reg: regExCusName,
@@ -251,7 +251,7 @@ customerValidations.push({
     error: 'Customer Address Pattern is Wrong : A-z 0-9 ,/'
 });
 customerValidations.push({
-    reg: regExSalary,
+    reg: regExCusSalary,
     field: $('#txtCusSalary'),
     error: 'Customer Salary Pattern is Wrong : 0-9{1,}.0-9{1,2}'
 });
@@ -277,7 +277,7 @@ $("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('blur', function (eve
  * Enable ENTER-KEY
  **/
 $("#txtCusId").on('keydown', function (event) {
-    if (event.key === "Enter" && check(regExCusID, $("#txtCusId"))) {
+    if (event.key === "Enter" && check(regExCusId, $("#txtCusId"))) {
         $("#txtCusName").focus();
     } else {
         focusText($("#txtCusId"));
@@ -294,7 +294,7 @@ $("#txtCusAddress").on('keydown', function (event) {
     }
 });
 $("#txtCusSalary").on('keydown', function (event) {
-    if (event.key === "Enter" && check(regExSalary, $("#txtCusSalary"))) {
+    if (event.key === "Enter" && check(regExCusSalary, $("#txtCusSalary"))) {
         if (event.which === 13) {
             $('#btnSaveCustomer').focus();
         }
