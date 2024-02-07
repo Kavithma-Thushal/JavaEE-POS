@@ -96,15 +96,15 @@ $("#txtSearchCusId").on("keypress", function (event) {
  * Search Customer Method
  **/
 function searchCustomer() {
-    let searchId = $("#txtSearchCusId").val();
+    let searchCusId = $("#txtSearchCusId").val();
     $.ajax({
-        url: baseUrl + "customer?id=" + searchId + "&option=searchCusId",
+        url: baseUrl + "customer?id=" + searchCusId + "&option=searchCusId",
         method: "GET",
         contentType: "application/json",
         dataType: "json",
-        success: function (res) {
+        success: function (resp) {
             $("#customerTable").empty();
-            let row = "<tr><td>" + res.id + "</td><td>" + res.name + "</td><td>" + res.address + "</td><td>" + res.salary + "</td></tr>";
+            let row = "<tr><td>" + resp.id + "</td><td>" + resp.name + "</td><td>" + resp.address + "</td><td>" + resp.salary + "</td></tr>";
             $("#customerTable").append(row);
             tableListener();
         },
