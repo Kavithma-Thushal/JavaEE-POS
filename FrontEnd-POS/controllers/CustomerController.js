@@ -68,8 +68,6 @@ $("#btnDeleteCustomer").click(function () {
     $.ajax({
         url: baseUrl + "customer?id=" + cusId,
         method: "DELETE",
-        contentType: "application/json",
-        dataType: "json",
         success: function (res) {
             successAlert("Customer", res.message);
             loadAllCustomers();
