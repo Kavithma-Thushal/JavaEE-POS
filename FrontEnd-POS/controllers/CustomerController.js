@@ -257,7 +257,7 @@ customerValidations.push({
 });
 
 /**
- * Check Customer for Validations
+ * Check Customer Validations
  **/
 $("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keyup', function (event) {
     checkValidity(customerValidations);
