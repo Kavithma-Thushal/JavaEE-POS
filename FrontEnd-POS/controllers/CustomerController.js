@@ -268,7 +268,7 @@ $("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keyup', function (ev
 /**
  * Disable TAB-KEY
  **/
-$("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keydown', function (event) {
+$("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary,#txtSearchCusId").on('keydown', function (event) {
     if (event.key === "Tab") {
         event.preventDefault();
     }
