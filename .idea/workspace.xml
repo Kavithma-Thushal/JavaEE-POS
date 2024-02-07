@@ -9,10 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Error Alert Refactored 3">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Refactored" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -336,15 +333,7 @@
       <workItem from="1707242875931" duration="997000" />
       <workItem from="1707243896204" duration="253000" />
       <workItem from="1707267974253" duration="710000" />
-      <workItem from="1707268691128" duration="467000" />
-    </task>
-    <task id="LOCAL-00019" summary="Place Order Refactored 2">
-      <option name="closed" value="true" />
-      <created>1705928406637</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1705928406637</updated>
+      <workItem from="1707268691128" duration="675000" />
     </task>
     <task id="LOCAL-00020" summary="Readme.md Updated">
       <option name="closed" value="true" />
@@ -730,14 +719,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707268678547</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Refactored">
+      <option name="closed" value="true" />
+      <created>1707269360452</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1707269360452</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Customer Disable/Enable Buttons Updated" />
     <MESSAGE value="Customer Validations Updated" />
     <MESSAGE value="Customer Disable TAB" />
     <MESSAGE value="Item Management Modified" />
@@ -762,6 +758,7 @@
     <MESSAGE value="CustomerController.js Refactored 3" />
     <MESSAGE value="Alert Refactored 3" />
     <MESSAGE value="Error Alert Refactored 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Error Alert Refactored 3" />
+    <MESSAGE value="Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored" />
   </component>
 </project>

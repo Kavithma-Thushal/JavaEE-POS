@@ -6,12 +6,7 @@
 
 let baseUrl = "http://localhost:8080/javaee_pos/";
 
-/**
- * Disable Buttons
- **/
-$("#btnSaveCustomer").attr('disabled', true);
-$("#btnUpdateCustomer").attr('disabled', true);
-$("#btnDeleteCustomer").attr('disabled', true);
+disableButtons();
 loadAllCustomers();
 
 /**
@@ -223,6 +218,15 @@ function generateCustomerID() {
             console.log("Generate Customer Id Error : ", error);
         }
     });
+}
+
+/**
+ * Disable Buttons
+ **/
+function disableButtons() {
+    $("#btnSaveCustomer").attr('disabled', true);
+    $("#btnUpdateCustomer").attr('disabled', true);
+    $("#btnDeleteCustomer").attr('disabled', true);
 }
 
 /**
