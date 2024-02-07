@@ -263,10 +263,6 @@ $("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keyup', function (ev
     checkValidity(customerValidations);
 });
 
-$("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('blur', function (event) {
-    checkValidity(customerValidations);
-});
-
 /**
  * Disable TAB-KEY
  **/
@@ -282,25 +278,21 @@ $("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keydown', function (
 $("#txtCusId").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExCusId, $("#txtCusId"))) {
         $("#txtCusName").focus();
-    } else {
-        focusText($("#txtCusId"));
     }
 });
 $("#txtCusName").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExCusName, $("#txtCusName"))) {
-        focusText($("#txtCusAddress"));
+        $("#txtCusAddress").focus();
     }
 });
 $("#txtCusAddress").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExCusAddress, $("#txtCusAddress"))) {
-        focusText($("#txtCusSalary"));
+        $("#txtCusSalary").focus();
     }
 });
 $("#txtCusSalary").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExCusSalary, $("#txtCusSalary"))) {
-        if (event.which === 13) {
-            $('#btnSaveCustomer').focus();
-        }
+        event.preventDefault();
     }
 });
 
