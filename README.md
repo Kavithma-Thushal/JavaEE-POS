@@ -38,7 +38,7 @@ or hospitality industry while benefiting from the portability and platform indep
 * Add project
   database [Project Database](https://github.com/Thushal2001/JavaEE-POS/blob/master/src/main/java/lk/ijse/gdse66/pos/schema/db.sql)
 * Reload the `pom.xml`
-* Run the Application
+* Run the Web Application
 
 ### Version
 
