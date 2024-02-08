@@ -54,7 +54,7 @@ or hospitality industry while benefiting from the portability and platform indep
 
 2.0.0
 
-⭐️If you hava any bugs or issues ,If you want to explain code pleace contact me on :<br/>
+⭐️If you hava any bugs or issues ,If you want to explain code please contact me on :<br/>
 [kavithmathushal9007@gmail.com](https://www.kavithmathushal9007@gmail.com)<br/><br/>
 
 <div align="center">

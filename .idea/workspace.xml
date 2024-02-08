@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Readme Modified 2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Readme Modified 3" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -384,14 +382,7 @@
       <workItem from="1707401440845" duration="31000" />
       <workItem from="1707402496304" duration="131000" />
       <workItem from="1707402683913" duration="45000" />
-    </task>
-    <task id="LOCAL-00055" summary="Load All Customers Refactored">
-      <option name="closed" value="true" />
-      <created>1706728344211</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1706728344211</updated>
+      <workItem from="1707402944839" duration="35000" />
     </task>
     <task id="LOCAL-00056" summary="Clear All Customers Refactored">
       <option name="closed" value="true" />
@@ -777,14 +768,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707402620157</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="Readme Modified 3">
+      <option name="closed" value="true" />
+      <created>1707402969773</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1707402969773</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Customer Delete Modified" />
     <MESSAGE value="Customer Search Modified" />
     <MESSAGE value="Customer Search Modified 2" />
     <MESSAGE value="Customer Search Modified 3" />
@@ -809,6 +807,7 @@
     <MESSAGE value="Modified" />
     <MESSAGE value="Readme Modified" />
     <MESSAGE value="Readme Modified 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Readme Modified 2" />
+    <MESSAGE value="Readme Modified 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme Modified 3" />
   </component>
 </project>
