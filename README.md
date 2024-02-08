@@ -8,7 +8,6 @@
 * JavaScript
 * JQuery
 * AJAX
-* JNDI
 
 ### BackEnd
 
@@ -19,6 +18,7 @@
 * Layered Architecture
 
 ### Functions
+
 ✅User can Save, Search, Update, Delete & Get All Customers<br/>
 ✅User can Save, Search, Update, Delete & Get All Items<br/>
 ✅User can manage Orders<br/>
