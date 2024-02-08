@@ -1,14 +1,24 @@
 # ✌️JavaEE POS System (Point of Sale)
 
-Technology :-<br/>
-✅FrontEnd - HTML, CSS, JavaScript, JQuery, Bootstrap<br/>
-✅BackEnd  - Java 8, JavaEE, MySQL<br/>
-✅AJAX, JNDI<br/>
-✅OOP Concepts<br/>
-✅Layered Architecture<br/>
-✅Maven<br/>
+### FrontEnd
 
-Functions :-<br/>
+* HTML
+* CSS
+* Bootstrap
+* JavaScript
+* JQuery
+* AJAX
+* JNDI
+
+### BackEnd
+
+* JavaEE
+* Java 8
+* MySQL
+* Maven
+* Layered Architecture
+
+### Functions
 ✅User can Save, Search, Update, Delete & Get All Customers<br/>
 ✅User can Save, Search, Update, Delete & Get All Items<br/>
 ✅User can manage Orders<br/>
