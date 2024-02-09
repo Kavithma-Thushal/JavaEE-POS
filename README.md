@@ -26,7 +26,6 @@ or hospitality industry while benefiting from the portability and platform indep
 * JavaScript
 * JQuery
 * AJAX
-* Tomcat 9
 
 ### BackEnd
 
@@ -34,7 +33,7 @@ or hospitality industry while benefiting from the portability and platform indep
 * Java 8
 * MySQL
 * Maven
-* Layered Architecture
+* Tomcat 9
 
 ### Functions
 
