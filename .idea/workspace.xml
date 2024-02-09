@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Readme Modified 3" />
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Readme Modified 4">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -383,14 +385,9 @@
       <workItem from="1707402496304" duration="131000" />
       <workItem from="1707402683913" duration="45000" />
       <workItem from="1707402944839" duration="35000" />
-    </task>
-    <task id="LOCAL-00056" summary="Clear All Customers Refactored">
-      <option name="closed" value="true" />
-      <created>1706728478878</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1706728478878</updated>
+      <workItem from="1707403180399" duration="28000" />
+      <workItem from="1707409037500" duration="4000" />
+      <workItem from="1707485212122" duration="69000" />
     </task>
     <task id="LOCAL-00057" summary="Table Listener Added">
       <option name="closed" value="true" />
@@ -776,14 +773,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707402969773</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="Readme Modified 4">
+      <option name="closed" value="true" />
+      <created>1707403200728</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1707403200728</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Customer Search Modified" />
     <MESSAGE value="Customer Search Modified 2" />
     <MESSAGE value="Customer Search Modified 3" />
     <MESSAGE value="Customer Search Modified 4" />
@@ -808,6 +812,7 @@
     <MESSAGE value="Readme Modified" />
     <MESSAGE value="Readme Modified 2" />
     <MESSAGE value="Readme Modified 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Readme Modified 3" />
+    <MESSAGE value="Readme Modified 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme Modified 4" />
   </component>
 </project>
