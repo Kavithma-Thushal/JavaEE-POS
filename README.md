@@ -26,6 +26,7 @@ or hospitality industry while benefiting from the portability and platform indep
 * JavaScript
 * JQuery
 * AJAX
+* Tomcat 9
 
 ### BackEnd
 
