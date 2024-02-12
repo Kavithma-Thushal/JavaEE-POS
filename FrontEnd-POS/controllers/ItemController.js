@@ -210,11 +210,6 @@ function tableListener() {
  * Clear All Items Button
  **/
 $("#btnClearAllItem").click(function () {
-    $('#txtItemCode').val("");
-    $('#txtItemDescription').val("");
-    $('#txtItemUnitPrice').val("");
-    $('#txtItemQuantity').val("");
-    $('#txtSearchItemCode').val("");
     loadAllItems();
 });
 
