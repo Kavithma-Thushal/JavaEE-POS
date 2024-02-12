@@ -180,7 +180,7 @@ function generateItemCode() {
             }
         },
         error: function (ob, statusText, error) {
-            console.log("Error : ", error);
+            console.log("Generate Item Code Error : ", error);
         }
     });
 }
