@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Controller Refactored 2">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Controller Refactored 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -399,14 +399,8 @@
       <workItem from="1707724656013" duration="775000" />
       <workItem from="1707725436013" duration="1591000" />
       <workItem from="1707727587049" duration="736000" />
-    </task>
-    <task id="LOCAL-00081" summary="dataType:'json'Added">
-      <option name="closed" value="true" />
-      <created>1707289248164</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1707289248164</updated>
+      <workItem from="1707728333149" duration="836000" />
+      <workItem from="1707729222196" duration="13000" />
     </task>
     <task id="LOCAL-00082" summary="Comments Added">
       <option name="closed" value="true" />
@@ -792,14 +786,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707726960896</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="Customer Controller Refactored 3">
+      <option name="closed" value="true" />
+      <created>1707729167418</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1707729167418</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Readme Modified 2" />
     <MESSAGE value="Readme Modified 3" />
     <MESSAGE value="Readme Modified 4" />
     <MESSAGE value="Readme Modified 5" />
@@ -824,6 +825,7 @@
     <MESSAGE value="Item Controller Refactored 4" />
     <MESSAGE value="Customer Controller Refactored 4" />
     <MESSAGE value="Customer Controller Refactored 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customer Controller Refactored 2" />
+    <MESSAGE value="Customer Controller Refactored 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customer Controller Refactored 3" />
   </component>
 </project>
