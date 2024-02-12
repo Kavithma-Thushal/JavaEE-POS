@@ -234,7 +234,7 @@ function clearInputFields() {
 let regExItemCode = /^(I00-)[0-9]{3}$/;
 let regExItemDescription = /^[A-z]{3,20}$/;
 let regExItemQty = /^[0-9]{2,10}$/;
-let regExItemUnitPrice = /^[0-9]{1,}[.]?[0-9]{2}$/;
+let regExItemUnitPrice = /^[0-9]{1,}[.]?[0-9]{1}$/;
 
 let itemValidations = [];
 itemValidations.push({
@@ -255,7 +255,7 @@ itemValidations.push({
 itemValidations.push({
     reg: regExItemUnitPrice,
     field: $('#txtItemUnitPrice'),
-    error: 'Item price must have 3 digits with 2 decimal places'
+    error: 'Item price must have 2 digits with 2 decimal places'
 });
 
 /**
@@ -280,25 +280,21 @@ $("#txtItemCode,#txtItemDescription,#txtItemQuantity,#txtItemUnitPrice,#txtSearc
 $("#txtItemCode").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExItemCode, $("#txtItemCode"))) {
         $("#txtItemDescription").focus();
-    } else {
-        focusText($("#txtItemCode"));
     }
 });
 $("#txtItemDescription").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExItemDescription, $("#txtItemDescription"))) {
-        focusText($("#txtItemQuantity"));
+        $("#txtItemQuantity").focus();
     }
 });
 $("#txtItemQuantity").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExItemQty, $("#txtItemQuantity"))) {
-        focusText($("#txtItemUnitPrice"));
+        $("#txtItemUnitPrice").focus();
     }
 });
 $("#txtItemUnitPrice").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExItemUnitPrice, $("#txtItemUnitPrice"))) {
-        if (event.which === 13) {
-            $('#btnAddItem').focus();
-        }
+        $("#btnAddItem").focus();
     }
 });
 

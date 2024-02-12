@@ -294,7 +294,7 @@ $("#txtCusAddress").on('keydown', function (event) {
 });
 $("#txtCusSalary").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExCusSalary, $("#txtCusSalary"))) {
-        event.preventDefault();
+        $("#btnSaveCustomer").focus();
     }
 });
 
