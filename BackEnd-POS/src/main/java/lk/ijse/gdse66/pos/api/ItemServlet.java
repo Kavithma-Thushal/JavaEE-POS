@@ -185,25 +185,25 @@ public class ItemServlet extends HttpServlet {
                 }
                 break;
 
-            case "loadAllItems  ":
+            case "loadAllItems":
                 try (Connection connection = pool.getConnection()) {
-                    ArrayList<ItemDTO> obList = itemBO.getAllItems(connection);
-                    JsonArrayBuilder allItems = Json.createArrayBuilder();
+                    ArrayList<ItemDTO> itemArrayList = itemBO.getAllItems(connection);
+                    JsonArrayBuilder jsonAllItemsArrayBuilder = Json.createArrayBuilder();
 
-                    for (ItemDTO itemDTO : obList) {
-                        JsonObjectBuilder item = Json.createObjectBuilder();
-                        item.add("code", itemDTO.getCode());
-                        item.add("description", itemDTO.getDescription());
-                        item.add("qty", itemDTO.getQty());
-                        item.add("unitPrice", itemDTO.getUnitPrice());
-                        allItems.add(item.build());
+                    JsonObjectBuilder response = Json.createObjectBuilder();
+                    for (ItemDTO itemDTO : itemArrayList) {
+                        response.add("code", itemDTO.getCode());
+                        response.add("description", itemDTO.getDescription());
+                        response.add("qty", itemDTO.getQty());
+                        response.add("unitPrice", itemDTO.getUnitPrice());
+                        jsonAllItemsArrayBuilder.add(response.build());
                     }
 
-                    JsonObjectBuilder job = Json.createObjectBuilder();
-                    job.add("state", "Ok");
-                    job.add("message", "Successfully Loaded..!");
-                    job.add("data", allItems.build());
-                    resp.getWriter().print(job.build());
+                    response.add("status", "200 OK");
+                    response.add("message", "Loaded Successfully...!");
+                    response.add("data", jsonAllItemsArrayBuilder.build());
+                    resp.setStatus(HttpServletResponse.SC_OK);
+                    resp.getWriter().print(response.build());
 
                 } catch (ClassNotFoundException | SQLException e) {
                     JsonObjectBuilder rjo = Json.createObjectBuilder();
