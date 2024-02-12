@@ -64,30 +64,20 @@ $("#btnUpdateItem").click(function () {
  * Delete Item Button
  **/
 $("#btnDeleteItem").click(function () {
-    let itCode = $("#txtItemCode").val();
-    let itDescription = $("#txtItemDescription").val();
-    let itQty = $("#txtItemQuantity").val();
-    let itUnitPrice = $("#txtItemUnitPrice").val();
-
-    const itemOb = {
-        code: itCode,
-        description: itDescription,
-        qty: itQty,
-        unitPrice: itUnitPrice
-    }
+    let deleteItemCode = $("#txtItemCode").val();
 
     $.ajax({
         url: baseUrl + "item",
-        method: "delete",
+        method: "DELETE",
         contentType: "application/json",
-        data: JSON.stringify(itemOb),
-        success: function (res) {
-            successAlert("Item", res.message);
+        data: JSON.stringify({code: deleteItemCode}),
+        dataType: 'json',
+        success: function (resp) {
+            successAlert("Item", resp.message);
             loadAllItems();
         },
         error: function (error) {
-            let message = JSON.parse(error.responseText).message;
-            errorAlert("Item", message);
+            errorAlert("Item", JSON.parse(error.responseText).message);
         }
     });
 });

@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -29,7 +28,107 @@ public class ItemServlet extends HttpServlet {
     private final QueryBO queryBO = (QueryBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.CUSTOM);
 
     @Resource(name = "java:comp/env/jdbc/pool")
-    DataSource dataSource;
+    DataSource pool;
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String code = req.getParameter("code");
+        String description = req.getParameter("description");
+        int qty = Integer.parseInt(req.getParameter("qty"));
+        double unitPrice = Double.parseDouble(req.getParameter("unitPrice"));
+
+        ItemDTO itemDTO = new ItemDTO(code, description, qty, unitPrice);
+        try (Connection connection = pool.getConnection()) {
+            boolean itemSaved = itemBO.saveItem(itemDTO, connection);
+
+            JsonObjectBuilder response = Json.createObjectBuilder();
+            if (itemSaved) {
+                response.add("status", "200 OK");
+                response.add("message", "Added Successfully...!");
+                resp.setStatus(HttpServletResponse.SC_OK);
+            } else {
+                response.add("status", "Error 500");
+                response.add("message", "Failed to add the item");
+                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            }
+            resp.getWriter().print(response.build());
+
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+            JsonObjectBuilder response = Json.createObjectBuilder();
+            response.add("status", "Error 500");
+            response.add("message", e.getMessage());
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            resp.getWriter().print(response.build());
+        }
+    }
+
+    @Override
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        JsonReader jsonReader = Json.createReader(req.getReader());
+        JsonObject jsonObject = jsonReader.readObject();
+
+        String code = jsonObject.getString("code");
+        String description = jsonObject.getString("description");
+        int qty = Integer.parseInt(jsonObject.getString("qty"));
+        double unitPrice = Double.parseDouble(jsonObject.getString("unitPrice"));
+
+        ItemDTO itemDTO = new ItemDTO(code, description, qty, unitPrice);
+        try (Connection connection = pool.getConnection()) {
+            boolean itemUpdated = itemBO.updateItem(itemDTO, connection);
+
+            JsonObjectBuilder response = Json.createObjectBuilder();
+            if (itemUpdated) {
+                response.add("status", "200 OK");
+                response.add("message", "Updated Successfully...!");
+                resp.setStatus(HttpServletResponse.SC_OK);
+            } else {
+                response.add("status", "Error 500");
+                response.add("message", "Failed to update the item");
+                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            }
+            resp.getWriter().print(response.build());
+
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+            JsonObjectBuilder response = Json.createObjectBuilder();
+            response.add("status", "Error 500");
+            response.add("message", e.getMessage());
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            resp.getWriter().print(response.build());
+        }
+    }
+
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        JsonReader jsonReader = Json.createReader(req.getReader());
+        JsonObject jsonObject = jsonReader.readObject();
+        String code = jsonObject.getString("code");
+
+        try (Connection connection = pool.getConnection()) {
+            boolean itemDeleted = itemBO.deleteItem(code, connection);
+
+            JsonObjectBuilder response = Json.createObjectBuilder();
+            if (itemDeleted) {
+                response.add("status", "200 OK");
+                response.add("message", "Deleted Successfully...!");
+                resp.setStatus(HttpServletResponse.SC_OK);
+            } else {
+                response.add("status", "Error 500");
+                response.add("message", "Failed to delete the item");
+                resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            }
+            resp.getWriter().print(response.build());
+
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+            JsonObjectBuilder response = Json.createObjectBuilder();
+            response.add("status", "Error 500");
+            response.add("message", e.getMessage());
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            resp.getWriter().print(response.build());
+        }
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -39,7 +138,7 @@ public class ItemServlet extends HttpServlet {
         JsonArrayBuilder allItems = Json.createArrayBuilder();
         switch (option) {
             case "searchItemCode":
-                try (Connection connection = dataSource.getConnection()) {
+                try (Connection connection = pool.getConnection()) {
                     ArrayList<ItemDTO> arrayList = itemBO.itemSearchId(code, connection);
                     if (arrayList.isEmpty()) {
                         JsonObjectBuilder rjo = Json.createObjectBuilder();
@@ -71,7 +170,7 @@ public class ItemServlet extends HttpServlet {
                 break;
 
             case "loadAllItem":
-                try (Connection connection = dataSource.getConnection()) {
+                try (Connection connection = pool.getConnection()) {
                     ArrayList<ItemDTO> obList = itemBO.getAllItems(connection);
 
                     for (ItemDTO itemDTO : obList) {
@@ -100,7 +199,7 @@ public class ItemServlet extends HttpServlet {
                 break;
 
             case "ItemIdGenerate":
-                try (Connection connection = dataSource.getConnection()) {
+                try (Connection connection = pool.getConnection()) {
                     String iCode = itemBO.generateNewItemCode(connection);
 
                     JsonObjectBuilder ItemID = Json.createObjectBuilder();
@@ -118,7 +217,7 @@ public class ItemServlet extends HttpServlet {
                 break;
 
             case "itemCount":
-                try (Connection connection = dataSource.getConnection()) {
+                try (Connection connection = pool.getConnection()) {
                     int count = queryBO.getItem(connection);
                     JsonObjectBuilder successResponse = Json.createObjectBuilder();
                     successResponse.add("count", count);
@@ -133,124 +232,6 @@ public class ItemServlet extends HttpServlet {
                     resp.getWriter().print(errorResponse.build());
                 }
                 break;
-        }
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String code = req.getParameter("code");
-        String description = req.getParameter("description");
-        int qty = Integer.parseInt(req.getParameter("qty"));
-        double unitPrice = Double.parseDouble(req.getParameter("unitPrice"));
-
-        try (Connection connection = dataSource.getConnection()) {
-            ItemDTO i = new ItemDTO(code, description, qty, unitPrice);
-            boolean b = itemBO.saveItem(i, connection);
-
-            if (b) {
-                JsonObjectBuilder responseObject = Json.createObjectBuilder();
-                responseObject.add("state", "Ok");
-                responseObject.add("message", "Successfully added..!");
-                responseObject.add("data", "");
-                resp.getWriter().print(responseObject.build());
-            }
-
-        } catch (SQLException e) {
-            JsonObjectBuilder error = Json.createObjectBuilder();
-            error.add("state", "Error");
-            error.add("message", e.getLocalizedMessage());
-            error.add("data", "");
-            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            resp.getWriter().print(error.build());
-
-        } catch (ClassNotFoundException e) {
-            JsonObjectBuilder error = Json.createObjectBuilder();
-            error.add("state", "Error");
-            error.add("message", e.getLocalizedMessage());
-            error.add("data", "");
-            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            resp.getWriter().print(error.build());
-        }
-    }
-
-    @Override
-    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        JsonReader reader = Json.createReader(req.getReader());
-        JsonObject item = reader.readObject();
-
-        String code = item.getString("code");
-        String description = item.getString("description");
-        int qty = Integer.parseInt(item.getString("qty"));
-        double unitPrice = Double.parseDouble(item.getString("unitPrice"));
-
-        ItemDTO iU = new ItemDTO(code, description, qty, unitPrice);
-        try (Connection connection = dataSource.getConnection()) {
-            boolean b = itemBO.updateItem(iU, connection);
-
-            if (b) {
-                JsonObjectBuilder responseObject = Json.createObjectBuilder();
-                responseObject.add("state", "Ok");
-                responseObject.add("message", "Successfully Updated..!");
-                responseObject.add("data", "");
-                resp.getWriter().print(responseObject.build());
-
-            } else {
-                throw new RuntimeException("Wrong Code, Please Check The Code..!");
-            }
-
-        } catch (RuntimeException e) {
-            JsonObjectBuilder rjo = Json.createObjectBuilder();
-            rjo.add("state", "Error");
-            rjo.add("message", e.getLocalizedMessage());
-            rjo.add("data", "");
-            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            resp.getWriter().print(rjo.build());
-
-        } catch (ClassNotFoundException | SQLException e) {
-            JsonObjectBuilder rjo = Json.createObjectBuilder();
-            rjo.add("state", "Error");
-            rjo.add("message", e.getLocalizedMessage());
-            rjo.add("data", "");
-            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            resp.getWriter().print(rjo.build());
-        }
-    }
-
-    @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        JsonReader reader = Json.createReader(req.getReader());
-        JsonObject item = reader.readObject();
-
-        String code = item.getString("code");
-        try (Connection connection = dataSource.getConnection()) {
-            boolean b = itemBO.deleteItem(code, connection);
-
-            if (b) {
-                JsonObjectBuilder rjo = Json.createObjectBuilder();
-                rjo.add("state", "Ok");
-                rjo.add("message", "Successfully Deleted..!");
-                rjo.add("data", "");
-                resp.getWriter().print(rjo.build());
-
-            } else {
-                throw new RuntimeException("There is no such Item for that ID..!");
-            }
-
-        } catch (RuntimeException e) {
-            JsonObjectBuilder rjo = Json.createObjectBuilder();
-            rjo.add("state", "Error");
-            rjo.add("message", e.getLocalizedMessage());
-            rjo.add("data", "");
-            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            resp.getWriter().print(rjo.build());
-
-        } catch (ClassNotFoundException | SQLException e) {
-            JsonObjectBuilder rjo = Json.createObjectBuilder();
-            rjo.add("state", "Error");
-            rjo.add("message", e.getLocalizedMessage());
-            rjo.add("data", "");
-            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            resp.getWriter().print(rjo.build());
         }
     }
 }
