@@ -129,13 +129,15 @@ $('#btnGetAllItems').click(function () {
  * Load All Items Method
  **/
 function loadAllItems() {
-    $("#itemTable").empty();
     $.ajax({
         url: baseUrl + "item?option=loadAllItem",
         method: "GET",
+        contentType: "application/json",
         dataType: "json",
-        success: function (res) {
-            for (let i of res.data) {
+        success: function (resp) {
+            $("#itemTable").empty();
+
+            for (let i of resp.data) {
                 let code = i.code;
                 let description = i.description;
                 let qty = i.qty;
@@ -144,13 +146,13 @@ function loadAllItems() {
                 let row = "<tr><td>" + code + "</td><td>" + description + "</td><td>" + qty + "</td><td>" + unitPrice + "</td></tr>";
                 $("#itemTable").append(row);
             }
-            tableListener();
-            generateItemID();
             clearInputFields("", "", "", "");
+            checkValidity(ItemsValidations);
+            tableListener();
+            generateItemCode();
         },
         error: function (error) {
-            let message = JSON.parse(error.responseText).message;
-            console.log(message);
+            console.log("Load All Items Error : " + error);
         }
     });
 }
@@ -158,7 +160,7 @@ function loadAllItems() {
 /**
  * Generate Item Code Method
  **/
-function generateItemID() {
+function generateItemCode() {
     $("#txtItemCode").val("I00-001");
     $.ajax({
         url: baseUrl + "item?option=ItemIdGenerate",
