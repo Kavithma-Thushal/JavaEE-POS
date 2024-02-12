@@ -147,7 +147,7 @@ function loadAllItems() {
                 $("#itemTable").append(row);
             }
             clearInputFields();
-            checkValidity(ItemsValidations);
+            checkValidity(itemValidations);
             tableListener();
             generateItemCode();
         },
@@ -231,39 +231,38 @@ function clearInputFields() {
 /**
  * Item Validations
  **/
-$("#txtItemCode").focus();
-const regExItemCode = /^(I00-)[0-9]{3,4}$/;
-const regExItemName = /^[A-z ]{3,20}$/;
-const regExItemPrice = /^[0-9]{1,10}$/;
-const regExItemQtyOnHand = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+let regExItemCode = /^(I00-)[0-9]{3}$/;
+let regExItemDescription = /^[A-z]{3,20}$/;
+let regExItemQty = /^[0-9]{2,10}$/;
+let regExItemUnitPrice = /^[0-9]{1,}[.]?[0-9]{2}$/;
 
-let ItemsValidations = [];
-ItemsValidations.push({
+let itemValidations = [];
+itemValidations.push({
     reg: regExItemCode,
     field: $('#txtItemCode'),
-    error: 'Item ID Pattern is Wrong : I00-001'
+    error: 'Item code must match the pattern I00-001'
 });
-ItemsValidations.push({
-    reg: regExItemName,
+itemValidations.push({
+    reg: regExItemDescription,
     field: $('#txtItemDescription'),
-    error: 'Item Name Pattern is Wrong : A-z 3-20'
+    error: 'Item description must be between 3-20 characters'
 });
-ItemsValidations.push({
-    reg: regExItemPrice,
+itemValidations.push({
+    reg: regExItemQty,
     field: $('#txtItemQuantity'),
-    error: 'Item Qty Pattern is Wrong : 0-9 1-10'
+    error: 'Item quantity must have 2-10 digits'
 });
-ItemsValidations.push({
-    reg: regExItemQtyOnHand,
+itemValidations.push({
+    reg: regExItemUnitPrice,
     field: $('#txtItemUnitPrice'),
-    error: 'Item Salary Pattern is Wrong : 100 or 100.00'
+    error: 'Item price must have 3 digits with 2 decimal places'
 });
 
 /**
  * Check Item Validations
  **/
 $("#txtItemCode,#txtItemDescription,#txtItemQuantity,#txtItemUnitPrice").on('keyup', function (event) {
-    checkValidity(ItemsValidations);
+    checkValidity(itemValidations);
 });
 
 /**
@@ -286,17 +285,17 @@ $("#txtItemCode").on('keydown', function (event) {
     }
 });
 $("#txtItemDescription").on('keydown', function (event) {
-    if (event.key === "Enter" && check(regExItemName, $("#txtItemDescription"))) {
+    if (event.key === "Enter" && check(regExItemDescription, $("#txtItemDescription"))) {
         focusText($("#txtItemQuantity"));
     }
 });
 $("#txtItemQuantity").on('keydown', function (event) {
-    if (event.key === "Enter" && check(regExItemPrice, $("#txtItemQuantity"))) {
+    if (event.key === "Enter" && check(regExItemQty, $("#txtItemQuantity"))) {
         focusText($("#txtItemUnitPrice"));
     }
 });
 $("#txtItemUnitPrice").on('keydown', function (event) {
-    if (event.key === "Enter" && check(regExItemQtyOnHand, $("#txtItemUnitPrice"))) {
+    if (event.key === "Enter" && check(regExItemUnitPrice, $("#txtItemUnitPrice"))) {
         if (event.which === 13) {
             $('#btnAddItem').focus();
         }

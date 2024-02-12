@@ -240,17 +240,17 @@ let customerValidations = [];
 customerValidations.push({
     reg: regExCusId,
     field: $('#txtCusId'),
-    error: 'Customer Id must match the pattern C00-001'
+    error: 'Customer id must match the pattern C00-001'
 });
 customerValidations.push({
     reg: regExCusName,
     field: $('#txtCusName'),
-    error: 'Customer Name must be between 3-20 characters'
+    error: 'Customer name must be between 3-20 characters'
 });
 customerValidations.push({
     reg: regExCusAddress,
     field: $('#txtCusAddress'),
-    error: 'Customer Address must be between 4-30 characters'
+    error: 'Customer address must be between 4-30 characters'
 });
 customerValidations.push({
     reg: regExCusSalary,
