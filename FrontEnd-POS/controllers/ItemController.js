@@ -89,7 +89,7 @@ $('#btnSearchItem').click(function () {
     searchItem();
 });
 $("#txtSearchItemCode").on("keypress", function (event) {
-    if (event.which === 13) {
+    if (event.key === "Enter") {
         searchItem();
     }
 });
@@ -98,22 +98,22 @@ $("#txtSearchItemCode").on("keypress", function (event) {
  * Search Item Method
  **/
 function searchItem() {
-    var search = $("#txtSearchItemCode").val();
-    $("#ItemTable").empty();
+    let searchItemCode = $("#txtSearchItemCode").val();
     $.ajax({
-        url: baseUrl + "item?code=" + search + "&option=searchItemCode",
+        url: baseUrl + "item?code=" + searchItemCode + "&option=searchItemCode",
         method: "GET",
         contentType: "application/json",
         dataType: "json",
-        success: function (res) {
-            let row = "<tr><td>" + res.code + "</td><td>" + res.description + "</td><td>" + res.qty + "</td><td>" + res.unitPrice + "</td></tr>";
-            $("#ItemTable").append(row);
-            blindClickEvents();
+        success: function (resp) {
+            $("#itemTable").empty();
+            let row = "<tr><td>" + resp.code + "</td><td>" + resp.description + "</td><td>" + resp.qty + "</td><td>" + resp.unitPrice + "</td></tr>";
+            $("#itemTable").append(row);
+            clearInputFields("", "", "", "");
+            tableListener();
         },
         error: function (error) {
+            emptyMessage(JSON.parse(error.responseText).message);
             loadAllItems();
-            let message = JSON.parse(error.responseText).message;
-            emptyMessage(message);
         }
     })
 };
@@ -129,7 +129,7 @@ $('#btnGetAllItems').click(function () {
  * Load All Items Method
  **/
 function loadAllItems() {
-    $("#ItemTable").empty();
+    $("#itemTable").empty();
     $.ajax({
         url: baseUrl + "item?option=loadAllItem",
         method: "GET",
@@ -142,9 +142,9 @@ function loadAllItems() {
                 let unitPrice = i.unitPrice;
 
                 let row = "<tr><td>" + code + "</td><td>" + description + "</td><td>" + qty + "</td><td>" + unitPrice + "</td></tr>";
-                $("#ItemTable").append(row);
+                $("#itemTable").append(row);
             }
-            blindClickEvents();
+            tableListener();
             generateItemID();
             clearInputFields("", "", "", "");
         },
@@ -186,8 +186,8 @@ function generateItemID() {
 /**
  * Table Listener Method
  **/
-function blindClickEvents() {
-    $("#ItemTable>tr").on("click", function () {
+function tableListener() {
+    $("#itemTable>tr").on("click", function () {
         let code = $(this).children().eq(0).text();
         let description = $(this).children().eq(1).text();
         let qty = $(this).children().eq(2).text();

@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Item Controller Updated 6">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Item Controller Updated 8">
       <change beforePath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/ItemServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/ItemServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/ItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/ItemController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/pages/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/pages/item.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -395,23 +396,7 @@
       <workItem from="1707709787041" duration="77000" />
       <workItem from="1707709868321" duration="388000" />
       <workItem from="1707710263315" duration="1185000" />
-      <workItem from="1707711455451" duration="3195000" />
-    </task>
-    <task id="LOCAL-00065" summary="CustomerController.js Refactored 3">
-      <option name="closed" value="true" />
-      <created>1707243604108</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1707243604108</updated>
-    </task>
-    <task id="LOCAL-00066" summary="Alert Refactored 3">
-      <option name="closed" value="true" />
-      <created>1707243868355</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1707243868356</updated>
+      <workItem from="1707711455451" duration="4928000" />
     </task>
     <task id="LOCAL-00067" summary="Error Alert Refactored 3">
       <option name="closed" value="true" />
@@ -789,15 +774,29 @@
       <option name="project" value="LOCAL" />
       <updated>1707713751848</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="Item Controller Updated 7">
+      <option name="closed" value="true" />
+      <created>1707714796725</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1707714796725</updated>
+    </task>
+    <task id="LOCAL-00115" summary="Item Controller Updated 8">
+      <option name="closed" value="true" />
+      <created>1707715420894</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1707715420894</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Load All Customers Refactored" />
-    <MESSAGE value="Load All Customers Refactored 2" />
     <MESSAGE value="Validations Refactored" />
     <MESSAGE value="Generate Customer Id Refactored" />
     <MESSAGE value="Customer Count Refactored" />
@@ -821,6 +820,8 @@
     <MESSAGE value="Item Controller Updated 3" />
     <MESSAGE value="Item Controller Updated 5" />
     <MESSAGE value="Item Controller Updated 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Item Controller Updated 6" />
+    <MESSAGE value="Item Controller Updated 7" />
+    <MESSAGE value="Item Controller Updated 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Item Controller Updated 8" />
   </component>
 </project>
