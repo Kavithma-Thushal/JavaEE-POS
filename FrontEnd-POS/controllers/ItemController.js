@@ -33,7 +33,7 @@ $("#btnAddItem").click(function () {
  **/
 $("#btnUpdateItem").click(function () {
     let code = $("#txtItemCode").val();
-    let description = $("#txtItemName").val();
+    let description = $("#txtItemDescription").val();
     let qty = $("#txtItemQty").val();
     let unitPrice = $("#txtItemPrice").val();
 
@@ -65,7 +65,7 @@ $("#btnUpdateItem").click(function () {
  **/
 $("#btnDeleteItem").click(function () {
     let itCode = $("#txtItemCode").val();
-    let itDescription = $("#txtItemName").val();
+    let itDescription = $("#txtItemDescription").val();
     let itQty = $("#txtItemQty").val();
     let itUnitPrice = $("#txtItemPrice").val();
 
@@ -204,7 +204,7 @@ function blindClickEvents() {
         let unitPrice = $(this).children().eq(3).text();
 
         $("#txtItemCode").val(code);
-        $("#txtItemName").val(description);
+        $("#txtItemDescription").val(description);
         $("#txtItemQty").val(qty);
         $("#txtItemPrice").val(unitPrice);
 
@@ -219,7 +219,7 @@ function blindClickEvents() {
  **/
 $("#btnClearAllItem").click(function () {
     $('#txtItemCode').val("");
-    $('#txtItemName').val("");
+    $('#txtItemDescription').val("");
     $('#txtItemPrice').val("");
     $('#txtItemQty').val("");
     $('#ItemIdSearch').val("");
@@ -231,10 +231,10 @@ $("#btnClearAllItem").click(function () {
  **/
 function clearInputFields(code, description, qty, price) {
     //$("#txtItemCode").val(code);
-    $("#txtItemName").val(description);
+    $("#txtItemDescription").val(description);
     $("#txtItemQty").val(qty);
     $("#txtItemPrice").val(price);
-    $("#txtItemName").focus();
+    $("#txtItemDescription").focus();
     checkValidity(ItemsValidations);
     $("#btnAddItem").attr('disabled', true);
     $("#btnUpdateItem").attr('disabled', true);
@@ -258,7 +258,7 @@ ItemsValidations.push({
 });
 ItemsValidations.push({
     reg: regExItemName,
-    field: $('#txtItemName'),
+    field: $('#txtItemDescription'),
     error: 'Item Name Pattern is Wrong : A-z 3-20'
 });
 ItemsValidations.push({
@@ -275,14 +275,14 @@ ItemsValidations.push({
 /**
  * Check Item Validations
  **/
-$("#txtItemCode,#txtItemName,#txtItemQty,#txtItemPrice").on('keyup', function (event) {
+$("#txtItemCode,#txtItemDescription,#txtItemQty,#txtItemPrice").on('keyup', function (event) {
     checkValidity(ItemsValidations);
 });
 
 /**
  * Disable TAB-KEY
  **/
-$("#txtItemCode,#txtItemName,#txtItemQty,#txtItemPrice").on('keydown', function (event) {
+$("#txtItemCode,#txtItemDescription,#txtItemQty,#txtItemPrice").on('keydown', function (event) {
     if (event.key === "Tab") {
         event.preventDefault();
     }
@@ -293,13 +293,13 @@ $("#txtItemCode,#txtItemName,#txtItemQty,#txtItemPrice").on('keydown', function 
  **/
 $("#txtItemCode").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExItemCode, $("#txtItemCode"))) {
-        $("#txtItemName").focus();
+        $("#txtItemDescription").focus();
     } else {
         focusText($("#txtItemCode"));
     }
 });
-$("#txtItemName").on('keydown', function (event) {
-    if (event.key === "Enter" && check(regExItemName, $("#txtItemName"))) {
+$("#txtItemDescription").on('keydown', function (event) {
+    if (event.key === "Enter" && check(regExItemName, $("#txtItemDescription"))) {
         focusText($("#txtItemQty"));
     }
 });
