@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Readme Modified 4">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Readme Modified 5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -388,30 +388,11 @@
       <workItem from="1707403180399" duration="28000" />
       <workItem from="1707409037500" duration="4000" />
       <workItem from="1707485212122" duration="69000" />
-    </task>
-    <task id="LOCAL-00057" summary="Table Listener Added">
-      <option name="closed" value="true" />
-      <created>1706729844020</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1706729844020</updated>
-    </task>
-    <task id="LOCAL-00058" summary="Generate New Customer Id">
-      <option name="closed" value="true" />
-      <created>1706731265751</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1706731265751</updated>
-    </task>
-    <task id="LOCAL-00059" summary="Clear Input Fields">
-      <option name="closed" value="true" />
-      <created>1706731850922</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1706731850922</updated>
+      <workItem from="1707496031571" duration="439000" />
+      <workItem from="1707707041941" duration="67000" />
+      <workItem from="1707709458915" duration="321000" />
+      <workItem from="1707709787041" duration="77000" />
+      <workItem from="1707709868321" duration="388000" />
     </task>
     <task id="LOCAL-00060" summary="Customer Servlet Refactored">
       <option name="closed" value="true" />
@@ -781,14 +762,37 @@
       <option name="project" value="LOCAL" />
       <updated>1707403200728</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="Readme Modified 5">
+      <option name="closed" value="true" />
+      <created>1707496080868</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1707496080870</updated>
+    </task>
+    <task id="LOCAL-00107" summary="Readme Modified 5">
+      <option name="closed" value="true" />
+      <created>1707496099454</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1707496099454</updated>
+    </task>
+    <task id="LOCAL-00108" summary="Readme Modified 5">
+      <option name="closed" value="true" />
+      <created>1707496148429</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1707496148429</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Customer Search Modified 2" />
     <MESSAGE value="Customer Search Modified 3" />
     <MESSAGE value="Customer Search Modified 4" />
     <MESSAGE value="Customer Search Modified 5" />
@@ -813,6 +817,7 @@
     <MESSAGE value="Readme Modified 2" />
     <MESSAGE value="Readme Modified 3" />
     <MESSAGE value="Readme Modified 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Readme Modified 4" />
+    <MESSAGE value="Readme Modified 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme Modified 5" />
   </component>
 </project>

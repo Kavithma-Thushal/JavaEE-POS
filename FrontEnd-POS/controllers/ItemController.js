@@ -6,16 +6,10 @@
 
 let baseUrl = "http://localhost:8080/javaee_pos/";
 
-/**
- * Disable Buttons
- **/
-$("#btnAddItem").attr('disabled', true);
-$("#btnUpdateItem").attr('disabled', true);
-$("#btnDeleteItem").attr('disabled', true);
 loadAllItems();
 
 /**
- * Save Item
+ * Save Item Button
  **/
 $("#btnAddItem").click(function () {
     let formData = $("#itemForm").serialize();
@@ -35,40 +29,7 @@ $("#btnAddItem").click(function () {
 });
 
 /**
- * Search Item
- **/
-$('#btnSearchItem').click(function () {
-    searchItem();
-});
-$("#ItemIdSearch").on("keypress", function (event) {
-    if (event.which === 13) {
-        searchItem();
-    }
-});
-
-function searchItem() {
-    var search = $("#ItemIdSearch").val();
-    $("#ItemTable").empty();
-    $.ajax({
-        url: baseUrl + "item?code=" + search + "&option=searchItemCode",
-        method: "GET",
-        contentType: "application/json",
-        dataType: "json",
-        success: function (res) {
-            let row = "<tr><td>" + res.code + "</td><td>" + res.description + "</td><td>" + res.qty + "</td><td>" + res.unitPrice + "</td></tr>";
-            $("#ItemTable").append(row);
-            blindClickEvents();
-        },
-        error: function (error) {
-            loadAllItems();
-            let message = JSON.parse(error.responseText).message;
-            emptyMessage(message);
-        }
-    })
-};
-
-/**
- * Update Item
+ * Update Item Button
  **/
 $("#btnUpdateItem").click(function () {
     let code = $("#txtItemID").val();
@@ -100,7 +61,7 @@ $("#btnUpdateItem").click(function () {
 });
 
 /**
- * Delete Item
+ * Delete Item Button
  **/
 $("#btnDeleteItem").click(function () {
     let itCode = $("#txtItemID").val();
@@ -132,26 +93,50 @@ $("#btnDeleteItem").click(function () {
 });
 
 /**
- * Clear Item Form
+ * Search Item Button
  **/
-$("#btnClearAllItem").click(function () {
-    $('#txtItemID').val("");
-    $('#txtItemName').val("");
-    $('#txtItemPrice').val("");
-    $('#txtItemQty').val("");
-    $('#ItemIdSearch').val("");
-    loadAllItems();
+$('#btnSearchItem').click(function () {
+    searchItem();
+});
+$("#ItemIdSearch").on("keypress", function (event) {
+    if (event.which === 13) {
+        searchItem();
+    }
 });
 
 /**
- * Get All Items
+ * Search Item Method
+ **/
+function searchItem() {
+    var search = $("#ItemIdSearch").val();
+    $("#ItemTable").empty();
+    $.ajax({
+        url: baseUrl + "item?code=" + search + "&option=searchItemCode",
+        method: "GET",
+        contentType: "application/json",
+        dataType: "json",
+        success: function (res) {
+            let row = "<tr><td>" + res.code + "</td><td>" + res.description + "</td><td>" + res.qty + "</td><td>" + res.unitPrice + "</td></tr>";
+            $("#ItemTable").append(row);
+            blindClickEvents();
+        },
+        error: function (error) {
+            loadAllItems();
+            let message = JSON.parse(error.responseText).message;
+            emptyMessage(message);
+        }
+    })
+};
+
+/**
+ * Get All Items Button
  **/
 $('#btnGetAllItems').click(function () {
     loadAllItems();
 });
 
 /**
- * Load All Items
+ * Load All Items Method
  **/
 function loadAllItems() {
     $("#ItemTable").empty();
@@ -181,28 +166,7 @@ function loadAllItems() {
 }
 
 /**
- * Table Listener
- **/
-function blindClickEvents() {
-    $("#ItemTable>tr").on("click", function () {
-        let code = $(this).children().eq(0).text();
-        let description = $(this).children().eq(1).text();
-        let qty = $(this).children().eq(2).text();
-        let unitPrice = $(this).children().eq(3).text();
-
-        $("#txtItemID").val(code);
-        $("#txtItemName").val(description);
-        $("#txtItemQty").val(qty);
-        $("#txtItemPrice").val(unitPrice);
-
-        $("#btnAddItem").attr('disabled', true);
-        $("#btnUpdateItem").attr('disabled', false);
-        $("#btnDeleteItem").attr('disabled', false);
-    });
-}
-
-/**
- * Generate Item Code
+ * Generate Item Code Method
  **/
 function generateItemID() {
     $("#txtItemID").val("I00-001");
@@ -230,6 +194,39 @@ function generateItemID() {
 }
 
 /**
+ * Table Listener Method
+ **/
+function blindClickEvents() {
+    $("#ItemTable>tr").on("click", function () {
+        let code = $(this).children().eq(0).text();
+        let description = $(this).children().eq(1).text();
+        let qty = $(this).children().eq(2).text();
+        let unitPrice = $(this).children().eq(3).text();
+
+        $("#txtItemID").val(code);
+        $("#txtItemName").val(description);
+        $("#txtItemQty").val(qty);
+        $("#txtItemPrice").val(unitPrice);
+
+        $("#btnAddItem").attr('disabled', true);
+        $("#btnUpdateItem").attr('disabled', false);
+        $("#btnDeleteItem").attr('disabled', false);
+    });
+}
+
+/**
+ * Clear All Items Button
+ **/
+$("#btnClearAllItem").click(function () {
+    $('#txtItemID').val("");
+    $('#txtItemName').val("");
+    $('#txtItemPrice').val("");
+    $('#txtItemQty').val("");
+    $('#ItemIdSearch').val("");
+    loadAllItems();
+});
+
+/**
  * Clear Input Fields
  **/
 function clearInputFields(code, description, qty, price) {
@@ -242,21 +239,6 @@ function clearInputFields(code, description, qty, price) {
     $("#btnAddItem").attr('disabled', true);
     $("#btnUpdateItem").attr('disabled', true);
     $("#btnDeleteItem").attr('disabled', true);
-}
-
-/**
- * Disable/Enable Buttons
- **/
-function setButtonState(value) {
-    if (value > 0) {
-        $("#btnAddItem").attr('disabled', true);
-        $("#btnUpdateItem").attr('disabled', true);
-        $("#btnDeleteItem").attr('disabled', true);
-    } else {
-        $("#btnAddItem").attr('disabled', false);
-        $("#btnUpdateItem").attr('disabled', false);
-        $("#btnDeleteItem").attr('disabled', false);
-    }
 }
 
 /**
@@ -291,20 +273,19 @@ ItemsValidations.push({
 });
 
 /**
+ * Check Item Validations
+ **/
+$("#txtItemID,#txtItemName,#txtItemQty,#txtItemPrice").on('keyup', function (event) {
+    checkValidity(ItemsValidations);
+});
+
+/**
  * Disable TAB-KEY
  **/
 $("#txtItemID,#txtItemName,#txtItemQty,#txtItemPrice").on('keydown', function (event) {
     if (event.key === "Tab") {
         event.preventDefault();
     }
-});
-
-$("#txtItemID,#txtItemName,#txtItemQty,#txtItemPrice").on('keyup', function (event) {
-    checkValidity(ItemsValidations);
-});
-
-$("#txtItemID,#txtItemName,#txtItemQty,#txtItemPrice").on('blur', function (event) {
-    checkValidity(ItemsValidations);
 });
 
 /**
@@ -334,3 +315,25 @@ $("#txtItemPrice").on('keydown', function (event) {
         }
     }
 });
+
+/**
+ * Disable/Enable Buttons
+ **/
+function setButtonState(value) {
+    if (value > 0) {
+        $("#btnAddItem").attr('disabled', true);
+        $("#btnUpdateItem").attr('disabled', true);
+        $("#btnDeleteItem").attr('disabled', true);
+    } else {
+        $("#btnAddItem").attr('disabled', false);
+        $("#btnUpdateItem").attr('disabled', false);
+        $("#btnDeleteItem").attr('disabled', false);
+    }
+}
+
+/**
+ * Disable Buttons
+ **/
+$("#btnAddItem").attr('disabled', true);
+$("#btnUpdateItem").attr('disabled', true);
+$("#btnDeleteItem").attr('disabled', true);
