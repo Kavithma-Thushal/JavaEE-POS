@@ -185,7 +185,7 @@ public class ItemServlet extends HttpServlet {
                 }
                 break;
 
-            case "loadAllItem":
+            case "loadAllItems  ":
                 try (Connection connection = pool.getConnection()) {
                     ArrayList<ItemDTO> obList = itemBO.getAllItems(connection);
                     JsonArrayBuilder allItems = Json.createArrayBuilder();
@@ -215,21 +215,21 @@ public class ItemServlet extends HttpServlet {
                 }
                 break;
 
-            case "ItemIdGenerate":
+            case "generateItemCode":
                 try (Connection connection = pool.getConnection()) {
-                    String iCode = itemBO.generateNewItemCode(connection);
+                    String itemCode = itemBO.generateNewItemCode(connection);
 
-                    JsonObjectBuilder ItemID = Json.createObjectBuilder();
-                    ItemID.add("code", iCode);
-                    resp.getWriter().print(ItemID.build());
+                    JsonObjectBuilder response = Json.createObjectBuilder();
+                    response.add("code", itemCode);
+                    resp.getWriter().print(response.build());
 
                 } catch (SQLException | ClassNotFoundException e) {
-                    JsonObjectBuilder rjo = Json.createObjectBuilder();
-                    rjo.add("state", "Error");
-                    rjo.add("message", e.getLocalizedMessage());
-                    rjo.add("data", "");
+                    e.printStackTrace();
+                    JsonObjectBuilder response = Json.createObjectBuilder();
+                    response.add("status", "Error 500");
+                    response.add("message", e.getMessage());
                     resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                    resp.getWriter().print(rjo.build());
+                    resp.getWriter().print(response.build());
                 }
                 break;
         }

@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Item Controller Refactored">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Item Controller Refactored 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/ItemServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/ItemServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/ItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/ItemController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -395,15 +397,8 @@
       <workItem from="1707709868321" duration="388000" />
       <workItem from="1707710263315" duration="1185000" />
       <workItem from="1707711455451" duration="5881000" />
-      <workItem from="1707718943297" duration="3028000" />
-    </task>
-    <task id="LOCAL-00076" summary="Customer Search Modified">
-      <option name="closed" value="true" />
-      <created>1707276699361</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1707276699361</updated>
+      <workItem from="1707718943297" duration="3378000" />
+      <workItem from="1707724656013" duration="347000" />
     </task>
     <task id="LOCAL-00077" summary="Customer Search Modified 2">
       <option name="closed" value="true" />
@@ -789,14 +784,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707721990057</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="Item Controller Refactored 2">
+      <option name="closed" value="true" />
+      <created>1707722314534</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1707722314534</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Customer Validations Refactored 3" />
     <MESSAGE value="Customer Validations Refactored 4" />
     <MESSAGE value="Focus Added" />
     <MESSAGE value="Modified" />
@@ -821,6 +823,7 @@
     <MESSAGE value="Item Controller Disable TAB Refactored" />
     <MESSAGE value="Item Controller Focus Refactored" />
     <MESSAGE value="Item Controller Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Item Controller Refactored" />
+    <MESSAGE value="Item Controller Refactored 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Item Controller Refactored 2" />
   </component>
 </project>

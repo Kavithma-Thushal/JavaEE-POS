@@ -130,7 +130,7 @@ $('#btnGetAllItems').click(function () {
  **/
 function loadAllItems() {
     $.ajax({
-        url: baseUrl + "item?option=loadAllItem",
+        url: baseUrl + "item?option=loadAllItems",
         method: "GET",
         contentType: "application/json",
         dataType: "json",
@@ -163,7 +163,7 @@ function loadAllItems() {
 function generateItemCode() {
     $("#txtItemCode").val("I00-001");
     $.ajax({
-        url: baseUrl + "item?option=ItemIdGenerate",
+        url: baseUrl + "item?option=generateItemCode",
         method: "GET",
         contentType: "application/json",
         dataType: "json",
