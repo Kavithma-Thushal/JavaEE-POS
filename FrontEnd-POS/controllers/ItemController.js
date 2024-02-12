@@ -312,10 +312,3 @@ function setButtonState(value) {
         $("#btnDeleteItem").attr('disabled', false);
     }
 }
-
-/**
- * Disable Buttons
- **/
-$("#btnAddItem").attr('disabled', true);
-$("#btnUpdateItem").attr('disabled', true);
-$("#btnDeleteItem").attr('disabled', true);
