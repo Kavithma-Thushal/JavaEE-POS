@@ -37,7 +37,7 @@ $("#btnUpdateItem").click(function () {
     let qty = $("#txtItemQuantity").val();
     let unitPrice = $("#txtItemUnitPrice").val();
 
-    var itemOb = {
+    var itemObj = {
         code: code,
         description: description,
         qty: qty,
@@ -46,16 +46,16 @@ $("#btnUpdateItem").click(function () {
 
     $.ajax({
         url: baseUrl + "item",
-        method: "put",
-        contentType: "application/json",
-        data: JSON.stringify(itemOb),
-        success: function (res) {
-            successAlert("Item", res.message);
+        method: "PUT",
+        contentType: "application/json",    // Specify content type of the request body, Now server hope this type
+        data: JSON.stringify(itemObj),      // This is the Actual Request
+        dataType: 'json',    // Specify that you're expecting JSON data from the Server
+        success: function (resp) {
+            successAlert("Item", resp.message);
             loadAllItems();
         },
         error: function (error) {
-            let message = JSON.parse(error.responseText).message;
-            errorAlert("Item", message);
+            errorAlert("Item", JSON.parse(error.responseText).message);
         }
     });
 });
