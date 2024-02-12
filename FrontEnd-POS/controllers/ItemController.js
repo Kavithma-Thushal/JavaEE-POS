@@ -88,7 +88,7 @@ $("#btnDeleteItem").click(function () {
 $('#btnSearchItem').click(function () {
     searchItem();
 });
-$("#ItemIdSearch").on("keypress", function (event) {
+$("#txtSearchItemCode").on("keypress", function (event) {
     if (event.which === 13) {
         searchItem();
     }
@@ -98,7 +98,7 @@ $("#ItemIdSearch").on("keypress", function (event) {
  * Search Item Method
  **/
 function searchItem() {
-    var search = $("#ItemIdSearch").val();
+    var search = $("#txtSearchItemCode").val();
     $("#ItemTable").empty();
     $.ajax({
         url: baseUrl + "item?code=" + search + "&option=searchItemCode",
@@ -212,7 +212,7 @@ $("#btnClearAllItem").click(function () {
     $('#txtItemDescription').val("");
     $('#txtItemUnitPrice').val("");
     $('#txtItemQuantity').val("");
-    $('#ItemIdSearch').val("");
+    $('#txtSearchItemCode').val("");
     loadAllItems();
 });
 
