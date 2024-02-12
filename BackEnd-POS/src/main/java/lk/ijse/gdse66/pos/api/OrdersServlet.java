@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -32,7 +31,7 @@ public class OrdersServlet extends HttpServlet {
     private final QueryBO queryBO = (QueryBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.CUSTOM);
 
     @Resource(name = "java:comp/env/jdbc/pool")
-    DataSource dataSource;
+    DataSource pool;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -43,7 +42,7 @@ public class OrdersServlet extends HttpServlet {
 
         switch (option) {
             case "OrderIdGenerate":
-                try (Connection connection = dataSource.getConnection()) {
+                try (Connection connection = pool.getConnection()) {
                     String orderId = orderBO.generateNewOrder(connection);
 
                     JsonObjectBuilder ordID = Json.createObjectBuilder();
@@ -61,7 +60,7 @@ public class OrdersServlet extends HttpServlet {
                 break;
 
             case "LoadOrders":
-                try (Connection connection = dataSource.getConnection()) {
+                try (Connection connection = pool.getConnection()) {
                     ArrayList<OrderDTO> orderDTOS = orderBO.getAllOrders(connection);
 
                     for (OrderDTO orderDTO : orderDTOS) {
@@ -89,7 +88,7 @@ public class OrdersServlet extends HttpServlet {
                 break;
 
             case "LoadOrderDetails":
-                try (Connection connection = dataSource.getConnection()) {
+                try (Connection connection = pool.getConnection()) {
                     ArrayList<OrderDetailDTO> orderDetailDTO = orderDetailBO.getAllOrderDetails(connection);
 
                     for (OrderDetailDTO customerDTO : orderDetailDTO) {
@@ -118,7 +117,7 @@ public class OrdersServlet extends HttpServlet {
                 break;
 
             case "ordersCount":
-                try (Connection connection = dataSource.getConnection()) {
+                try (Connection connection = pool.getConnection()) {
                     int count = queryBO.getSumOrders(connection);
                     JsonObjectBuilder successResponse = Json.createObjectBuilder();
                     successResponse.add("count", count);
@@ -147,7 +146,7 @@ public class OrdersServlet extends HttpServlet {
         String date = jsonObject.getString("date");
         String orderId = jsonObject.getString("orderId");
 
-        try (Connection connection = dataSource.getConnection()) {
+        try (Connection connection = pool.getConnection()) {
             connection.setAutoCommit(false);
 
             OrderDTO orderDTO = new OrderDTO(orderId, date, customerId);
@@ -214,7 +213,7 @@ public class OrdersServlet extends HttpServlet {
         JsonObject jsonObject = reader.readObject();
         JsonArray oDetail = jsonObject.getJsonArray("detail");
 
-        try (Connection connection = dataSource.getConnection()) {
+        try (Connection connection = pool.getConnection()) {
             for (JsonValue orderDetail : oDetail) {
                 JsonObject object = orderDetail.asJsonObject();
 
