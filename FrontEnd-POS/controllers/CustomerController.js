@@ -4,7 +4,7 @@
  * @since : 6:56 PM - 1/15/2024
  **/
 
-let baseUrl = "http://localhost:8080/javaee_pos/";
+let baseUrl = "http://localhost:8080/javaee_pos/customer";
 
 loadAllCustomers();
 
@@ -14,7 +14,7 @@ loadAllCustomers();
 $("#btnSaveCustomer").click(function () {
     let formData = $("#customerForm").serialize();
     $.ajax({
-        url: baseUrl + "customer",
+        url: baseUrl,
         method: "POST",
         data: formData,
         dataType: 'json',
@@ -45,7 +45,7 @@ $("#btnUpdateCustomer").click(function () {
     };
 
     $.ajax({
-        url: baseUrl + "customer",
+        url: baseUrl,
         method: "PUT",
         contentType: "application/json",        // Specify content type of the request body, Now server hope this type
         data: JSON.stringify(customerObj),      // This is the Actual Request
@@ -67,7 +67,7 @@ $("#btnDeleteCustomer").click(function () {
     let deleteCusId = $("#txtCusId").val();
 
     $.ajax({
-        url: baseUrl + "customer",
+        url: baseUrl,
         method: "DELETE",
         contentType: "application/json",
         data: JSON.stringify({id: deleteCusId}),
@@ -100,7 +100,7 @@ $("#txtSearchCusId").on("keypress", function (event) {
 function searchCustomer() {
     let searchCusId = $("#txtSearchCusId").val();
     $.ajax({
-        url: baseUrl + "customer?id=" + searchCusId + "&option=searchCusId",
+        url: baseUrl + "?id=" + searchCusId + "&option=searchCusId",
         method: "GET",
         contentType: "application/json",
         dataType: 'json',
@@ -130,7 +130,7 @@ $('#btnGetAllCustomers').click(function () {
  **/
 function loadAllCustomers() {
     $.ajax({
-        url: baseUrl + "customer?option=loadAllCustomers",
+        url: baseUrl + "?option=loadAllCustomers",
         method: "GET",
         contentType: "application/json",
         dataType: "json",
@@ -163,7 +163,7 @@ function loadAllCustomers() {
 function generateCustomerId() {
     $("#txtCusId").val("C00-001");
     $.ajax({
-        url: baseUrl + "customer?option=generateCusId",
+        url: baseUrl + "?option=generateCusId",
         method: "GET",
         contentType: "application/json",
         dataType: "json",

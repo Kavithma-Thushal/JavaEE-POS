@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Item Controller Refactored 2">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Item Controller Refactored 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/ItemServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/ItemServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/ItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/ItemController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -398,23 +397,8 @@
       <workItem from="1707710263315" duration="1185000" />
       <workItem from="1707711455451" duration="5881000" />
       <workItem from="1707718943297" duration="3378000" />
-      <workItem from="1707724656013" duration="347000" />
-    </task>
-    <task id="LOCAL-00077" summary="Customer Search Modified 2">
-      <option name="closed" value="true" />
-      <created>1707285028449</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1707285028449</updated>
-    </task>
-    <task id="LOCAL-00078" summary="Customer Search Modified 3">
-      <option name="closed" value="true" />
-      <created>1707285696886</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1707285696886</updated>
+      <workItem from="1707724656013" duration="775000" />
+      <workItem from="1707725436013" duration="1260000" />
     </task>
     <task id="LOCAL-00079" summary="Customer Search Modified 4">
       <option name="closed" value="true" />
@@ -792,15 +776,29 @@
       <option name="project" value="LOCAL" />
       <updated>1707722314534</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="Item Controller Refactored 3">
+      <option name="closed" value="true" />
+      <created>1707725036989</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1707725036989</updated>
+    </task>
+    <task id="LOCAL-00127" summary="Item Controller Refactored 4">
+      <option name="closed" value="true" />
+      <created>1707725305551</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1707725305551</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Customer Validations Refactored 4" />
-    <MESSAGE value="Focus Added" />
     <MESSAGE value="Modified" />
     <MESSAGE value="Readme Modified" />
     <MESSAGE value="Readme Modified 2" />
@@ -824,6 +822,8 @@
     <MESSAGE value="Item Controller Focus Refactored" />
     <MESSAGE value="Item Controller Refactored" />
     <MESSAGE value="Item Controller Refactored 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Item Controller Refactored 2" />
+    <MESSAGE value="Item Controller Refactored 3" />
+    <MESSAGE value="Item Controller Refactored 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Item Controller Refactored 4" />
   </component>
 </project>
