@@ -108,7 +108,7 @@ function searchItem() {
             $("#itemTable").empty();
             let row = "<tr><td>" + resp.code + "</td><td>" + resp.description + "</td><td>" + resp.qty + "</td><td>" + resp.unitPrice + "</td></tr>";
             $("#itemTable").append(row);
-            clearInputFields("", "", "", "");
+            clearInputFields();
             tableListener();
         },
         error: function (error) {
@@ -146,7 +146,7 @@ function loadAllItems() {
                 let row = "<tr><td>" + code + "</td><td>" + description + "</td><td>" + qty + "</td><td>" + unitPrice + "</td></tr>";
                 $("#itemTable").append(row);
             }
-            clearInputFields("", "", "", "");
+            clearInputFields();
             checkValidity(ItemsValidations);
             tableListener();
             generateItemCode();
@@ -216,13 +216,13 @@ $("#btnClearAllItem").click(function () {
 /**
  * Clear Input Fields
  **/
-function clearInputFields(code, description, qty, price) {
-    //$("#txtItemCode").val(code);
-    $("#txtItemDescription").val(description);
-    $("#txtItemQuantity").val(qty);
-    $("#txtItemUnitPrice").val(price);
+function clearInputFields() {
     $("#txtItemDescription").focus();
-    checkValidity(ItemsValidations);
+    $("#txtItemDescription").val("");
+    $("#txtItemQuantity").val("");
+    $("#txtItemUnitPrice").val("");
+    $("#txtSearchItemCode").val("");
+
     $("#btnAddItem").attr('disabled', true);
     $("#btnUpdateItem").attr('disabled', true);
     $("#btnDeleteItem").attr('disabled', true);
