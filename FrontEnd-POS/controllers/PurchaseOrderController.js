@@ -57,7 +57,7 @@ function generateOrderID() {
  **/
 $("#cmbCustomerId").empty();
 $.ajax({
-    url: baseUrl + "customer?option=loadAllCustomer",
+    url: baseUrl + "customer?option=loadAllCustomers",
     method: "GET",
     dataType: "json",
     success: function (res) {
@@ -103,7 +103,7 @@ $("#cmbCustomerId").click(function () {
  **/
 $("#cmbItemCode").empty();
 $.ajax({
-    url: baseUrl + "item?option=loadAllItem",
+    url: baseUrl + "item?option=loadAllItems",
     method: "GET",
     dataType: "json",
     success: function (res) {

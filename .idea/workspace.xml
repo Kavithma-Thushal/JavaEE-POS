@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Customer Controller Refactored 3">
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="UI Refactored">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +69,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Tomcat Server.Tomcat 9.0.831.executor&quot;: &quot;Run&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IJSE/Workspace/2nd Sem Repo/AAD/JavaEE/JavaEE-POS&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IJSE/Workspace/2nd Sem Repo/Friends/Savinda/AAD-Assignment-JavaEE-WEB-POS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -88,6 +88,10 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\JavaEE\JavaEE-POS\FrontEnd-POS\assets\images" />
+      <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\JavaEE\JavaEE-POS\FrontEnd-POS\assets\img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\JavaEE\JavaEE-POS\FrontEnd-POS\assets" />
       <recent name="D:\IJSE\Workspace\2nd Sem Repo\AAD\JavaEE\JavaEE-POS\FrontEnd-POS\assets\Styles" />
@@ -401,14 +405,11 @@
       <workItem from="1707727587049" duration="736000" />
       <workItem from="1707728333149" duration="836000" />
       <workItem from="1707729222196" duration="13000" />
-    </task>
-    <task id="LOCAL-00082" summary="Comments Added">
-      <option name="closed" value="true" />
-      <created>1707290368287</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1707290368287</updated>
+      <workItem from="1707729773152" duration="1031000" />
+      <workItem from="1707730810771" duration="2394000" />
+      <workItem from="1707733238545" duration="204000" />
+      <workItem from="1707734556362" duration="18000" />
+      <workItem from="1707734698050" duration="373000" />
     </task>
     <task id="LOCAL-00083" summary="Load All Customers Refactored">
       <option name="closed" value="true" />
@@ -794,14 +795,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707729167418</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="UI Refactored">
+      <option name="closed" value="true" />
+      <created>1707730802080</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1707730802080</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Readme Modified 3" />
     <MESSAGE value="Readme Modified 4" />
     <MESSAGE value="Readme Modified 5" />
     <MESSAGE value="Item Controller Updated" />
@@ -826,6 +834,7 @@
     <MESSAGE value="Customer Controller Refactored 4" />
     <MESSAGE value="Customer Controller Refactored 2" />
     <MESSAGE value="Customer Controller Refactored 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customer Controller Refactored 3" />
+    <MESSAGE value="UI Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI Refactored" />
   </component>
 </project>
