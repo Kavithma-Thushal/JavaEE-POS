@@ -15,15 +15,15 @@ $("#btnAddItem").click(function () {
     let formData = $("#itemForm").serialize();
     $.ajax({
         url: baseUrl + "item",
-        method: "post",
+        method: "POST",
         data: formData,
         dataType: "json",
-        success: function (res) {
-            successAlert("item", res.message);
+        success: function (resp) {
+            successAlert("Item", resp.message);
             loadAllItems();
         },
         error: function (error) {
-            errorAlert("item", JSON.parse(error.responseText).message);
+            errorAlert("Item", JSON.parse(error.responseText).message);
         }
     });
 });
@@ -32,7 +32,7 @@ $("#btnAddItem").click(function () {
  * Update Item Button
  **/
 $("#btnUpdateItem").click(function () {
-    let code = $("#txtItemID").val();
+    let code = $("#txtItemCode").val();
     let description = $("#txtItemName").val();
     let qty = $("#txtItemQty").val();
     let unitPrice = $("#txtItemPrice").val();
@@ -64,7 +64,7 @@ $("#btnUpdateItem").click(function () {
  * Delete Item Button
  **/
 $("#btnDeleteItem").click(function () {
-    let itCode = $("#txtItemID").val();
+    let itCode = $("#txtItemCode").val();
     let itDescription = $("#txtItemName").val();
     let itQty = $("#txtItemQty").val();
     let itUnitPrice = $("#txtItemPrice").val();
@@ -169,7 +169,7 @@ function loadAllItems() {
  * Generate Item Code Method
  **/
 function generateItemID() {
-    $("#txtItemID").val("I00-001");
+    $("#txtItemCode").val("I00-001");
     $.ajax({
         url: baseUrl + "item?option=ItemIdGenerate",
         method: "GET",
@@ -180,11 +180,11 @@ function generateItemID() {
             let tempId = parseInt(code.split("-")[1]);
             tempId = tempId + 1;
             if (tempId <= 9) {
-                $("#txtItemID").val("I00-00" + tempId);
+                $("#txtItemCode").val("I00-00" + tempId);
             } else if (tempId <= 99) {
-                $("#txtItemID").val("I00-0" + tempId);
+                $("#txtItemCode").val("I00-0" + tempId);
             } else {
-                $("#txtItemID").val("I00-" + tempId);
+                $("#txtItemCode").val("I00-" + tempId);
             }
         },
         error: function (ob, statusText, error) {
@@ -203,7 +203,7 @@ function blindClickEvents() {
         let qty = $(this).children().eq(2).text();
         let unitPrice = $(this).children().eq(3).text();
 
-        $("#txtItemID").val(code);
+        $("#txtItemCode").val(code);
         $("#txtItemName").val(description);
         $("#txtItemQty").val(qty);
         $("#txtItemPrice").val(unitPrice);
@@ -218,7 +218,7 @@ function blindClickEvents() {
  * Clear All Items Button
  **/
 $("#btnClearAllItem").click(function () {
-    $('#txtItemID').val("");
+    $('#txtItemCode').val("");
     $('#txtItemName').val("");
     $('#txtItemPrice').val("");
     $('#txtItemQty').val("");
@@ -230,7 +230,7 @@ $("#btnClearAllItem").click(function () {
  * Clear Input Fields
  **/
 function clearInputFields(code, description, qty, price) {
-    //$("#txtItemID").val(code);
+    //$("#txtItemCode").val(code);
     $("#txtItemName").val(description);
     $("#txtItemQty").val(qty);
     $("#txtItemPrice").val(price);
@@ -244,7 +244,7 @@ function clearInputFields(code, description, qty, price) {
 /**
  * Item Validations
  **/
-$("#txtItemID").focus();
+$("#txtItemCode").focus();
 const regExItemCode = /^(I00-)[0-9]{3,4}$/;
 const regExItemName = /^[A-z ]{3,20}$/;
 const regExItemPrice = /^[0-9]{1,10}$/;
@@ -253,7 +253,7 @@ const regExItemQtyOnHand = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 let ItemsValidations = [];
 ItemsValidations.push({
     reg: regExItemCode,
-    field: $('#txtItemID'),
+    field: $('#txtItemCode'),
     error: 'Item ID Pattern is Wrong : I00-001'
 });
 ItemsValidations.push({
@@ -275,14 +275,14 @@ ItemsValidations.push({
 /**
  * Check Item Validations
  **/
-$("#txtItemID,#txtItemName,#txtItemQty,#txtItemPrice").on('keyup', function (event) {
+$("#txtItemCode,#txtItemName,#txtItemQty,#txtItemPrice").on('keyup', function (event) {
     checkValidity(ItemsValidations);
 });
 
 /**
  * Disable TAB-KEY
  **/
-$("#txtItemID,#txtItemName,#txtItemQty,#txtItemPrice").on('keydown', function (event) {
+$("#txtItemCode,#txtItemName,#txtItemQty,#txtItemPrice").on('keydown', function (event) {
     if (event.key === "Tab") {
         event.preventDefault();
     }
@@ -291,11 +291,11 @@ $("#txtItemID,#txtItemName,#txtItemQty,#txtItemPrice").on('keydown', function (e
 /**
  * Enable ENTER-KEY
  **/
-$("#txtItemID").on('keydown', function (event) {
-    if (event.key === "Enter" && check(regExItemCode, $("#txtItemID"))) {
+$("#txtItemCode").on('keydown', function (event) {
+    if (event.key === "Enter" && check(regExItemCode, $("#txtItemCode"))) {
         $("#txtItemName").focus();
     } else {
-        focusText($("#txtItemID"));
+        focusText($("#txtItemCode"));
     }
 });
 $("#txtItemName").on('keydown', function (event) {
