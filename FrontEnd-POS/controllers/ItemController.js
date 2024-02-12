@@ -34,8 +34,8 @@ $("#btnAddItem").click(function () {
 $("#btnUpdateItem").click(function () {
     let code = $("#txtItemCode").val();
     let description = $("#txtItemDescription").val();
-    let qty = $("#txtItemQty").val();
-    let unitPrice = $("#txtItemPrice").val();
+    let qty = $("#txtItemQuantity").val();
+    let unitPrice = $("#txtItemUnitPrice").val();
 
     var itemOb = {
         code: code,
@@ -66,8 +66,8 @@ $("#btnUpdateItem").click(function () {
 $("#btnDeleteItem").click(function () {
     let itCode = $("#txtItemCode").val();
     let itDescription = $("#txtItemDescription").val();
-    let itQty = $("#txtItemQty").val();
-    let itUnitPrice = $("#txtItemPrice").val();
+    let itQty = $("#txtItemQuantity").val();
+    let itUnitPrice = $("#txtItemUnitPrice").val();
 
     const itemOb = {
         code: itCode,
@@ -205,8 +205,8 @@ function blindClickEvents() {
 
         $("#txtItemCode").val(code);
         $("#txtItemDescription").val(description);
-        $("#txtItemQty").val(qty);
-        $("#txtItemPrice").val(unitPrice);
+        $("#txtItemQuantity").val(qty);
+        $("#txtItemUnitPrice").val(unitPrice);
 
         $("#btnAddItem").attr('disabled', true);
         $("#btnUpdateItem").attr('disabled', false);
@@ -220,8 +220,8 @@ function blindClickEvents() {
 $("#btnClearAllItem").click(function () {
     $('#txtItemCode').val("");
     $('#txtItemDescription').val("");
-    $('#txtItemPrice').val("");
-    $('#txtItemQty').val("");
+    $('#txtItemUnitPrice').val("");
+    $('#txtItemQuantity').val("");
     $('#ItemIdSearch').val("");
     loadAllItems();
 });
@@ -232,8 +232,8 @@ $("#btnClearAllItem").click(function () {
 function clearInputFields(code, description, qty, price) {
     //$("#txtItemCode").val(code);
     $("#txtItemDescription").val(description);
-    $("#txtItemQty").val(qty);
-    $("#txtItemPrice").val(price);
+    $("#txtItemQuantity").val(qty);
+    $("#txtItemUnitPrice").val(price);
     $("#txtItemDescription").focus();
     checkValidity(ItemsValidations);
     $("#btnAddItem").attr('disabled', true);
@@ -263,26 +263,26 @@ ItemsValidations.push({
 });
 ItemsValidations.push({
     reg: regExItemPrice,
-    field: $('#txtItemQty'),
+    field: $('#txtItemQuantity'),
     error: 'Item Qty Pattern is Wrong : 0-9 1-10'
 });
 ItemsValidations.push({
     reg: regExItemQtyOnHand,
-    field: $('#txtItemPrice'),
+    field: $('#txtItemUnitPrice'),
     error: 'Item Salary Pattern is Wrong : 100 or 100.00'
 });
 
 /**
  * Check Item Validations
  **/
-$("#txtItemCode,#txtItemDescription,#txtItemQty,#txtItemPrice").on('keyup', function (event) {
+$("#txtItemCode,#txtItemDescription,#txtItemQuantity,#txtItemUnitPrice").on('keyup', function (event) {
     checkValidity(ItemsValidations);
 });
 
 /**
  * Disable TAB-KEY
  **/
-$("#txtItemCode,#txtItemDescription,#txtItemQty,#txtItemPrice").on('keydown', function (event) {
+$("#txtItemCode,#txtItemDescription,#txtItemQuantity,#txtItemUnitPrice").on('keydown', function (event) {
     if (event.key === "Tab") {
         event.preventDefault();
     }
@@ -300,16 +300,16 @@ $("#txtItemCode").on('keydown', function (event) {
 });
 $("#txtItemDescription").on('keydown', function (event) {
     if (event.key === "Enter" && check(regExItemName, $("#txtItemDescription"))) {
-        focusText($("#txtItemQty"));
+        focusText($("#txtItemQuantity"));
     }
 });
-$("#txtItemQty").on('keydown', function (event) {
-    if (event.key === "Enter" && check(regExItemPrice, $("#txtItemQty"))) {
-        focusText($("#txtItemPrice"));
+$("#txtItemQuantity").on('keydown', function (event) {
+    if (event.key === "Enter" && check(regExItemPrice, $("#txtItemQuantity"))) {
+        focusText($("#txtItemUnitPrice"));
     }
 });
-$("#txtItemPrice").on('keydown', function (event) {
-    if (event.key === "Enter" && check(regExItemQtyOnHand, $("#txtItemPrice"))) {
+$("#txtItemUnitPrice").on('keydown', function (event) {
+    if (event.key === "Enter" && check(regExItemQtyOnHand, $("#txtItemUnitPrice"))) {
         if (event.which === 13) {
             $('#btnAddItem').focus();
         }
