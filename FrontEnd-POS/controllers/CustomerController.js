@@ -232,7 +232,7 @@ function clearInputFields() {
  * Customer Validations
  **/
 let regExCusId = /^(C00-)[0-9]{3}$/;
-let regExCusName = /^[A-z]{3,20}$/;
+let regExCusName = /^[A-z ]{3,20}$/;
 let regExCusAddress = /^[A-Za-z0-9/, -]{4,30}$/;
 let regExCusSalary = /^[0-9]{1,}[.]?[0-9]{2}$/;
 

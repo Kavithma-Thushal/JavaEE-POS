@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Item Controller Updated 9" />
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Item Controller Refactored">
+      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/ItemController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/ItemController.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -393,70 +395,7 @@
       <workItem from="1707709868321" duration="388000" />
       <workItem from="1707710263315" duration="1185000" />
       <workItem from="1707711455451" duration="5881000" />
-    </task>
-    <task id="LOCAL-00068" summary="Refactored">
-      <option name="closed" value="true" />
-      <created>1707269360452</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1707269360452</updated>
-    </task>
-    <task id="LOCAL-00069" summary="CustomerController.js Modified">
-      <option name="closed" value="true" />
-      <created>1707269912761</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1707269912761</updated>
-    </task>
-    <task id="LOCAL-00070" summary="Modified">
-      <option name="closed" value="true" />
-      <created>1707270185940</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1707270185940</updated>
-    </task>
-    <task id="LOCAL-00071" summary="Modified">
-      <option name="closed" value="true" />
-      <created>1707270231253</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1707270231254</updated>
-    </task>
-    <task id="LOCAL-00072" summary="Modified">
-      <option name="closed" value="true" />
-      <created>1707270878591</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1707270878591</updated>
-    </task>
-    <task id="LOCAL-00073" summary="Customer Update Modified">
-      <option name="closed" value="true" />
-      <created>1707271376482</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1707271376482</updated>
-    </task>
-    <task id="LOCAL-00074" summary="Customer Delete Modified">
-      <option name="closed" value="true" />
-      <created>1707272136847</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1707272136847</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Customer Delete Modified">
-      <option name="closed" value="true" />
-      <created>1707273793126</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1707273793126</updated>
+      <workItem from="1707718943297" duration="3028000" />
     </task>
     <task id="LOCAL-00076" summary="Customer Search Modified">
       <option name="closed" value="true" />
@@ -786,21 +725,77 @@
       <option name="project" value="LOCAL" />
       <updated>1707716761944</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="Item Controller LoadAllCustomers">
+      <option name="closed" value="true" />
+      <created>1707719442709</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1707719442710</updated>
+    </task>
+    <task id="LOCAL-00118" summary="Item Controller Generate Code">
+      <option name="closed" value="true" />
+      <created>1707719565322</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1707719565322</updated>
+    </task>
+    <task id="LOCAL-00119" summary="Item Controller Clear All">
+      <option name="closed" value="true" />
+      <created>1707719679748</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1707719679748</updated>
+    </task>
+    <task id="LOCAL-00120" summary="Item Controller Clear Input Fields">
+      <option name="closed" value="true" />
+      <created>1707719935013</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1707719935013</updated>
+    </task>
+    <task id="LOCAL-00121" summary="Item Controller Validations Refactored">
+      <option name="closed" value="true" />
+      <created>1707721270545</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1707721270545</updated>
+    </task>
+    <task id="LOCAL-00122" summary="Item Controller Disable TAB Refactored">
+      <option name="closed" value="true" />
+      <created>1707721393620</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1707721393620</updated>
+    </task>
+    <task id="LOCAL-00123" summary="Item Controller Focus Refactored">
+      <option name="closed" value="true" />
+      <created>1707721926902</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1707721926902</updated>
+    </task>
+    <task id="LOCAL-00124" summary="Item Controller Refactored">
+      <option name="closed" value="true" />
+      <created>1707721990057</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1707721990057</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Generate Customer Id Refactored" />
-    <MESSAGE value="Customer Count Refactored" />
-    <MESSAGE value="Customer Validation Refactored" />
-    <MESSAGE value="Customer Validation Refactored 2" />
-    <MESSAGE value="CustomerController.js Modified" />
-    <MESSAGE value="CustomerController.js Modified 2" />
-    <MESSAGE value="Customer Validations Refactored" />
-    <MESSAGE value="Customer Validations Refactored 2" />
     <MESSAGE value="Customer Validations Refactored 3" />
     <MESSAGE value="Customer Validations Refactored 4" />
     <MESSAGE value="Focus Added" />
@@ -818,6 +813,14 @@
     <MESSAGE value="Item Controller Updated 7" />
     <MESSAGE value="Item Controller Updated 8" />
     <MESSAGE value="Item Controller Updated 9" />
-    <option name="LAST_COMMIT_MESSAGE" value="Item Controller Updated 9" />
+    <MESSAGE value="Item Controller LoadAllCustomers" />
+    <MESSAGE value="Item Controller Generate Code" />
+    <MESSAGE value="Item Controller Clear All" />
+    <MESSAGE value="Item Controller Clear Input Fields" />
+    <MESSAGE value="Item Controller Validations Refactored" />
+    <MESSAGE value="Item Controller Disable TAB Refactored" />
+    <MESSAGE value="Item Controller Focus Refactored" />
+    <MESSAGE value="Item Controller Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Item Controller Refactored" />
   </component>
 </project>

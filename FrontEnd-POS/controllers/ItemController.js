@@ -232,7 +232,7 @@ function clearInputFields() {
  * Item Validations
  **/
 let regExItemCode = /^(I00-)[0-9]{3}$/;
-let regExItemDescription = /^[A-z]{3,20}$/;
+let regExItemDescription = /^[A-z ]{3,20}$/;
 let regExItemQty = /^[0-9]{2,10}$/;
 let regExItemUnitPrice = /^[0-9]{1,}[.]?[0-9]{1}$/;
 
