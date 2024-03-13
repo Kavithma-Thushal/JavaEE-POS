@@ -41,6 +41,24 @@ public class OrdersServlet extends HttpServlet {
         JsonArrayBuilder allOrderDetails = Json.createArrayBuilder();
 
         switch (option) {
+            case "ordersCount":
+                try (Connection connection = pool.getConnection()) {
+                    int count = queryBO.getSumOrders(connection);
+
+                    JsonObjectBuilder response = Json.createObjectBuilder();
+                    response.add("count", count);
+                    resp.getWriter().print(response.build());
+
+                } catch (SQLException | ClassNotFoundException e) {
+                    e.printStackTrace();
+                    JsonObjectBuilder response = Json.createObjectBuilder();
+                    response.add("status", "Error 500");
+                    response.add("message", e.getMessage());
+                    resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                    resp.getWriter().print(response.build());
+                }
+                break;
+
             case "OrderIdGenerate":
                 try (Connection connection = pool.getConnection()) {
                     String orderId = orderBO.generateNewOrder(connection);
@@ -113,23 +131,6 @@ public class OrdersServlet extends HttpServlet {
                     rjo.add("data", "");
                     resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
                     resp.getWriter().print(rjo.build());
-                }
-                break;
-
-            case "ordersCount":
-                try (Connection connection = pool.getConnection()) {
-                    int count = queryBO.getSumOrders(connection);
-                    JsonObjectBuilder successResponse = Json.createObjectBuilder();
-                    successResponse.add("count", count);
-                    resp.getWriter().print(successResponse.build());
-
-                } catch (SQLException | ClassNotFoundException e) {
-                    e.printStackTrace();
-                    JsonObjectBuilder errorResponse = Json.createObjectBuilder();
-                    errorResponse.add("status", "Error");
-                    errorResponse.add("message", e.getMessage());
-                    resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                    resp.getWriter().print(errorResponse.build());
                 }
                 break;
         }

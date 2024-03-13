@@ -9,7 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Place Order Refactored 3" />
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Order Details Refactored">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/OrdersServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd-POS/src/main/java/lk/ijse/gdse66/pos/api/OrdersServlet.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -414,14 +417,8 @@
       <workItem from="1710301074524" duration="13283000" />
       <workItem from="1710316235770" duration="1398000" />
       <workItem from="1710317649180" duration="1556000" />
-    </task>
-    <task id="LOCAL-00086" summary="Generate Customer Id Refactored">
-      <option name="closed" value="true" />
-      <created>1707296114061</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1707296114061</updated>
+      <workItem from="1710319214387" duration="608000" />
+      <workItem from="1710319836313" duration="1670000" />
     </task>
     <task id="LOCAL-00087" summary="Customer Count Refactored">
       <option name="closed" value="true" />
@@ -807,14 +804,21 @@
       <option name="project" value="LOCAL" />
       <updated>1710319200614</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="Order Details Refactored">
+      <option name="closed" value="true" />
+      <created>1710319817574</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1710319817575</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Item Controller Updated 2" />
     <MESSAGE value="Item Controller Updated 3" />
     <MESSAGE value="Item Controller Updated 5" />
     <MESSAGE value="Item Controller Updated 6" />
@@ -839,6 +843,7 @@
     <MESSAGE value="Place Order Refactored" />
     <MESSAGE value="Place Order Refactored 2" />
     <MESSAGE value="Place Order Refactored 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Place Order Refactored 3" />
+    <MESSAGE value="Order Details Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Order Details Refactored" />
   </component>
 </project>

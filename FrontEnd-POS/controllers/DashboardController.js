@@ -6,7 +6,9 @@
 
 let baseUrl = "http://localhost:8080/javaee_pos/";
 
-$("#txtCustomerCount").val("00");
+/**
+ * Customer Count
+ **/
 $.ajax({
     url: baseUrl + "customer?option=customerCount",
     method: "GET",
@@ -20,7 +22,9 @@ $.ajax({
     }
 });
 
-$("#txtItemsCount").val("00");
+/**
+ * Item Count
+ **/
 $.ajax({
     url: baseUrl + "item?option=itemCount",
     method: "GET",
@@ -34,7 +38,9 @@ $.ajax({
     }
 });
 
-$("#txtOrderCount").val("00");
+/**
+ * Orders Count
+ **/
 $.ajax({
     url: baseUrl + "orders?option=ordersCount",
     method: "GET",
