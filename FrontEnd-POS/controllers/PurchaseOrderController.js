@@ -120,7 +120,7 @@ function generateOrderId() {
 }
 
 /**
- * Set Date Method
+ * Set Date
  **/
 function setDate() {
     let date = new Date();
@@ -131,64 +131,17 @@ function setDate() {
 }
 
 /**
- * Item Details
- **/
-let itemCode;
-let itemName;
-let itemPrice;
-let itemQty;
-let itemOrderQty;
-
-/**
  * Order Details
  **/
+let itemCode = 0;
+let itemName = 0;
+let itemPrice = 0;
+let itemQty = 0;
+let itemOrderQty = 0;
 let total = 0;
 let discount = 0;
 let subTotal = 0;
-
-/**
- * Add To Cart Button
- **/
 let tableRow = [];
-$("#btnAddToCart").on("click", function () {
-
-    let duplicate = false;
-    for (let i = 0; i < $("#tblAddToCart tr").length; i++) {
-        if ($("#cmbItemCode option:selected").text() === $("#tblAddToCart tr").children(':nth-child(1)')[i].innerText) {
-            duplicate = true;
-        }
-    }
-
-    if (duplicate !== true) {
-        loadCartTableDetail();
-        reduceQty($("#buyQty").val());
-        calcTotal($("#buyQty").val() * $("#itemPrice").val());
-        $('#cmbItemCode,#itemName,#itemPrice,#qtyOnHand,#buyQty').val("");
-        $("#btnAddToCart").attr('disabled', true);
-
-    } else if (duplicate === true) {
-        manageQtyOnHand(tableRow.children(':nth-child(4)').text(), $("#buyQty").val());
-        $(tableRow).children(':nth-child(4)').text($("#buyQty").val());
-
-        manageTotal(tableRow.children(':nth-child(5)').text(), $("#buyQty").val() * $("#itemPrice").val());
-        $(tableRow).children(':nth-child(5)').text($("#buyQty").val() * $("#itemPrice").val());
-    }
-
-    /**
-     * Table Listener
-     **/
-    $("#tblAddToCart>tr").click('click', function () {
-        let itemCode = $(this).children(":eq(0)").text();
-        let itemName = $(this).children(":eq(1)").text();
-        let unitPrice = $(this).children(":eq(2)").text();
-        let qty = $(this).children(":eq(3)").text();
-
-        $("#cmbItemCode").val(itemCode);
-        $("#itemName").val(itemName);
-        $("#itemPrice").val(unitPrice);
-        $("#buyQty").val(qty);
-    });
-});
 
 /**
  * Load Cart-Table-Details
@@ -290,6 +243,48 @@ $(document).on("change keyup blur", "#txtCash", function () {
     }
 });
 
+/**
+ * Add To Cart Button
+ **/
+$("#btnAddToCart").on("click", function () {
+
+    let duplicate = false;
+    for (let i = 0; i < $("#tblAddToCart tr").length; i++) {
+        if ($("#cmbItemCode option:selected").text() === $("#tblAddToCart tr").children(':nth-child(1)')[i].innerText) {
+            duplicate = true;
+        }
+    }
+
+    if (duplicate !== true) {
+        loadCartTableDetail();
+        reduceQty($("#buyQty").val());
+        calcTotal($("#buyQty").val() * $("#itemPrice").val());
+        $('#cmbItemCode,#itemName,#itemPrice,#qtyOnHand,#buyQty').val("");
+        $("#btnAddToCart").attr('disabled', true);
+
+    } else if (duplicate === true) {
+        manageQtyOnHand(tableRow.children(':nth-child(4)').text(), $("#buyQty").val());
+        $(tableRow).children(':nth-child(4)').text($("#buyQty").val());
+
+        manageTotal(tableRow.children(':nth-child(5)').text(), $("#buyQty").val() * $("#itemPrice").val());
+        $(tableRow).children(':nth-child(5)').text($("#buyQty").val() * $("#itemPrice").val());
+    }
+
+    /**
+     * Table Listener
+     **/
+    $("#tblAddToCart>tr").click('click', function () {
+        let itemCode = $(this).children(":eq(0)").text();
+        let itemName = $(this).children(":eq(1)").text();
+        let unitPrice = $(this).children(":eq(2)").text();
+        let qty = $(this).children(":eq(3)").text();
+
+        $("#cmbItemCode").val(itemCode);
+        $("#itemName").val(itemName);
+        $("#itemPrice").val(unitPrice);
+        $("#buyQty").val(qty);
+    });
+});
 
 /**
  * Purchase Order Button
