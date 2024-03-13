@@ -9,12 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="UI Refactored">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5b44bb9a-40bb-4b70-b0e1-184201e31f78.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5b44bb9a-40bb-4b70-b0e1-184201e31f78.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd-POS/controllers/CustomerController.js" afterDir="false" />
-    </list>
+    <list default="true" id="341d8c88-4977-4e3a-8b2a-32ff8e835f08" name="Changes" comment="Place Order Refactored" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -416,15 +411,7 @@
       <workItem from="1707734698050" duration="373000" />
       <workItem from="1710263917684" duration="658000" />
       <workItem from="1710270465994" duration="4000" />
-      <workItem from="1710301074524" duration="1895000" />
-    </task>
-    <task id="LOCAL-00083" summary="Load All Customers Refactored">
-      <option name="closed" value="true" />
-      <created>1707293816434</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1707293816434</updated>
+      <workItem from="1710301074524" duration="13283000" />
     </task>
     <task id="LOCAL-00084" summary="Load All Customers Refactored 2">
       <option name="closed" value="true" />
@@ -810,14 +797,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707730802080</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="Place Order Refactored">
+      <option name="closed" value="true" />
+      <created>1710316207025</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1710316207026</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Readme Modified 4" />
     <MESSAGE value="Readme Modified 5" />
     <MESSAGE value="Item Controller Updated" />
     <MESSAGE value="Item Controller Updated 2" />
@@ -842,6 +836,7 @@
     <MESSAGE value="Customer Controller Refactored 2" />
     <MESSAGE value="Customer Controller Refactored 3" />
     <MESSAGE value="UI Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI Refactored" />
+    <MESSAGE value="Place Order Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Place Order Refactored" />
   </component>
 </project>

@@ -6,6 +6,8 @@
 
 let baseUrl = "http://localhost:8080/javaee_pos/";
 
+clearAll();
+
 /**
  * Load All Customers to Combo-Box
  **/
@@ -20,7 +22,6 @@ $.ajax({
             let id = i.id;
             $("#cmbCustomerId").append(`<option>${id}</option>`);
         }
-        generateOrderId();
     },
     error: function (error) {
         console.log(JSON.parse("Load All Customers to Combo-Box Error : " + error.responseText).message);
@@ -62,7 +63,6 @@ $.ajax({
             let code = i.code;
             $("#cmbItemCode").append(`<option>${code}</option>`);
         }
-        generateOrderId();
     },
     error: function (error) {
         console.log(JSON.parse("Load All Items to Combo-Box Error : " + error.responseText).message);
@@ -178,7 +178,6 @@ $("#btnAddToCart").on("click", function () {
      * Table Listener
      **/
     $("#tblAddToCart>tr").click('click', function () {
-        //tableRow = $(this);
         let itemCode = $(this).children(":eq(0)").text();
         let itemName = $(this).children(":eq(1)").text();
         let unitPrice = $(this).children(":eq(2)").text();
@@ -194,7 +193,6 @@ $("#btnAddToCart").on("click", function () {
 /**
  * Load Cart-Table-Details
  **/
-//$("#tblAddToCart").empty();
 function loadCartTableDetail() {
     itemCode = $("#cmbItemCode").val();
     itemName = $("#itemName").val();
@@ -342,29 +340,9 @@ $("#btnPurchase").click(function () {
         data: JSON.stringify(orderOb)
     });
 
-    clearDetails();
-    $("#tblAddToCart").empty();
-    $("#btnPurchase").attr('disabled', true);
-    $("#btnAddToCart").attr('disabled', true);
+    clearAll();
     total = 0;
 });
-
-/**
- * Clear All Button
- **/
-$("#btnClearAll").click(function () {
-    clearDetails();
-});
-
-/**
- * Clear All Method
- **/
-function clearDetails() {
-    $('#cmbCustomerId,#customerName,#customerAddress,#customerSalary,#cmbItemCode,#itemName,#itemPrice,#qtyOnHand,#buyQty,#txtDiscount,#txtTotal,#txtDiscount,#txtSubTotal,#txtCash,#txtBalance').val("");
-    $("#tblAddToCart").empty();
-    $("#btnAddToCart").attr('disabled', true);
-    $("#btnPurchase").attr('disabled', true);
-}
 
 /**
  * Remove Row
@@ -388,7 +366,19 @@ $("#tblAddToCart").dblclick(function () {
 });
 
 /**
- * Disable Buttons
+ * Clear All Button
  **/
-$("#btnAddToCart").attr('disabled', true);
-$("#btnPurchase").attr('disabled', true);
+$("#btnClearAll").click(function () {
+    clearAll();
+});
+
+/**
+ * Clear All Method
+ **/
+function clearAll() {
+    $('#cmbCustomerId,#customerName,#customerAddress,#customerSalary,#cmbItemCode,#itemName,#itemPrice,#qtyOnHand,#buyQty,#txtTotal,#txtDiscount,#txtSubTotal,#txtCash,#txtBalance').val("");
+    $("#tblAddToCart").empty();
+    $("#btnAddToCart").attr('disabled', true);
+    $("#btnPurchase").attr('disabled', true);
+    generateOrderId();
+}
