@@ -65,7 +65,6 @@ $("#btnUpdateCustomer").click(function () {
  **/
 $("#btnDeleteCustomer").click(function () {
     let deleteCusId = $("#txtCusId").val();
-
     $.ajax({
         url: baseUrl + "customer",
         method: "DELETE",
