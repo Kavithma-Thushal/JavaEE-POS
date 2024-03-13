@@ -140,30 +140,28 @@ public class OrdersServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        JsonReader jsonReader = Json.createReader(req.getReader());
+        JsonObject jsonObject = jsonReader.readObject();
 
-        JsonReader reader = Json.createReader(req.getReader());
-        JsonObject jsonObject = reader.readObject();
-        JsonArray oDetail = jsonObject.getJsonArray("detail");
-
-        String customerId = jsonObject.getString("customerId");
-        String date = jsonObject.getString("date");
         String orderId = jsonObject.getString("orderId");
+        String date = jsonObject.getString("date");
+        String customerId = jsonObject.getString("customerId");
+        JsonArray oDetail = jsonObject.getJsonArray("detail");
 
         try (Connection connection = pool.getConnection()) {
             connection.setAutoCommit(false);
 
             OrderDTO orderDTO = new OrderDTO(orderId, date, customerId);
-            boolean b = orderBO.purchaseOrder(orderDTO, connection);
-            if (!(b)) {
+            boolean purchaseOrder = orderBO.purchaseOrder(orderDTO, connection);
+            if (!(purchaseOrder)) {
                 connection.rollback();
                 connection.setAutoCommit(true);
 
-                JsonObjectBuilder rjo = Json.createObjectBuilder();
-                rjo.add("state", "Error");
-                rjo.add("message", "Order Issue");
-                rjo.add("data", "");
+                JsonObjectBuilder response = Json.createObjectBuilder();
+                response.add("state", "Error");
+                response.add("message", "Order Error");
                 resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                resp.getWriter().print(rjo.build());
+                resp.getWriter().print(response.build());
 
             } else {
                 for (JsonValue orderDetail : oDetail) {
@@ -175,16 +173,14 @@ public class OrdersServlet extends HttpServlet {
                     double price = Double.parseDouble(object.getString("unitPrice"));
 
                     OrderDetailDTO orderDetailDTO = new OrderDetailDTO(orId, itId, qty, price);
-                    boolean b1 = orderDetailBO.purchaseOrderDetails(orderDetailDTO, connection);
-
-                    if (!(b1)) {
+                    boolean purchaseOrderDetails = orderDetailBO.purchaseOrderDetails(orderDetailDTO, connection);
+                    if (!(purchaseOrderDetails)) {
                         connection.rollback();
                         connection.setAutoCommit(true);
 
                         JsonObjectBuilder rjo = Json.createObjectBuilder();
                         rjo.add("state", "Error");
-                        rjo.add("message", "Order Details Issue");
-                        rjo.add("data", "");
+                        rjo.add("message", "Order Details Error");
                         resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
                         resp.getWriter().print(rjo.build());
                     }
@@ -192,28 +188,27 @@ public class OrdersServlet extends HttpServlet {
                 connection.commit();
                 connection.setAutoCommit(true);
 
-                JsonObjectBuilder job = Json.createObjectBuilder();
-                job.add("state", "Ok");
-                job.add("message", "Successfully Place Order..!");
-                job.add("data", "");
-                resp.getWriter().print(job.build());
+                JsonObjectBuilder response = Json.createObjectBuilder();
+                response.add("state", "200 OK");
+                response.add("message", "purchased Successfully...!");
+                resp.setStatus(HttpServletResponse.SC_OK);
+                resp.getWriter().print(response.build());
             }
 
         } catch (SQLException | ClassNotFoundException e) {
-            JsonObjectBuilder rjo = Json.createObjectBuilder();
-            rjo.add("state", "Error");
-            rjo.add("message", e.getLocalizedMessage());
-            rjo.add("data", "");
+            e.printStackTrace();
+            JsonObjectBuilder response = Json.createObjectBuilder();
+            response.add("status", "Error 500");
+            response.add("message", e.getMessage());
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-            resp.getWriter().print(rjo.build());
+            resp.getWriter().print(response.build());
         }
     }
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-
-        JsonReader reader = Json.createReader(req.getReader());
-        JsonObject jsonObject = reader.readObject();
+        JsonReader jsonReader = Json.createReader(req.getReader());
+        JsonObject jsonObject = jsonReader.readObject();
         JsonArray oDetail = jsonObject.getJsonArray("detail");
 
         try (Connection connection = pool.getConnection()) {
@@ -229,7 +224,12 @@ public class OrdersServlet extends HttpServlet {
             }
 
         } catch (SQLException | ClassNotFoundException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            JsonObjectBuilder response = Json.createObjectBuilder();
+            response.add("status", "Error 500");
+            response.add("message", e.getMessage());
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            resp.getWriter().print(response.build());
         }
     }
 }
