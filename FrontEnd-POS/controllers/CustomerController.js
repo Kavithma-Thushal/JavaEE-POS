@@ -47,9 +47,9 @@ $("#btnUpdateCustomer").click(function () {
     $.ajax({
         url: baseUrl + "customer",
         method: "PUT",
-        contentType: "application/json",        // Specify content type of the request body, Now server hope this type
-        data: JSON.stringify(customerObj),      // This is the Actual Request
-        dataType: 'json',    // Specify that you're expecting JSON data from the Server
+        contentType: "application/json",        // Specify content type of the request body
+        data: JSON.stringify(customerObj),      // This is the actual request
+        dataType: 'json',                       // Specify server is expecting json data
         success: function (resp) {
             successAlert("Customer", resp.message);
             loadAllCustomers();

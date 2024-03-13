@@ -7,26 +7,93 @@
 let baseUrl = "http://localhost:8080/javaee_pos/";
 
 /**
- * Disable Buttons
+ * Load All Customers to Combo-Box
  **/
-$("#btnPurchase").attr('disabled', true);
-$("#btnAddToCart").attr('disabled', true);
+$.ajax({
+    url: baseUrl + "customer?option=loadAllCustomers",
+    method: "GET",
+    dataType: "json",
+    success: function (res) {
+        $("#cmbCustomerId").empty();
+
+        for (let i of res.data) {
+            let id = i.id;
+            $("#cmbCustomerId").append(`<option>${id}</option>`);
+        }
+        generateOrderId();
+    },
+    error: function (error) {
+        console.log(JSON.parse("Load All Customers to Combo-Box Error : " + error.responseText).message);
+    }
+});
 
 /**
- * Invoice Details
+ * Customer Searching Combo-Box
  **/
-function setDates() {
-    const date = new Date();
-    const day = ("0" + date.getDate()).slice(-2);
-    const month = ("0" + (date.getMonth() + 1)).slice(-2);
-    const today = date.getFullYear() + "-" + (month) + "-" + (day);
-    $('#orderDate').val(today);
-}
+$("#cmbCustomerId").click(function () {
+    let search = $("#cmbCustomerId").val();
+    $.ajax({
+        url: baseUrl + "customer?id=" + search + "&option=searchCusId",
+        method: "GET",
+        contentType: "application/json",
+        dataType: "json",
+        success: function (res) {
+            $("#customerName").val(res.name);
+            $("#customerAddress").val(res.address);
+            $("#customerSalary").val(res.salary);
+        },
+        error: function (error) {
+            console.log(JSON.parse("Customer Combo-Box Searching Error : " + error.responseText).message);
+        }
+    })
+});
 
 /**
- * Generate Order ID
+ * Load All Items to Combo-Box
  **/
-function generateOrderID() {
+$.ajax({
+    url: baseUrl + "item?option=loadAllItems",
+    method: "GET",
+    dataType: "json",
+    success: function (res) {
+        $("#cmbItemCode").empty();
+
+        for (let i of res.data) {
+            let code = i.code;
+            $("#cmbItemCode").append(`<option>${code}</option>`);
+        }
+        generateOrderId();
+    },
+    error: function (error) {
+        console.log(JSON.parse("Load All Items to Combo-Box Error : " + error.responseText).message);
+    }
+});
+
+/**
+ * Item Searching Combo-Box
+ **/
+$("#cmbItemCode").click(function () {
+    let search = $("#cmbItemCode").val();
+    $.ajax({
+        url: baseUrl + "item?code=" + search + "&option=searchItemCode",
+        method: "GET",
+        contentType: "application/json",
+        dataType: "json",
+        success: function (res) {
+            $("#itemName").val(res.description);
+            $("#itemPrice").val(res.unitPrice);
+            $("#qtyOnHand").val(res.qty);
+        },
+        error: function (error) {
+            console.log(JSON.parse("Item Combo-Box Searching Error : " + error.responseText).message);
+        }
+    })
+});
+
+/**
+ * Generate OrderId Method
+ **/
+function generateOrderId() {
     $("#orderId").val("ODI-001");
     $.ajax({
         url: baseUrl + "orders?option=OrderIdGenerate",
@@ -34,7 +101,6 @@ function generateOrderID() {
         contentType: "application/json",
         dataType: "json",
         success: function (resp) {
-            setDates();
             let orderId = resp.orderId;
             let tempId = parseInt(orderId.split("-")[1]);
             tempId = tempId + 1;
@@ -45,103 +111,24 @@ function generateOrderID() {
             } else {
                 $("#orderId").val("ODI-" + tempId);
             }
+            setDate();
         },
         error: function (ob, statusText, error) {
-            console.log("Error : ", error);
+            console.log("Generate Order Id Error : ", error);
         }
     });
 }
 
 /**
- * Customer Select Combo
+ * Set Date Method
  **/
-$("#cmbCustomerId").empty();
-$.ajax({
-    url: baseUrl + "customer?option=loadAllCustomers",
-    method: "GET",
-    dataType: "json",
-    success: function (res) {
-        console.log(res);
-        for (let i of res.data) {
-            let id = i.id;
-            $("#cmbCustomerId").append(`<option>${id}</option>`);
-        }
-        generateOrderID();
-        console.log(res.message);
-    },
-    error: function (error) {
-        let message = JSON.parse(error.responseText).message;
-        console.log(message);
-    }
-});
-
-/**
- * Customer Combo Search
- **/
-$("#cmbCustomerId").click(function () {
-    var search = $("#cmbCustomerId").val();
-    $.ajax({
-        url: baseUrl + "customer?id=" + search + "&option=searchCusId",
-        method: "GET",
-        contentType: "application/json",
-        dataType: "json",
-        success: function (res) {
-            console.log(res);
-            $("#customerName").val(res.name);
-            $("#customerAddress").val(res.address);
-            $("#customerSalary").val(res.salary);
-        },
-        error: function (error) {
-            let message = JSON.parse(error.responseText).message;
-            console.log(message);
-        }
-    })
-});
-
-/**
- * Item Select Combo
- **/
-$("#cmbItemCode").empty();
-$.ajax({
-    url: baseUrl + "item?option=loadAllItems",
-    method: "GET",
-    dataType: "json",
-    success: function (res) {
-        console.log(res);
-        for (let i of res.data) {
-            let code = i.code;
-            $("#cmbItemCode").append(`<option>${code}</option>`);
-        }
-        console.log(res.message);
-    },
-    error: function (error) {
-        let message = JSON.parse(error.responseText).message;
-        console.log(message);
-    }
-});
-
-/**
- * Item Combo Search
- **/
-$("#cmbItemCode").click(function () {
-    var search = $("#cmbItemCode").val();
-    $.ajax({
-        url: baseUrl + "item?code=" + search + "&option=searchItemCode",
-        method: "GET",
-        contentType: "application/json",
-        dataType: "json",
-        success: function (res) {
-            console.log(res);
-            $("#itemName").val(res.description);
-            $("#itemPrice").val(res.unitPrice);
-            $("#qtyOnHand").val(res.qty);
-        },
-        error: function (error) {
-            let message = JSON.parse(error.responseText).message;
-            console.log(message);
-        }
-    })
-});
+function setDate() {
+    let date = new Date();
+    let day = ("0" + date.getDate()).slice(-2);
+    let month = ("0" + (date.getMonth() + 1)).slice(-2);
+    let today = date.getFullYear() + "-" + (month) + "-" + (day);
+    $('#orderDate').val(today);
+}
 
 /**
  * Item Details
@@ -160,7 +147,7 @@ let discount = 0;
 let subTotal = 0;
 
 /**
- * Place Order Logic
+ * Add To Cart Button
  **/
 let tableRow = [];
 $("#btnAddToCart").on("click", function () {
@@ -171,6 +158,7 @@ $("#btnAddToCart").on("click", function () {
             duplicate = true;
         }
     }
+
     if (duplicate !== true) {
         loadCartTableDetail();
         reduceQty($("#buyQty").val());
@@ -187,26 +175,41 @@ $("#btnAddToCart").on("click", function () {
     }
 
     /**
-     * Place Order Table Add Logic
+     * Table Listener
      **/
     $("#tblAddToCart>tr").click('click', function () {
-        tableRow = $(this);
+        //tableRow = $(this);
         let itemCode = $(this).children(":eq(0)").text();
         let itemName = $(this).children(":eq(1)").text();
         let unitPrice = $(this).children(":eq(2)").text();
         let qty = $(this).children(":eq(3)").text();
-        let total = $(this).children(":eq(4)").text();
 
         $("#cmbItemCode").val(itemCode);
         $("#itemName").val(itemName);
         $("#itemPrice").val(unitPrice);
         $("#buyQty").val(qty);
-        $("#txtTotal").val(total);
     });
 });
 
 /**
- * Place Order Logic
+ * Load Cart-Table-Details
+ **/
+//$("#tblAddToCart").empty();
+function loadCartTableDetail() {
+    itemCode = $("#cmbItemCode").val();
+    itemName = $("#itemName").val();
+    itemPrice = $("#itemPrice").val();
+    itemQty = $("#qtyOnHand").val();
+    itemOrderQty = $("#buyQty").val();
+
+    let total = itemPrice * itemOrderQty;
+    let row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${itemPrice}</td><td>${itemOrderQty}</td><td>${total}</td></tr>`;
+
+    $("#tblAddToCart").append(row);
+}
+
+/**
+ * Reduce Quantity
  **/
 function reduceQty(orderQty) {
     let minQty = parseInt(orderQty);
@@ -224,7 +227,7 @@ function calcTotal(amount) {
 }
 
 /**
- * Manage Available QTY
+ * Manage Available Qty
  **/
 function manageQtyOnHand(preQty, nowQty) {
     var preQty = parseInt(preQty);
@@ -248,32 +251,14 @@ function manageTotal(preTotal, nowTotal) {
 }
 
 /**
- * Place Order Table Load
- **/
-$("#tblAddToCart").empty();
-
-function loadCartTableDetail() {
-    itemCode = $("#cmbItemCode").val();
-    itemName = $("#itemName").val();
-    itemPrice = $("#itemPrice").val();
-    itemQty = $("#qtyOnHand").val();
-    itemOrderQty = $("#buyQty").val();
-
-    let total = itemPrice * itemOrderQty;
-    let row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${itemPrice}</td><td>${itemOrderQty}</td><td>${total}</td></tr>`;
-
-    $("#tblAddToCart").append(row);
-}
-
-/**
- * Enter BuyQty and Check QtyOnHand
+ * Check QtyOnHand
  **/
 $(document).on("change keyup blur", "#buyQty", function () {
     let qtyOnHand = $("#qtyOnHand").val();
     let buyQty = $("#buyQty").val();
     let buyOnHand = qtyOnHand - buyQty;
     if (buyOnHand < 0) {
-        $("#lblCheckQty").parent().children('strong').text(qtyOnHand + " : Empty On Stock..!!");
+        $("#lblCheckQty").parent().children('strong').text("Empty On Stock : " + qtyOnHand);
         $("#btnAddToCart").attr('disabled', true);
     } else {
         $("#lblCheckQty").parent().children('strong').text("");
@@ -299,7 +284,7 @@ $(document).on("change keyup blur", "#txtCash", function () {
     let balance = cash - subTotal;
     $("#txtBalance").val(balance);
     if (balance < 0) {
-        $("#lblCheckSubtotal").parent().children('strong').text(balance + " : plz enter valid Balance");
+        $("#lblCheckSubtotal").parent().children('strong').text(balance + " : Please enter valid balance");
         $("#btnPurchase").attr('disabled', true);
     } else {
         $("#lblCheckSubtotal").parent().children('strong').text("");
@@ -312,9 +297,9 @@ $(document).on("change keyup blur", "#txtCash", function () {
  * Purchase Order Button
  **/
 $("#btnPurchase").click(function () {
-    var orderDetails = [];
+    let orderDetails = [];
     for (let i = 0; i < $("#tblAddToCart tr").length; i++) {
-        var detailOb = {
+        let detailOb = {
             orderId: $("#orderId").val(),
             itemId: $("#tblAddToCart tr").children(':nth-child(1)')[i].innerText,
             qty: $("#tblAddToCart tr").children(':nth-child(4)')[i].innerText,
@@ -322,18 +307,16 @@ $("#btnPurchase").click(function () {
         }
         orderDetails.push(detailOb);
     }
-    var orderId = $("#orderId").val();
-    var customerId = $("#cmbCustomerId option:selected").text();
-    var date = $("#orderDate").val();
+    let orderId = $("#orderId").val();
+    let customerId = $("#cmbCustomerId option:selected").text();
+    let date = $("#orderDate").val();
 
-    var orderOb = {
+    let orderOb = {
         "orderId": orderId,
         "date": date,
         "customerId": customerId,
         "detail": orderDetails
     }
-    console.log(orderOb)
-    console.log(orderDetails)
 
     $.ajax({
         url: baseUrl + "orders",
@@ -343,12 +326,11 @@ $("#btnPurchase").click(function () {
         data: JSON.stringify(orderOb),
         success: function (res) {
             successAlert("Order", res.message);
-            generateOrderID();
+            generateOrderId();
 
         },
         error: function (error) {
-            let message = JSON.parse(error.responseText).message;
-            errorAlert("Order", message);
+            errorAlert("Order", JSON.parse(error.responseText).message);
         }
     });
 
@@ -368,16 +350,6 @@ $("#btnPurchase").click(function () {
 });
 
 /**
- * Clear All Method
- **/
-function clearDetails() {
-    $('#cmbCustomerId,#customerName,#customerAddress,#customerSalary,#cmbItemCode,#itemName,#itemPrice,#qtyOnHand,#buyQty,#txtDiscount,#txtTotal,#txtDiscount,#txtSubTotal,#txtCash,#txtBalance').val("");
-    $("#tblAddToCart").empty();
-    $("#btnPurchase").attr('disabled', true);
-    $("#btnAddToCart").attr('disabled', true);
-}
-
-/**
  * Clear All Button
  **/
 $("#btnClearAll").click(function () {
@@ -385,27 +357,38 @@ $("#btnClearAll").click(function () {
 });
 
 /**
+ * Clear All Method
+ **/
+function clearDetails() {
+    $('#cmbCustomerId,#customerName,#customerAddress,#customerSalary,#cmbItemCode,#itemName,#itemPrice,#qtyOnHand,#buyQty,#txtDiscount,#txtTotal,#txtDiscount,#txtSubTotal,#txtCash,#txtBalance').val("");
+    $("#tblAddToCart").empty();
+    $("#btnAddToCart").attr('disabled', true);
+    $("#btnPurchase").attr('disabled', true);
+}
+
+/**
  * Remove Row
  **/
 $("#tblAddToCart").dblclick(function () {
     Swal.fire({
-        title: 'Do you want to Delete the Select row?',
+        title: 'Do you want to delete the selected row?',
         showDenyButton: true,
-        showCancelButton: true,
         confirmButtonText: 'Yes',
         denyButtonText: 'No',
         customClass: {
             actions: 'my-actions',
-            cancelButton: 'order-1 right-gap',
-            confirmButton: 'order-2',
-            denyButton: 'order-3',
+            denyButton: 'order-1',
+            confirmButton: 'order-2'
         }
     }).then((result) => {
         if (result.isConfirmed) {
             $(this).children('tr').eq(0).remove();
-            Swal.fire('Delete!', '', 'success')
-        } else if (result.isDenied) {
-            Swal.fire('Select row are not Delete', '', 'info')
         }
     })
 });
+
+/**
+ * Disable Buttons
+ **/
+$("#btnAddToCart").attr('disabled', true);
+$("#btnPurchase").attr('disabled', true);
