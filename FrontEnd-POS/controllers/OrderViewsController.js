@@ -9,68 +9,48 @@ let baseUrl = "http://localhost:8080/javaee_pos/";
 /**
  * Load All Orders
  **/
-loadAllOrders();
+$.ajax({
+    url: baseUrl + "orders?option=LoadOrders",
+    method: "GET",
+    dataType: "json",
+    success: function (res) {
+        $("#tblOrder").empty();
 
-/**
- * Load All Order Details
- **/
-loadAllOrderDetails();
+        for (let i of res.data) {
+            let orderId = i.orderId;
+            let date = i.date;
+            let cusId = i.cusId;
 
-/**
- * Load All Orders Method
- **/
-function loadAllOrders() {
-    $("#tblOrder").empty();
-    $.ajax({
-        url: baseUrl + "orders?option=LoadOrders",
-        method: "GET",
-        dataType: "json",
-        success: function (res) {
-            console.log(res);
-
-            for (let i of res.data) {
-                let orderId = i.orderId;
-                let date = i.date;
-                let cusId = i.cusId;
-
-                let row = "<tr><td>" + orderId + "</td><td>" + date + "</td><td>" + cusId + "</td></tr>";
-                $("#tblOrder").append(row);
-            }
-            console.log(res.message);
-        },
-        error: function (error) {
-            let message = JSON.parse(error.responseText).message;
-            console.log(message);
+            let row = "<tr><td>" + orderId + "</td><td>" + date + "</td><td>" + cusId + "</td></tr>";
+            $("#tblOrder").append(row);
         }
-    });
-}
+    },
+    error: function (error) {
+        console.log("Load All Orders Error : " + JSON.parse(error.responseText).message);
+    }
+});
 
 /**
- * Load All OrderDetails Method
+ * Load All OrderDetails
  **/
-function loadAllOrderDetails() {
-    $("#tblOrderDetails").empty();
-    $.ajax({
-        url: baseUrl + "orders?option=LoadOrderDetails",
-        method: "GET",
-        dataType: "json",
-        success: function (res) {
-            console.log(res);
+$.ajax({
+    url: baseUrl + "orders?option=LoadOrderDetails",
+    method: "GET",
+    dataType: "json",
+    success: function (res) {
+        $("#tblOrderDetails").empty();
 
-            for (let i of res.data) {
-                let OrderId = i.OrderId;
-                let code = i.code;
-                let qty = i.qty;
-                let unitPrice = i.unitPrice;
+        for (let i of res.data) {
+            let OrderId = i.OrderId;
+            let code = i.code;
+            let qty = i.qty;
+            let unitPrice = i.unitPrice;
 
-                let row = "<tr><td>" + OrderId + "</td><td>" + code + "</td><td>" + qty + "</td><td>" + unitPrice + "</td></tr>";
-                $("#tblOrderDetails").append(row);
-            }
-            console.log(res.message);
-        },
-        error: function (error) {
-            let message = JSON.parse(error.responseText).message;
-            console.log(message);
+            let row = "<tr><td>" + OrderId + "</td><td>" + code + "</td><td>" + qty + "</td><td>" + unitPrice + "</td></tr>";
+            $("#tblOrderDetails").append(row);
         }
-    });
-}
+    },
+    error: function (error) {
+        console.log("Load All OrdersDetails Error : " + JSON.parse(error.responseText).message);
+    }
+});
