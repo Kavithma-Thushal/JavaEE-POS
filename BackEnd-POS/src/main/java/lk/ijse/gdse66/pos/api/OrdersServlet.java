@@ -68,20 +68,20 @@ public class OrdersServlet extends HttpServlet {
                     resp.getWriter().print(ordID.build());
 
                 } catch (SQLException | ClassNotFoundException e) {
-                    JsonObjectBuilder rjo = Json.createObjectBuilder();
-                    rjo.add("state", "Error");
-                    rjo.add("message", e.getLocalizedMessage());
-                    rjo.add("data", "");
+                    e.printStackTrace();
+                    JsonObjectBuilder response = Json.createObjectBuilder();
+                    response.add("status", "Error 500");
+                    response.add("message", e.getMessage());
                     resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                    resp.getWriter().print(rjo.build());
+                    resp.getWriter().print(response.build());
                 }
                 break;
 
             case "LoadOrders":
                 try (Connection connection = pool.getConnection()) {
-                    ArrayList<OrderDTO> orderDTOS = orderBO.getAllOrders(connection);
+                    ArrayList<OrderDTO> orderArrayList = orderBO.getAllOrders(connection);
 
-                    for (OrderDTO orderDTO : orderDTOS) {
+                    for (OrderDTO orderDTO : orderArrayList) {
                         JsonObjectBuilder order = Json.createObjectBuilder();
                         order.add("orderId", orderDTO.getId());
                         order.add("date", orderDTO.getDate());
@@ -89,27 +89,28 @@ public class OrdersServlet extends HttpServlet {
                         allOrders.add(order.build());
                     }
 
-                    JsonObjectBuilder job = Json.createObjectBuilder();
-                    job.add("state", "Ok");
-                    job.add("message", "Successfully Loaded..!");
-                    job.add("data", allOrders.build());
-                    resp.getWriter().print(job.build());
+                    JsonObjectBuilder response = Json.createObjectBuilder();
+                    response.add("state", "200 OK");
+                    response.add("message", "Loaded Successfully...!");
+                    response.add("data", allOrders.build());
+                    resp.setStatus(HttpServletResponse.SC_OK);
+                    resp.getWriter().print(response.build());
 
-                } catch (ClassNotFoundException | SQLException e) {
-                    JsonObjectBuilder rjo = Json.createObjectBuilder();
-                    rjo.add("state", "Error");
-                    rjo.add("message", e.getLocalizedMessage());
-                    rjo.add("data", "");
+                } catch (SQLException | ClassNotFoundException e) {
+                    e.printStackTrace();
+                    JsonObjectBuilder response = Json.createObjectBuilder();
+                    response.add("status", "Error 500");
+                    response.add("message", e.getMessage());
                     resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                    resp.getWriter().print(rjo.build());
+                    resp.getWriter().print(response.build());
                 }
                 break;
 
             case "LoadOrderDetails":
                 try (Connection connection = pool.getConnection()) {
-                    ArrayList<OrderDetailDTO> orderDetailDTO = orderDetailBO.getAllOrderDetails(connection);
+                    ArrayList<OrderDetailDTO> orderDetailsArrayList = orderDetailBO.getAllOrderDetails(connection);
 
-                    for (OrderDetailDTO customerDTO : orderDetailDTO) {
+                    for (OrderDetailDTO customerDTO : orderDetailsArrayList) {
                         JsonObjectBuilder orderDetails = Json.createObjectBuilder();
                         orderDetails.add("OrderId", customerDTO.getOrderId());
                         orderDetails.add("code", customerDTO.getItemCode());
@@ -118,19 +119,20 @@ public class OrdersServlet extends HttpServlet {
                         allOrderDetails.add(orderDetails.build());
                     }
 
-                    JsonObjectBuilder job = Json.createObjectBuilder();
-                    job.add("state", "Ok");
-                    job.add("message", "Successfully Loaded..!");
-                    job.add("data", allOrderDetails.build());
-                    resp.getWriter().print(job.build());
+                    JsonObjectBuilder response = Json.createObjectBuilder();
+                    response.add("state", "200 OK");
+                    response.add("message", "Loaded Successfully...!");
+                    response.add("data", allOrderDetails.build());
+                    resp.setStatus(HttpServletResponse.SC_OK);
+                    resp.getWriter().print(response.build());
 
-                } catch (ClassNotFoundException | SQLException e) {
-                    JsonObjectBuilder rjo = Json.createObjectBuilder();
-                    rjo.add("state", "Error");
-                    rjo.add("message", e.getLocalizedMessage());
-                    rjo.add("data", "");
+                } catch (SQLException | ClassNotFoundException e) {
+                    e.printStackTrace();
+                    JsonObjectBuilder response = Json.createObjectBuilder();
+                    response.add("status", "Error 500");
+                    response.add("message", e.getMessage());
                     resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-                    resp.getWriter().print(rjo.build());
+                    resp.getWriter().print(response.build());
                 }
                 break;
         }
